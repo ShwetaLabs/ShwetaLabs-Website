@@ -1,6 +1,7 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import StaggeredPara from './components/StaggeredPara';
+import { paraData } from './data/test';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+	  <StaggeredPara paras={paraData} />
     </div>
   );
 }
