@@ -54,6 +54,11 @@ a.button{
   font-weight: bold;
   color: var(--accent);
 }
+a.footerLink{
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+}
 .col{
   display: flex;
   flex-direction: column;
