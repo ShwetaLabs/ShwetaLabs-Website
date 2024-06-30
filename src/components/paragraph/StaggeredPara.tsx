@@ -1,12 +1,12 @@
-import { textPageSpec } from "../data/utils"
-import Para from "./Para"
+import { textPageSpec } from "../../data/utils"
+import {Para} from "./Para"
 import "./StaggeredPara.css"
 
 interface ItextPageSpec {
     paras: textPageSpec
 }
 
-export default function StaggeredPara({paras}: ItextPageSpec) {
+export function StaggeredPara({paras}: ItextPageSpec) {
     return (
         <div>
             {paras.title}

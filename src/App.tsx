@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import StaggeredPara from './components/StaggeredPara';
+import {StaggeredPara} from './components/paragraph/StaggeredPara';
 import { paraData } from './data/test';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit the file <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"

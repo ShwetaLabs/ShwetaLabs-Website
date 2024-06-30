@@ -1,10 +1,10 @@
-import { paraSpec } from "../data/utils"
+import { paraSpec } from "../../data/utils"
 
 interface IPara {
     para: paraSpec
 }
 
-export default function Para({ para }: IPara): JSX.Element {
+export function Para({ para }: IPara): JSX.Element {
     var payload = <>NOT IMPLEMENTED AS OF NOW</>;
     if (typeof (para.text) !== 'undefined') {
         payload = <>para.text</>;
