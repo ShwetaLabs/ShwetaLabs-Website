@@ -1,11 +1,7 @@
 // import { Route } from "@angular/router";
 
-export interface routeSpec {
-    label: string;
-    route?: string;
-    component?: any;
-    children?: routeSpec[]
-}
+import { routeSpec } from "./navigation";
+
 export interface paraSpec {
     text?: string;
     list?: string[];
@@ -22,12 +18,12 @@ export interface textPageSpec {
     title: string;
     paragraphs: paraSpec[];
 }
-
-export interface linkSpec {
-    target: string;
-    label: string;
-    type?: 'facebook' | 'twitter' | 'email' | 'webpage' | 'resume';
-}
+// use the linkSpec in navigation.ts
+// export interface linkSpec {
+//     target: string;
+//     label: string;
+//     type?: 'facebook' | 'twitter' | 'email' | 'webpage' | 'resume';
+// }
 
 export interface VersatilePageSpec {
     title: string;

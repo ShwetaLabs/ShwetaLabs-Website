@@ -2,26 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import {StaggeredPara} from './components/paragraph/StaggeredPara';
 import { paraData } from './data/test';
-
+import { Header } from './components/header/Header';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import { getMainAppRoutes } from './data/navigation';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit the file <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-	  <StaggeredPara paras={paraData} />
+      <Header></Header>
+      <BrowserRouter>
+      <Routes>
+        {
+          getMainAppRoutes().map((route)=>{
+            return <Route path={route.path} element={<route.element/>}/>
+          })
+        }
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

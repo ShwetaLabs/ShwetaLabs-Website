@@ -1,5 +1,21 @@
+:root{
+  /* TODO: change based on figma file */
+  background-color: black;
+  color: white;
+  --primary:#00356b;
+  --secondary:#286dc0;
+  --accent:#006ef5;
+  --light:#7eb3f5;
+  --lightgray:#eee;
+  --darkgray:#ccc;
+  --mgvwidth:600px;
+  letter-spacing: 0.5px;
+  font-size: 19.5px;
+}
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +26,155 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a{
+  text-decoration: none;
+  color: var(--accent);
+}
+a:hover{
+  color: var(--light);
+}
+a.button{
+  padding-inline: 15px;
+  color:white;
+  font-size: 1.33rem;
+  border-radius: 5px;
+}
+.title{
+  font-size: 1.66rem;
+  text-align: center;
+}
+.heading{
+  font-size: 1.33rem;
+  font-weight: bold;
+}
+.heading-colored{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.centercol{
+  align-items: center;
+}
+.centerrow{
+  justify-content: center;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.rrow{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+input{
+  height: 30px;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+.student-img{
+  width: 250px;
+  height: 250px;
+}
+.person-img{
+  width: 200px;
+  height: 200px;
+}
+.preview-img{
+  width: 30px;
+  height: 30px;
+}
+hr.thick{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:var(--secondary);
+  height: 5px;
+}
+.titlebar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.fs-large{
+  font-size: 1.33rem;
+}
+.fs-x-large{
+  font-size: 1.66rem;
+}
+.fs-medium{
+  font-size: 1rem;
+}
+.fs-larger{
+  font-size: 1.5rem;
+}
+.fs-xx-large{
+  font-size: 2rem;
+}
+.pointable{
+  cursor: pointer;
+}
+.desktop{
+  display: none;
+}
+
+@media(min-width:800px){
+  .desktop{
+      display: block;
+  }
+  .mobile{
+      display: none;
+  }
+}
+
+.shadow{
+  box-shadow: 3px 3px 5px 5px grey;
+}
+.titlebar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+img.logo{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+input{
+  width: 50%;
+}
+.articlesgrid{
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+}
+@media (min-width:750px) {
+  .articlesgrid{
+      grid-template-columns: 50% 50%;
+  }
+}
+@media (min-width:1200px){
+  .articlesgrid{
+      grid-template-columns: 33% 33% 33%;
+  }
+}
+.mentionsgrid{
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+}
+@media (min-width:1200px){
+  .mentionsgrid{
+      grid-template-columns: 50% 50%;
+  }
 }
