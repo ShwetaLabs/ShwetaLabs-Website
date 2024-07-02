@@ -2,7 +2,7 @@ import { footerData } from "../../data/footer";
 import { LinkBox } from "../linkBox/LinkBox";
 
 export function Footer():JSX.Element{
-    return <div className="row" style={{padding:'20px',justifyContent:"space-around",position:"absolute",bottom:0,right:0,left:0}}>
+    return <div className="row" style={{padding:'20px',justifyContent:"space-around"}}>
         <div className="col" style={{justifyContent:'space-around'}}>
             {/* get better res. logo */}
             <img src={footerData.logo}/>

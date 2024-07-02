@@ -9,7 +9,7 @@ export function LinkBox({link,aClassName}:ILinkBoxProps):JSX.Element{
     // and render it
     // should make use of iconOnly option
     return <a className={aClassName||''} href={link.url}>
-        {(link.icon?<i className={link.icon}></i>:null)}
+        {(link.icon == null?<img className={link.icon} />:null)}
         {(!link.iconOnly)?<>{link.text}</>:null}
     </a>
 }
