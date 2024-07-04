@@ -7,7 +7,7 @@ interface profileProp {
 
 export default function Profile({ profile }: profileProp) {
     return (
-        <div style={{ border: "2px solid red" }}>
+        <div>
             <img style={{ width: "100%", borderRadius: "10%" }} src={profile.image} alt={profile.name} />
             <div style={{ marginTop:"24px", display: "flex", justifyContent: "space-around" }}>
                 <div style={{ textAlign: "left", width: "50%" }}>

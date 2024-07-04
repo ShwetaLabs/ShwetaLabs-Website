@@ -10,7 +10,7 @@ export default function Squad({ squad }: squadProp) {
         var rows: JSX.Element[] = [];
         var inRow: JSX.Element[] = [];
         for (var i = 0; i < profiles.length; i++) {
-            inRow.push(<div style={{margin:"16px"}}><Profile profile={profiles[i]} /></div>)
+            inRow.push(<div style={{ margin: "16px" }}><Profile profile={profiles[i]} /></div>)
             if (inRow.length == perRow) {
                 rows.push(<div style={{ display: "flex", justifyContent: "space-between" }}>{inRow.concat()}</div>);
                 inRow = [];
