@@ -22,6 +22,7 @@ export interface valuesSpec {
 
 export interface aboutSpec {
     titleInfo: titleInfoSpec,
+	visions: valueCardSpec[],
     squad: squadSpec,
     values: valuesSpec,
 }
@@ -37,6 +38,18 @@ That’s not a cheesy movie line - that’s what we want to do; and this is our 
 Founder, Naveen A. witnessed first-hand the hurdles law enforcement faced in his own family of police officials; and that sparked the idea of making a range of cyber tools to aid police, military and law enforcement.The end of our start - up story - is the beginning of the next one.The one in which we ‘want to make the bad guys pay’ a reality.
 `
     },
+	visions: [
+		{
+			image: images.visionLogo,
+			title: "Our Vision",
+			para: "Our vision is to make the world fearless, empowered and free; and to remove the   obstacles that get in the way of our freedom and flourishing."
+		},
+		{
+			image: images.missionLogo,
+			title: "Our Mission",
+			para: "To provide the services and software needed for a secure and fearless world"
+		}
+	],
     squad: squadData,
 	values: {
         superTitle: "Qui numquam",
