@@ -11,7 +11,7 @@ export function About(): JSX.Element {
         var inRow: JSX.Element[] = [];
         for (var i = 0; i < values.length; i++) {
             inRow.push(<div style={{ margin: "16px", width: "50%"}}><ValueCard valueCard={values[i]} onLeft={false} /></div>)
-            if (inRow.length == 2) {
+            if (inRow.length === 2) {
                 rows.push(<div style={{ display: "flex", justifyContent: "space-between" }}>{inRow.concat()}</div>);
                 inRow = [];
             }
@@ -21,7 +21,7 @@ export function About(): JSX.Element {
     }
 
     return <div style={{ padding: "160px" }}>
-        <TitleInfo titleInfo={aboutData.titleInfo} />
+        <TitleInfo titleInfo={aboutData.titleInfo} onSide={true} />
 		{createRows(aboutData.visions)}
         <Squad squad={aboutData.squad} />
         <Values values={aboutData.values} />
