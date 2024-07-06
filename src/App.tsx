@@ -10,15 +10,17 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <BrowserRouter>
-      <Routes>
-        {
-          getMainAppRoutes().map((route)=>{
-            return <Route path={route.path} element={<route.element/>} key={route.path}/>
-          })
-        }
-      </Routes>
-      </BrowserRouter>
+      <div className="main">
+        <BrowserRouter>
+        <Routes>
+          {
+            getMainAppRoutes().map((route)=>{
+              return <Route path={route.path} element={<route.element/>} key={route.path}/>
+            })
+          }
+        </Routes>
+        </BrowserRouter>
+      </div>
       <Footer/>
     </div>
   );

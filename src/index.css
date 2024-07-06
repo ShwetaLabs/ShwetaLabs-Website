@@ -12,7 +12,7 @@
   --mgvwidth:600px;
   letter-spacing: 0.5px;
   font-size: 19.5px;
-  font-family: 'ProximaNovaRegular', Helvetica, sans-serif;
+  font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
 }
 body {
   margin: 0;
@@ -32,7 +32,10 @@ a{
   color: white;
   /* color: var(--accent); */
 }
-
+div.main{
+  margin: 77px;
+  margin-inline: 0px;
+}
 a.button{
   padding-inline: 15px;
   color:white;
@@ -43,8 +46,10 @@ p.footerTitle{
   opacity: 70%;
 }
 .title{
-  font-size: 1.66rem;
-  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 .heading{
   font-size: 1.33rem;
@@ -79,12 +84,12 @@ a.footerLink{
   flex-direction: row-reverse;
 }
 
-input{
+/* input{
   height: 30px;
   border: 3px solid black;
   padding: 5px;
   border-radius: 5px;
-}
+} */
 .student-img{
   width: 250px;
   height: 250px;
@@ -181,9 +186,6 @@ img.logo{
   height: 100px;
   padding: 10px;
 }
-input{
-  width: 50%;
-}
 .articlesgrid{
   display: grid;
   grid-template-columns: 100%;
@@ -208,4 +210,28 @@ input{
   .mentionsgrid{
       grid-template-columns: 50% 50%;
   }
+}
+.field.title{
+  margin-top: 32px;
+  margin-bottom: 0px;
+  font-size: small;
+  text-align: start;
+}
+.field.input{
+  resize: none;
+  position: relative;
+  left: 0;
+  right: 0;
+  font-family: 'ProximaNovaRegular', Helvetica, sans-serif;
+  margin-top: 12px;
+  margin-bottom: 0;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  color: white;
+  background-color: #080808;
+  padding: 12px;
+  padding-inline: 16px;
+}
+.field.input:focus-visible{
+  outline:none;
 }

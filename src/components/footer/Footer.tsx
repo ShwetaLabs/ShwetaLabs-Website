@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { footerData } from "../../data/footer";
 import { LinkBox } from "../linkBox/LinkBox";
-const outerDivStyle:CSSProperties = {position:"absolute",bottom:0,right:0,left:0};
+const outerDivStyle:CSSProperties = {display:'block',position:"relative",bottom:0,right:0,left:0};
 export function Footer():JSX.Element{
     return <div className="col" style={outerDivStyle}>
         <div className="row thin-bordered" style={{padding:'20px',justifyContent:"space-around", borderInline:0}}>
