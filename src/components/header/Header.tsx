@@ -21,5 +21,5 @@ interface HeaderButtonSpec{
     link:linkSpec;
 }
 export function HeaderButton({link}:HeaderButtonSpec):JSX.Element{
-    return <a href={link.url} className="button">{link.text}</a>
+    return <a href={link.url} className="button" style={{textTransform:"uppercase"}}>{link.text}</a>
 }
