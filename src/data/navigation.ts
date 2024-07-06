@@ -4,6 +4,7 @@ import { Contact } from '../pages/Contact';
 import { Home } from '../pages/Home';
 import { Podcast } from '../pages/Podcast';
 import { Products } from '../pages/Products';
+import { icons } from '../rsrc';
 export interface linkSpec{
     text:string;
     url:string;
@@ -57,25 +58,25 @@ const socialLinks:linkSpec[] = [
     {
         text:'Youtube',
         url:'',
-        icon:'fa fa-youtube'
+        icon:icons.youtube
         //todo: fill social links
     },
     {
         text:'Facebook',
         url:'',
-        icon:'fa fa-facebook'
+        icon:icons.facebook
         
     },
     {
         text:'Instagram',
         url:'',
-        icon:'fa fa-instagram'
+        icon:icons.instagram
         
     },
     {
         text:'Twitter',
         url:'',
-        icon:'fa fa-twitter'
+        icon:icons.twitter
         
     },
 ]
@@ -85,8 +86,32 @@ export const quickLinks:linkSpec[] = [
     blogLink,
     podcastLink
 ]
+const termsLink = {
+    text: 'Terms',
+    url: ``
+};
+const privacyAndSecurityLink = {
+    text: 'Privacy and Security',
+    url: ``
+};
+const cookiesLink = {
+    text: 'Cookies',
+    url: ''
+};
+const patentsLink = {
+    text: 'Patents',
+    url: ''
+};
+// may change this to button, onclick if action is too wild.
+export const requestDemoLink:linkSpec = {
+    text: 'REQUEST DEMO',
+    url:''
+}
 export const policyLinks:linkSpec[] = [
-    policyLink
+    termsLink,
+    privacyAndSecurityLink,
+    cookiesLink,
+    patentsLink
 ]
 export function getSocialIconOnlyLinks():linkSpec[]{
     return socialLinks.map((link)=>{

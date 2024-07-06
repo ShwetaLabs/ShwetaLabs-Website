@@ -1,8 +1,9 @@
+@import './assets/fonts/stylesheet.css';
 :root{
   /* TODO: change based on figma file */
   background-color: black;
   color: white;
-  --primary:#00356b;
+  --primary:#2A5C65;
   --secondary:#286dc0;
   --accent:#006ef5;
   --light:#7eb3f5;
@@ -11,14 +12,12 @@
   --mgvwidth:600px;
   letter-spacing: 0.5px;
   font-size: 19.5px;
+  font-family: 'ProximaNovaRegular', Helvetica, sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,7 +29,8 @@ code {
 
 a{
   text-decoration: none;
-  color: var(--accent);
+  color: white;
+  /* color: var(--accent); */
 }
 a:hover{
   color: var(--light);
@@ -40,6 +40,9 @@ a.button{
   color:white;
   font-size: 1.33rem;
   border-radius: 5px;
+}
+p.footerTitle{
+  opacity: 70%;
 }
 .title{
   font-size: 1.66rem;
@@ -104,11 +107,36 @@ hr.thick{
   background-color:var(--secondary);
   height: 5px;
 }
+hr.thin{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:var(--secondary);
+  height: 1px;
+}
+p.stripped{
+  margin: 3px;
+  padding: 0;
+}
+.thin-bordered{
+  border: 0.5px solid grey;
+}
 .titlebar{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+a.button2{
+  background-color: var(--primary);
+  padding-inline: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+.fs-small{
+  font-size: 0.8rem;
 }
 .fs-large{
   font-size: 1.33rem;
