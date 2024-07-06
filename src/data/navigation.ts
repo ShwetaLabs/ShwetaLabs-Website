@@ -4,13 +4,13 @@ import { Contact } from '../pages/Contact';
 import { Home } from '../pages/Home';
 import { Podcast } from '../pages/Podcast';
 import { Products } from '../pages/Products';
-
-export interface linkSpec {
-    text: string;
-    url: string;
-    icon?: string;
-    iconOnly?: boolean;
-    element?: ({ }: any) => JSX.Element;
+import { icons } from '../rsrc';
+export interface linkSpec{
+    text:string;
+    url:string;
+    icon?:string;
+    iconOnly?:boolean;
+    element?:({}:any)=>JSX.Element;
 }
 //spec for routes within the website.
 export interface routeSpec {
@@ -56,27 +56,28 @@ const staticHeaderLinks: linkSpec[] = [
 ];
 const socialLinks: linkSpec[] = [
     {
-        text: 'Youtube',
-        url: '',
-        icon: 'fa fa-youtube'
+        text:'Youtube',
+        url:'',
+        icon:icons.youtube
         //todo: fill social links
     },
     {
-        text: 'Facebook',
-        url: '',
-        icon: 'fa fa-facebook'
-
+        text:'Facebook',
+        url:'',
+        icon:icons.facebook
+        
     },
     {
-        text: 'Instagram',
-        url: '',
-        icon: 'fa fa-instagram'
-
+        text:'Instagram',
+        url:'',
+        icon:icons.instagram
+        
     },
     {
-        text: 'Twitter',
-        url: '',
-        icon: 'fa fa-twitter'
+        text:'Twitter',
+        url:'',
+        icon:icons.twitter
+        
     },
 ]
 export const quickLinks: linkSpec[] = [
@@ -85,8 +86,32 @@ export const quickLinks: linkSpec[] = [
     blogLink,
     podcastLink
 ]
-export const policyLinks: linkSpec[] = [
-    policyLink
+const termsLink = {
+    text: 'Terms',
+    url: ``
+};
+const privacyAndSecurityLink = {
+    text: 'Privacy and Security',
+    url: ``
+};
+const cookiesLink = {
+    text: 'Cookies',
+    url: ''
+};
+const patentsLink = {
+    text: 'Patents',
+    url: ''
+};
+// may change this to button, onclick if action is too wild.
+export const requestDemoLink:linkSpec = {
+    text: 'REQUEST DEMO',
+    url:''
+}
+export const policyLinks:linkSpec[] = [
+    termsLink,
+    privacyAndSecurityLink,
+    cookiesLink,
+    patentsLink
 ]
 export function getSocialIconOnlyLinks(): linkSpec[] {
     return socialLinks.map((link) => {

@@ -1,6 +1,7 @@
 import { images } from "../rsrc";
-import { getHeaderNavLinks, homeLink, linkSpec } from "./navigation";
+import { getHeaderNavLinks, homeLink, linkSpec, requestDemoLink } from "./navigation";
 export interface headerSpec{
+    requestDemoLink: linkSpec;
     logo:string;//path to logo
     logoLink:linkSpec
     navLinks:linkSpec[];
@@ -9,5 +10,6 @@ export interface headerSpec{
 export const headerData:headerSpec = {
     logo:images.logo,
     logoLink:homeLink,
-    navLinks:getHeaderNavLinks()
+    navLinks:getHeaderNavLinks(),
+    requestDemoLink:requestDemoLink
 }

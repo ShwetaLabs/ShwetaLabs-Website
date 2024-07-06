@@ -1,39 +1,49 @@
+import { CSSProperties } from "react";
 import { footerData } from "../../data/footer";
 import { LinkBox } from "../linkBox/LinkBox";
-
-export function Footer():JSX.Element{
-    return <div className="row" style={{padding:'20px',justifyContent:"space-around"}}>
-        <div className="col" style={{justifyContent:'space-around'}}>
-            {/* get better res. logo */}
-            <img src={footerData.logo}/>
-            <div className="row">
+const outerDivStyle: CSSProperties = { display: 'block', position: "relative", bottom: 0, right: 0, left: 0 };
+export function Footer(): JSX.Element {
+    return <div className="col" style={outerDivStyle}>
+        <div className="row thin-bordered" style={{ padding: '20px', justifyContent: "space-around", borderInline: 0 }}>
+            <div className="col" key={footerData.logo} style={{ justifyContent: 'space-around' }}>
+                {/* get better res. logo */}
+                <img src={footerData.logo} />
+            </div>
+            <div className="col" key={footerData.quickLinksTitle} style={{ alignItems: "flex-start" }}>
+                <p className="footerTitle">{footerData.quickLinksTitle}</p>
                 {
-                    footerData.socialLinks.map((link)=>{
-                        return <LinkBox link={link} aClassName="button" key={link.url}/>
+                    footerData.quickLinks.map((link) => {
+                        return <LinkBox link={link} aClassName="footerLink" key={link.text} />
                     })
                 }
             </div>
+            <div className="col" key={footerData.policyLinksTitle} style={{ alignItems: "flex-start" }}>
+                <p className="footerTitle">{footerData.policyLinksTitle}</p>
+                {
+                    footerData.policyLinks.map((link) => {
+                        return <LinkBox link={link} aClassName="footerLink" key={link.text} />
+                    })
+                }
+            </div>
+            <div className="col" key={footerData.addressTitle} style={{ alignItems: "flex-start" }}>
+                <p className="footerTitle">{footerData.addressTitle}</p>
+                {
+                    <p className="stripped" key={footerData.address}>{footerData.address}</p>
+                }
+                {
+                    footerData.businessDetails.map((value) => {
+                        return <p className="stripped" key={value}>{value}</p>
+                    })
+                }
+                <div className="row" style={{ marginTop: 48 }}>
+                    {
+                        footerData.socialLinks.map((link) => {
+                            return <LinkBox link={link} aClassName="button" key={link.url} />
+                        })
+                    }
+                </div>
+            </div>
         </div>
-        <div className="col">
-            <p>{footerData.quickLinksTitle}</p>
-            {
-                footerData.quickLinks.map((link)=>{
-                    return <LinkBox link={link} aClassName="footerLink" key={link.text}/>
-                })
-            }
-        </div>
-        <div className="col">
-            <p>{footerData.policyLinksTitle}</p>
-            {
-                footerData.policyLinks.map((link)=>{
-                    return <LinkBox link={link} aClassName="footerLink" key={link.text}/>
-                })
-            }
-        </div>
-        <div className="col">
-            <p>{footerData.subscribeToNewsletterTitle}</p>
-            {/* input */}
-            {/* address, cin, gst */}
-        </div>
+        <p className="fs-small">{footerData.copyrightText}</p>
     </div>
 }
