@@ -32,9 +32,7 @@ a{
   color: white;
   /* color: var(--accent); */
 }
-a:hover{
-  color: var(--light);
-}
+
 a.button{
   padding-inline: 15px;
   color:white;
