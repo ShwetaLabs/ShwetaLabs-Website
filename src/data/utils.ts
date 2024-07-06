@@ -1,6 +1,3 @@
-// import { Route } from "@angular/router";
-
-import { ReactNode } from "react";
 import { routeSpec } from "./navigation";
 
 export interface paraSpec {
@@ -27,7 +24,7 @@ export interface textPageSpec {
 // }
 
 export interface titleInfoSpec {
-    title: ReactNode,
+    title: String,
     paras: string
 }
 
