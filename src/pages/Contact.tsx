@@ -63,7 +63,7 @@ function Form({ form }: IFormSpec): JSX.Element {
         setValue={setMessage}
         height={167}
       />
-      <a className="button2" onClick={sendData} style={{ marginTop: "32px" }}>
+      <a className="button2 pointable" onClick={sendData} style={{ marginTop: "32px"}}>
         Submit
       </a>
     </div>
