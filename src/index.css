@@ -4,8 +4,8 @@
   background-color: black;
   color: white;
   --primary:#2A5C65;
-  --secondary:#286dc0;
-  --accent:#006ef5;
+  --secondary-bg:#0F0F0F;
+  --accent:#1f1f1f;
   --light:#7eb3f5;
   --lightgray:#eee;
   --darkgray:#ccc;
@@ -13,6 +13,9 @@
   letter-spacing: 0.5px;
   font-size: 19.5px;
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
+}
+.bg2{
+  background-color: var(--secondary-bg);
 }
 body {
   margin: 0;
@@ -36,16 +39,24 @@ div.main{
   margin: 77px;
   margin-inline: 0px;
 }
+div.home>*{
+  margin:80px;
+  margin-inline: auto;
+}
 a.button{
   padding-inline: 15px;
   color:white;
   font-size: 1.33rem;
   border-radius: 5px;
 }
-p.footerTitle{
+p.shady-70{
   opacity: 70%;
 }
+p{
+  text-align: left;
+}
 .title{
+  text-align: center;
   font-size: 4rem;
   font-weight: bold;
   padding: 0;
@@ -107,7 +118,7 @@ hr.thick{
   clear:both;
   display:block;
   width: 100%;               
-  background-color:var(--secondary);
+  background-color:var(--secondary-bg);
   height: 5px;
 }
 hr.thin{
@@ -115,7 +126,7 @@ hr.thin{
   clear:both;
   display:block;
   width: 100%;               
-  background-color:var(--secondary);
+  background-color:var(--secondary-bg);
   height: 1px;
 }
 p.stripped{
@@ -186,6 +197,14 @@ img.logo{
   height: 100px;
   padding: 10px;
 }
+div.grid{
+  display: grid;
+}
+/* dimensions: 3 x n */
+div.d3xn{
+  grid-template-columns: 33% 33% 33%;
+  align-items: center;
+}
 .articlesgrid{
   display: grid;
   grid-template-columns: 100%;
@@ -228,7 +247,7 @@ img.logo{
   border: 1px solid #1f1f1f;
   border-radius: 5px;
   color: white;
-  background-color: #080808;
+  background-color: var(--secondary-bg);
   padding: 12px;
   padding-inline: 16px;
 }

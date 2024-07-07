@@ -4,9 +4,11 @@ import twitter from './assets/icons/twitter.svg';
 import youtube from './assets/icons/youtube.svg';
 import facebook from './assets/icons/facebook.svg';
 import footerLogo from './assets/footerLogo.svg';
+import dummyLogo from './assets/dummyLogo.svg';
 export const images = {
     logo,
-    footerLogo
+    footerLogo,
+    dummyLogo,
 }
 
 export const icons = {
