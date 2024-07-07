@@ -8,6 +8,7 @@ import {
   userSpec,
   whatWeHaveData,
 } from "../data/home";
+import { icons } from "../rsrc";
 import { LinkBox } from "./linkBox/LinkBox";
 
 export interface IFeatureProps {
@@ -203,6 +204,9 @@ export function PodcastEpisodeTile({
           src={episode.thumbnail}
           style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 0 }}
         />
+        <div style={{position:'absolute',top:0,left:0,right:0,bottom:0,alignItems:'center',justifyContent:'center'}} className="row">
+          <img className="pointable" onClick={()=>(window.location=(episode.link as any))} src={icons.playButton} style={{}}/>
+        </div>
         <div
           className="row"
           style={{

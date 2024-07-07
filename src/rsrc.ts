@@ -4,6 +4,7 @@ import twitter from "./assets/icons/twitter.svg";
 import awardLogo from "./assets/awardLogo.svg";
 import youtube from "./assets/icons/youtube.svg";
 import facebook from "./assets/icons/facebook.svg";
+import playButton from "./assets/icons/playButton.svg";
 import footerLogo from "./assets/footerLogo.svg";
 import dummyLogo from "./assets/dummyLogo.svg";
 import detective from "./assets/detective.svg";
@@ -38,6 +39,7 @@ export const icons = {
   twitter,
   youtube,
   facebook,
+  playButton
 };
 
 export const people = {

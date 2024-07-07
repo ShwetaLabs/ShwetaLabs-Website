@@ -202,6 +202,7 @@ export interface podcastEpisodeSpec{
     date:string;
     length:string;
     thumbnail:string;
+    link:string;
 }
 
 export const podcastAdvertData = {
@@ -213,6 +214,7 @@ export const podcastAdvertData = {
             length:'48 min',
             date:'12 March, 2024',
             thumbnail:images.thumbnail,
+            link:'/contact'
         },
         {
             episode:'Episode 9',
@@ -220,6 +222,7 @@ export const podcastAdvertData = {
             length:'48 min',
             date:'12 March, 2024',
             thumbnail:images.thumbnail,
+            link:'/contact'
         }
     ]
 }
