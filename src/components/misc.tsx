@@ -1,4 +1,4 @@
-import { blogsAdvertData, blogSpec, featureSpec, testimonySpec, userSpec, whatWeHaveData } from "../data/home";
+import { awardSpec, blogsAdvertData, blogSpec, featureSpec, testimonySpec, userSpec, whatWeHaveData } from "../data/home";
 import { LinkBox } from "./linkBox/LinkBox";
 
 export interface IFeatureProps {
@@ -126,5 +126,23 @@ export function BlogTile({blog}:IBlogProps):JSX.Element{
       </p>
       <LinkBox link={{text:blogsAdvertData.readArticle,url:blog.url}} aClassName="caret-right button-pill"/>
     </div>
+  </div>
+}
+export interface IAwardTileProps{
+  award:awardSpec;
+}
+export function AwardTile({award}:IAwardTileProps):JSX.Element{
+  return <div className="col bg2" style={{margin:16,}}>
+  <div style={{padding:40,paddingInline:52,paddingBottom:24}}>
+    <img src={award.logo}/>
+  </div>
+  <div className="col" style={{padding:24, paddingInline:40,alignItems:'center',borderTop:'var(--accent) 0.5px solid'}}>
+    <p className="fs-small stripped">
+      {award.title}
+    </p>
+    <p className="fs-smaller stripped offwhite">
+      {award.category}
+    </p>
+    </div>    
   </div>
 }

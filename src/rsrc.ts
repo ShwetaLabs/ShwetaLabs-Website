@@ -1,6 +1,7 @@
 import logo from "./assets/logo.svg";
 import instagram from "./assets/icons/instagram.svg";
 import twitter from "./assets/icons/twitter.svg";
+import awardLogo from "./assets/awardLogo.svg";
 import youtube from "./assets/icons/youtube.svg";
 import facebook from "./assets/icons/facebook.svg";
 import footerLogo from "./assets/footerLogo.svg";
@@ -25,6 +26,7 @@ export const images = {
   decoding,
   sleuthLogo,
   quotes,
+  awardLogo
 };
 
 export const icons = {

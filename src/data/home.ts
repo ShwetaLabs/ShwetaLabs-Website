@@ -163,3 +163,35 @@ export const blogsAdvertData = {
         }
     ]
 }
+
+export interface awardSpec{
+    title:string;
+    logo:string;
+    category:string;
+}
+export const awardsData = {
+    title:'Recognizing Excellence in Innovation and Dedication',
+    description:'Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium dolorum. Consequatur sint cum illo eum harum odit delectus sed. Quis deleniti aut alias.',
+    awards:[
+        {
+            title:'Award Title',
+            logo:images.awardLogo,
+            category:'Category'
+        },
+        {
+            title:'Award Title',
+            logo:images.awardLogo,
+            category:'Category'
+        },
+        {
+            title:'Award Title',
+            logo:images.awardLogo,
+            category:'Category'
+        },
+        {
+            title:'Award Title',
+            logo:images.awardLogo,
+            category:'Category'
+        }
+    ]
+}

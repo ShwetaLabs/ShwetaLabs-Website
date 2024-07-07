@@ -2,6 +2,7 @@ import { features } from "process";
 import { LinkBox } from "../components/linkBox/LinkBox";
 import {
   advertData,
+  awardsData,
   blogsAdvertData,
   caseStudiesData,
   featureSpec,
@@ -12,7 +13,7 @@ import {
   whatWeHaveData,
 } from "../data/home";
 import { contactLink } from "../data/navigation";
-import { BlogTile, Feature, Product, Testimony } from "../components/misc";
+import { AwardTile, BlogTile, Feature, Product, Testimony } from "../components/misc";
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
@@ -109,7 +110,21 @@ function OurProducts(): JSX.Element {
 }
 
 function Awards(): JSX.Element {
-  return <div></div>;
+  return <div style={{width:'80%'}}>
+    <p className="title" style={{width:'90%'}}>
+      {awardsData.title}
+    </p>
+    <p className="offwhite fs-small centered" style={{width:'85%'}}>
+      {awardsData.description}
+    </p>
+    <div className="row" style={{justifyContent:'center'}}>
+      {
+        awardsData.awards.map((award)=>{
+          return <AwardTile award={award} key={award.title}/>
+        })
+      }
+    </div>
+  </div>;
 }
 function CaseStudies(): JSX.Element {
   return <div className="col" style={{width:'80%',alignContent:'flex-start'}}>
