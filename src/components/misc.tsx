@@ -1,4 +1,4 @@
-import { featureSpec, testimonySpec, userSpec, whatWeHaveData } from "../data/home";
+import { blogsAdvertData, blogSpec, featureSpec, testimonySpec, userSpec, whatWeHaveData } from "../data/home";
 import { LinkBox } from "./linkBox/LinkBox";
 
 export interface IFeatureProps {
@@ -57,7 +57,7 @@ export function FeatureTextData({
         <div className="row">
           <LinkBox
             link={{ url: learnMoreUrl, text: whatWeHaveData.learnMore }}
-            aClassName="button-pill"
+            aClassName="button-pill caret-right"
           />
         </div>
       ) : null}
@@ -102,6 +102,29 @@ export function UserBox({user}:IUserBoxProps):JSX.Element{
     <div className="col">
       <p className="stripped">{user.name}</p>
       <p className="stripped offwhite fs-smaller">{user.designation}</p>
+    </div>
+  </div>
+}
+
+
+export interface IBlogProps{
+  blog:blogSpec;
+}
+
+export function BlogTile({blog}:IBlogProps):JSX.Element{
+  return <div className="col" style={{marginInline:16}}>
+    <div className="blogtile">
+      <img src={blog.image}/>
+    </div>
+    <div className="row" style={{justifyContent:'space-between',marginTop:24}}>
+      <p className="offwhite fs-smaller stripped">{blog.date}</p>
+      <p className="offwhite fs-smaller stripped clocked">{blog.length}</p>
+    </div>
+    <div className="col" style={{alignItems:'flex-start'}}>
+      <p className="stripped" style={{marginBottom:12}}>
+        {blog.title}
+      </p>
+      <LinkBox link={{text:blogsAdvertData.readArticle,url:blog.url}} aClassName="caret-right button-pill"/>
     </div>
   </div>
 }

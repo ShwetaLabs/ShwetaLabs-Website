@@ -138,7 +138,10 @@ img.profile {
   height: 56px;
   margin-right: 16px;
 }
-
+div.blogtile{
+  height:250px;
+  overflow: hidden;
+}
 .student-img {
   width: 250px;
   height: 250px;
@@ -200,12 +203,21 @@ a.button-pill {
   font-size: 0.7rem;
   border-radius: 30px;
   background-color: var(--tertiary-bg);
-  padding: 10px;
+  padding: 8px;
   padding-inline: 16px;
   text-transform: uppercase;
 }
-
-a.button-pill::after {
+.clocked::before{
+  content: url('assets/clock.svg');
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  right: 0px;
+  margin: 0px;
+  padding-right: 8px;
+  align-self: center;
+}
+a.caret-right::after {
   content: url('assets/caretRight.svg');
   position: relative;
   display: inline-block;

@@ -1,4 +1,4 @@
-import { images, people } from "../rsrc";
+import { blogImages, images, people } from "../rsrc";
 import { contactLink } from "./navigation";
 
 export const advertData={
@@ -123,6 +123,43 @@ export const caseStudiesData = {
                 image:people.harryKerluke,
                 designation:'Designation'
             }
+        }
+    ]
+}
+export interface blogSpec{
+    image:string;
+    date:string;
+    length:string;
+    title:string;
+    url:string;
+}
+export const blogsAdvertData = {
+    title:'Our Blogs',
+    readArticle:'Read Article',
+    blogs:[
+        {
+            // can also be urls of images online.
+            image:blogImages.blog1,
+            length:'3 min',
+            date:'12 March, 2024',
+            title:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+            url:'/contact',
+        },
+        {
+            // can also be urls of images online.
+            image:blogImages.blog2,
+            length:'3 min',
+            date:'12 March, 2024',
+            title:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+            url:'/contact',
+        },
+        {
+            // can also be urls of images online.
+            image:blogImages.blog3,
+            length:'3 min',
+            date:'12 March, 2024',
+            title:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+            url:'/contact',
         }
     ]
 }

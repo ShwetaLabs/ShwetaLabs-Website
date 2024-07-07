@@ -2,6 +2,7 @@ import { features } from "process";
 import { LinkBox } from "../components/linkBox/LinkBox";
 import {
   advertData,
+  blogsAdvertData,
   caseStudiesData,
   featureSpec,
   ourProductsData,
@@ -11,7 +12,7 @@ import {
   whatWeHaveData,
 } from "../data/home";
 import { contactLink } from "../data/navigation";
-import { Feature, Product, Testimony } from "../components/misc";
+import { BlogTile, Feature, Product, Testimony } from "../components/misc";
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
@@ -128,7 +129,17 @@ function PodcastAdvert(): JSX.Element {
   return <div></div>;
 }
 function BlogsAdvert(): JSX.Element {
-  return <div></div>;
+  return <div className="col" style={{width:'80%',alignItems:'center'}}>
+    <p className="title" style={{marginBottom:48}}>{blogsAdvertData.title}</p>
+    <div className="row">
+      {
+        blogsAdvertData.blogs.map((blog)=>{
+          return <BlogTile blog={blog} key={blog.title}/>
+        })
+      }
+    </div>
+
+  </div>;
 }
 function Strongholds(): JSX.Element {
   return <div></div>;

@@ -11,7 +11,10 @@ import gear from "./assets/gear.svg";
 import decoding from "./assets/decoding.svg";
 import sleuthLogo from "./assets/sleuthLogo.svg";
 import quotes from "./assets/quotes.svg";
-import harryKerluke from './assets/people/harryKerluke.png';
+import harryKerluke from "./assets/people/harryKerluke.png";
+import blog1 from "./assets/blogs/blog1.png";
+import blog2 from "./assets/blogs/blog2.png";
+import blog3 from "./assets/blogs/blog3.png";
 export const images = {
   logo,
   footerLogo,
@@ -21,7 +24,7 @@ export const images = {
   gear,
   decoding,
   sleuthLogo,
-  quotes
+  quotes,
 };
 
 export const icons = {
@@ -32,5 +35,11 @@ export const icons = {
 };
 
 export const people = {
-  harryKerluke
-}
+  harryKerluke,
+};
+
+export const blogImages = {
+  blog1,
+  blog2,
+  blog3,
+};
