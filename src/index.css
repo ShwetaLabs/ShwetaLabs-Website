@@ -145,7 +145,7 @@ p.stripped{
   padding: 0;
 }
 .thin-bordered{
-  border: 0.5px solid grey;
+  border: 0.5px solid var(--accent);
 }
 .titlebar{
   display: flex;

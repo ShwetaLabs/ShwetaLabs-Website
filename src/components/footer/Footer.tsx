@@ -44,6 +44,6 @@ export function Footer():JSX.Element{
             </div>
         </div>
         </div>
-        <p className="fs-small">{footerData.copyrightText}</p>
+        <p className="fs-small" style={{textAlign:'center'}}>{footerData.copyrightText}</p>
     </div>
 }

@@ -67,3 +67,18 @@ export const whatWeHaveData:whatWeHaveSpec = {
         },
     ]
 }
+export interface ourProductsSpec{
+    title:string;
+    products:featureSpec[];
+}
+export const ourProductsData:ourProductsSpec = {
+    title:'Our Products',
+    products:[
+        {
+            title:'Sleuth',
+            description:'SLEUTH is a sophisticated CDR (Call Detail Record) and IPDR (Internet Protocol Detail Record) analysis tool.',
+            image:images.sleuthLogo,
+            learnMoreUrl:'/contact'
+        }
+    ]
+}

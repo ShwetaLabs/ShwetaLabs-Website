@@ -9,6 +9,7 @@ import detective from "./assets/detective.svg";
 import shieldCircuit from "./assets/shieldCircuit.svg";
 import gear from "./assets/gear.svg";
 import decoding from "./assets/decoding.svg";
+import sleuthLogo from "./assets/sleuthLogo.svg";
 export const images = {
   logo,
   footerLogo,
@@ -17,6 +18,7 @@ export const images = {
   shieldCircuit,
   gear,
   decoding,
+  sleuthLogo
 };
 
 export const icons = {

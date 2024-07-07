@@ -3,6 +3,7 @@ import { LinkBox } from "../components/linkBox/LinkBox";
 import {
   advertData,
   featureSpec,
+  ourProductsData,
   trustedPartnersData,
   whatWeHaveData,
 } from "../data/home";
@@ -85,7 +86,7 @@ function WhatWeHave(): JSX.Element {
     <div className="col" style={{ width: "80%" }}>
       <p className="title">{whatWeHaveData.title}</p>
       {whatWeHaveData.features.map((feature, index, arr) => {
-        return <Feature feature={feature} reverse={index % 2 === 1} />;
+        return <Feature feature={feature} reverse={index % 2 === 1} key={feature.title}/>;
       })}
     </div>
   );
@@ -110,31 +111,58 @@ function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
       >
         <img src={feature.image} style={{ width: "60%" }} />
       </div>
-      <div
-        className="col bg2"
-        style={{
-          width: "50%",
-          padding: 40,
-          paddingInline: 52,
-          marginInline: 16,
-        }}
-      >
-        <p className="subtitle">{feature.title}</p>
-        <p className="offwhite fs-small">{feature.description}</p>
-        {feature.learnMoreUrl ? (
-          <div className="row">
-            <LinkBox
-            link={{ url: feature.learnMoreUrl, text: whatWeHaveData.learnMore }}
-            aClassName="button-pill"
-          />
-          </div>
-        ) : null}
-      </div>
+      {<FeatureTextData title={feature.title} description={feature.description} learnMoreUrl={feature.learnMoreUrl} />}
     </div>
   );
 }
+interface IFeatureTextDataProps{
+  title:string;
+  description:string;
+  learnMoreUrl?:string;
+}
+function FeatureTextData({title,description,learnMoreUrl}:IFeatureTextDataProps) {
+  return <div
+    className="col bg2"
+    style={{
+      width: "50%",
+      padding: 40,
+      paddingInline: 52,
+      marginInline: 16,
+    }}
+  >
+    <p className="subtitle">{title}</p>
+    <p className="offwhite fs-small">{description}</p>
+    {learnMoreUrl ? (
+      <div className="row">
+        <LinkBox
+          link={{ url: learnMoreUrl, text: whatWeHaveData.learnMore }}
+          aClassName="button-pill" />
+      </div>
+    ) : null}
+  </div>;
+}
+
 function OurProducts(): JSX.Element {
-  return <div></div>;
+  return <div className="col" style={{width:'80%'}}>
+    <p className="title">{ourProductsData.title}</p>
+    {
+      ourProductsData.products.map((product)=>{
+        return <Product product={product} key={product.title}/>;
+      })
+    }
+  </div>;
+}
+interface IProductProps{
+  product:featureSpec
+}
+function Product({product}:IProductProps):JSX.Element{
+  return <div className="row bg2 thin-bordered" style={{alignItems:"stretch"}}>
+    <div className="row" style={{flexGrow:1,alignItems:'center'}}>
+      <img src={product.image}/>
+    </div>
+    {/* todo: single line between image and textdata */}
+    <FeatureTextData title={product.title} description={product.description} learnMoreUrl={product.learnMoreUrl}/>
+  </div>
 }
 function Awards(): JSX.Element {
   return <div></div>;
