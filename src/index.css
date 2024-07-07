@@ -6,8 +6,8 @@
   --primary:#2A5C65;
   --secondary-bg:#0F0F0F;
   --accent:#1f1f1f;
-  --light:#7eb3f5;
-  --lightgray:#eee;
+  --offwhite:#b3b3b3;
+  --tertiary-bg:#1a1a1a;
   --darkgray:#ccc;
   --mgvwidth:600px;
   letter-spacing: 0.5px;
@@ -55,10 +55,21 @@ p.shady-70{
 p{
   text-align: left;
 }
+.accent{
+  color: var(--accent);
+}
+.offwhite{
+  color: var(--offwhite);
+}
 .title{
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.subtitle{
+  font-size: 3rem;
   padding: 0;
   margin: 0;
 }
@@ -148,6 +159,24 @@ a.button2{
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
+}
+a.button-pill{
+  border-radius: 30px;
+  background-color: var(--tertiary-bg);
+  padding: 10px;
+  padding-inline: 16px;
+  text-transform: uppercase;
+}
+a.button-pill::after{
+  content: url('assets/caretRight.svg');
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  right: 0px;
+  margin: 0px;
+  padding-left: 4px;
+  align-self: center;
+
 }
 .fs-small{
   font-size: 0.8rem;
