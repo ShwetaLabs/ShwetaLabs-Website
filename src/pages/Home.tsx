@@ -2,9 +2,12 @@ import { features } from "process";
 import { LinkBox } from "../components/linkBox/LinkBox";
 import {
   advertData,
+  caseStudiesData,
   featureSpec,
   ourProductsData,
+  testimonySpec,
   trustedPartnersData,
+  userSpec,
   whatWeHaveData,
 } from "../data/home";
 import { contactLink } from "../data/navigation";
@@ -168,7 +171,45 @@ function Awards(): JSX.Element {
   return <div></div>;
 }
 function CaseStudies(): JSX.Element {
-  return <div></div>;
+  return <div className="col" style={{width:'80%',alignContent:'flex-start'}}>
+    <p className="title" style={{textAlign:'left'}}>{caseStudiesData.title}</p>
+    <p className="offwhite" style={{width:'90%'}}>{caseStudiesData.description}</p>
+    <div className="row">
+      {
+        caseStudiesData.cases.map((testimony)=>{
+          return <Testimony testimony={testimony}/>
+        })
+      }
+    </div>
+  </div>;
+}
+interface ITestimonyProps{
+  testimony:testimonySpec;
+}
+function Testimony({testimony}:ITestimonyProps):JSX.Element{
+  return <div className="col bg2" style={{margin:16,padding:0}}>
+    <div className="col" style={{borderBottom:'var(--accent) 0.5px solid',padding:40,paddingBottom:24}}>
+      <div className="row" style={{alignItems:'flex-start'}}>
+        <img src={testimony.quoteImage}/>
+      </div>
+      <div>
+        <p className="offwhite fs-small">{testimony.description}</p>
+      </div>
+    </div>
+    <UserBox user={testimony.user}/>
+  </div>
+}
+interface IUserBoxProps{
+  user:userSpec;
+}
+function UserBox({user}:IUserBoxProps):JSX.Element{
+  return <div className="row" style={{alignItems:'center',padding:24,paddingInline:40}}>
+    <img className="profile" src={user.image}/>
+    <div className="col">
+      <p className="stripped">{user.name}</p>
+      <p className="stripped offwhite fs-smaller">{user.designation}</p>
+    </div>
+  </div>
 }
 function PodcastAdvert(): JSX.Element {
   return <div></div>;

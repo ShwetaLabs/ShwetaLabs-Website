@@ -1,4 +1,4 @@
-import { images } from "../rsrc";
+import { images, people } from "../rsrc";
 import { contactLink } from "./navigation";
 
 export const advertData={
@@ -79,6 +79,50 @@ export const ourProductsData:ourProductsSpec = {
             description:'SLEUTH is a sophisticated CDR (Call Detail Record) and IPDR (Internet Protocol Detail Record) analysis tool.',
             image:images.sleuthLogo,
             learnMoreUrl:'/contact'
+        }
+    ]
+}
+export interface userSpec {
+    name: string;
+    image: string;
+    designation: string;
+}
+
+export interface testimonySpec{
+    quoteImage:string;
+    description:string;
+    user:userSpec
+}
+export const caseStudiesData = {
+    title:'Voices of Trust and Success',
+    description:'Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium dolorum. Consequatur sint cum illo eum harum odit delectus sed. Quis deleniti aut alias.',
+    cases:[
+        {
+            quoteImage:images.quotes,
+            description:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem.',
+            user:{
+                name:'Harry Kerluke',
+                image:people.harryKerluke,
+                designation:'Designation'
+            }
+        },
+        {
+            quoteImage:images.quotes,
+            description:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem.',
+            user:{
+                name:'Harry Kerluke',
+                image:people.harryKerluke,
+                designation:'Designation'
+            }
+        },
+        {
+            quoteImage:images.quotes,
+            description:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem.',
+            user:{
+                name:'Harry Kerluke',
+                image:people.harryKerluke,
+                designation:'Designation'
+            }
         }
     ]
 }

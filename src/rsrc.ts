@@ -10,6 +10,8 @@ import shieldCircuit from "./assets/shieldCircuit.svg";
 import gear from "./assets/gear.svg";
 import decoding from "./assets/decoding.svg";
 import sleuthLogo from "./assets/sleuthLogo.svg";
+import quotes from "./assets/quotes.svg";
+import harryKerluke from './assets/people/harryKerluke.png';
 export const images = {
   logo,
   footerLogo,
@@ -18,7 +20,8 @@ export const images = {
   shieldCircuit,
   gear,
   decoding,
-  sleuthLogo
+  sleuthLogo,
+  quotes
 };
 
 export const icons = {
@@ -27,3 +30,7 @@ export const icons = {
   youtube,
   facebook,
 };
+
+export const people = {
+  harryKerluke
+}
