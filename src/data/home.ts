@@ -195,3 +195,31 @@ export const awardsData = {
         }
     ]
 }
+
+export interface podcastEpisodeSpec{
+    episode:string;
+    title:string;
+    date:string;
+    length:string;
+    thumbnail:string;
+}
+
+export const podcastAdvertData = {
+    title:'Watch our Podcast Series',
+    episodes:[
+        {
+            episode:'Episode 9',
+            title:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+            length:'48 min',
+            date:'12 March, 2024',
+            thumbnail:images.thumbnail,
+        },
+        {
+            episode:'Episode 9',
+            title:'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+            length:'48 min',
+            date:'12 March, 2024',
+            thumbnail:images.thumbnail,
+        }
+    ]
+}

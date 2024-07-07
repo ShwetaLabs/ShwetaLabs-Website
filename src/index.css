@@ -142,6 +142,10 @@ div.blogtile{
   height:250px;
   overflow: hidden;
 }
+div.episodetile{
+  height:230px;
+  overflow: hidden;
+}
 .student-img {
   width: 250px;
   height: 250px;
@@ -200,6 +204,9 @@ a.button2 {
 }
 .centered{
   text-align: center;
+}
+.gradient-shade{
+  background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7),rgba(0,0,0,0));
 }
 .left{
   text-align: left;

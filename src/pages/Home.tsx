@@ -7,13 +7,14 @@ import {
   caseStudiesData,
   featureSpec,
   ourProductsData,
+  podcastAdvertData,
   testimonySpec,
   trustedPartnersData,
   userSpec,
   whatWeHaveData,
 } from "../data/home";
 import { contactLink } from "../data/navigation";
-import { AwardTile, BlogTile, Feature, Product, Testimony } from "../components/misc";
+import { AwardTile, BlogTile, Feature, PodcastEpisodeTile, Product, Testimony } from "../components/misc";
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
@@ -141,7 +142,16 @@ function CaseStudies(): JSX.Element {
 }
 
 function PodcastAdvert(): JSX.Element {
-  return <div></div>;
+  return <div className="col" style={{width:'80%',alignItems:'center'}}>
+    <p className="title" style={{width:'80%'}}>{podcastAdvertData.title}</p>
+    <div className="row" style={{justifyContent:'center'}}>
+      {
+        podcastAdvertData.episodes.map((episode)=>{
+          return <PodcastEpisodeTile episode={episode} key={episode.title}/>
+        })
+      }
+    </div>
+  </div>;
 }
 function BlogsAdvert(): JSX.Element {
   return <div className="col" style={{width:'80%',alignItems:'center'}}>

@@ -12,6 +12,7 @@ import gear from "./assets/gear.svg";
 import decoding from "./assets/decoding.svg";
 import sleuthLogo from "./assets/sleuthLogo.svg";
 import quotes from "./assets/quotes.svg";
+import thumbnail from './assets/thumbnail.png';
 import harryKerluke from "./assets/people/harryKerluke.png";
 import blog1 from "./assets/blogs/blog1.png";
 import blog2 from "./assets/blogs/blog2.png";
@@ -26,7 +27,8 @@ export const images = {
   decoding,
   sleuthLogo,
   quotes,
-  awardLogo
+  awardLogo,
+  thumbnail
 };
 
 export const icons = {
