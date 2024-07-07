@@ -223,3 +223,9 @@ export const podcastAdvertData = {
         }
     ]
 }
+
+
+export const strongholdsData = {
+    title:'Global Strongholds Worldwide',
+    map:images.strongholdsMap
+}

@@ -8,6 +8,7 @@ import {
   featureSpec,
   ourProductsData,
   podcastAdvertData,
+  strongholdsData,
   testimonySpec,
   trustedPartnersData,
   userSpec,
@@ -167,5 +168,10 @@ function BlogsAdvert(): JSX.Element {
   </div>;
 }
 function Strongholds(): JSX.Element {
-  return <div></div>;
+  return <div className="col" style={{width:'80%',alignItems:'center'}}>
+    <p className="title" style={{width:'80%'}}>
+      {strongholdsData.title}
+    </p>
+    <img style={{width:'90%'}} src={strongholdsData.map}/>
+  </div>;
 }

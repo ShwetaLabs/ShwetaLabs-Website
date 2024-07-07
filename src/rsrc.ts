@@ -13,6 +13,7 @@ import decoding from "./assets/decoding.svg";
 import sleuthLogo from "./assets/sleuthLogo.svg";
 import quotes from "./assets/quotes.svg";
 import thumbnail from './assets/thumbnail.png';
+import strongholdsMap from './assets/strongholdsMap.svg';
 import harryKerluke from "./assets/people/harryKerluke.png";
 import blog1 from "./assets/blogs/blog1.png";
 import blog2 from "./assets/blogs/blog2.png";
@@ -28,7 +29,8 @@ export const images = {
   sleuthLogo,
   quotes,
   awardLogo,
-  thumbnail
+  thumbnail,
+  strongholdsMap
 };
 
 export const icons = {
