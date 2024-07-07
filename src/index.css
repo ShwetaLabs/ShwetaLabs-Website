@@ -161,6 +161,7 @@ a.button2{
   border-radius: 5px;
 }
 a.button-pill{
+  font-size: 0.7rem;
   border-radius: 30px;
   background-color: var(--tertiary-bg);
   padding: 10px;
