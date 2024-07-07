@@ -1,5 +1,5 @@
 npm run deploy;
-git checkout gh-pages;
-git pull origin gh-pages;
+git checkout deploy;
+git pull origin gh-pages --force;
 git push origin deploy --force;
 git checkout -;
