@@ -4,13 +4,14 @@ import { Contact } from '../pages/Contact';
 import { Home } from '../pages/Home';
 import { Podcast } from '../pages/Podcast';
 import { Products } from '../pages/Products';
+import { Services } from '../pages/Services';
 import { icons } from '../rsrc';
-export interface linkSpec{
-    text:string;
-    url:string;
-    icon?:string;
-    iconOnly?:boolean;
-    element?:({}:any)=>JSX.Element;
+export interface linkSpec {
+    text: string;
+    url: string;
+    icon?: string;
+    iconOnly?: boolean;
+    element?: ({ }: any) => JSX.Element;
 }
 //spec for routes within the website.
 export interface routeSpec {
@@ -26,6 +27,12 @@ const productsLink = {
     text: 'Products',
     url: '/products',
     element: Products
+};
+
+const servicesLink = {
+    text: 'Services',
+    url: '/services',
+    element: Services
 };
 const blogLink = {
     text: 'Blog',
@@ -50,34 +57,35 @@ const policyLink = {
 const staticHeaderLinks: linkSpec[] = [
     aboutLink,
     productsLink,
-    blogLink,
+    servicesLink,
     podcastLink,
-    contactLink
+    blogLink,
+    // contactLink
 ];
 const socialLinks: linkSpec[] = [
     {
-        text:'Youtube',
-        url:'',
-        icon:icons.youtube
+        text: 'Youtube',
+        url: '',
+        icon: icons.youtube
         //todo: fill social links
     },
     {
-        text:'Facebook',
-        url:'',
-        icon:icons.facebook
-        
+        text: 'Facebook',
+        url: '',
+        icon: icons.facebook
+
     },
     {
-        text:'Instagram',
-        url:'',
-        icon:icons.instagram
-        
+        text: 'Instagram',
+        url: '',
+        icon: icons.instagram
+
     },
     {
-        text:'Twitter',
-        url:'',
-        icon:icons.twitter
-        
+        text: 'Twitter',
+        url: '',
+        icon: icons.twitter
+
     },
 ]
 export const quickLinks: linkSpec[] = [
@@ -103,11 +111,11 @@ const patentsLink = {
     url: ''
 };
 // may change this to button, onclick if action is too wild.
-export const requestDemoLink:linkSpec = {
+export const requestDemoLink: linkSpec = {
     text: 'REQUEST DEMO',
-    url:''
+    url: ''
 }
-export const policyLinks:linkSpec[] = [
+export const policyLinks: linkSpec[] = [
     termsLink,
     privacyAndSecurityLink,
     cookiesLink,

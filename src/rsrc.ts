@@ -20,11 +20,36 @@ import ai from './assets/investigative/ai.svg'
 import profile from './assets/investigative/profile.svg'
 
 import securityLogo from './assets/security.svg'
+import dataLogo from './assets/security/data.svg'
+import complianceLogo from './assets/security/compliance.svg'
+import accessLogo from './assets/security/access.svg'
 
 import userFriendly from './assets/userFriendly.svg'
 import easyLogo from './assets/userFriendly/easy.svg'
 import scalableLogo from './assets/userFriendly/scalable.svg'
 import tailorLogo from './assets/userFriendly/tailor.svg'
+
+import forensicLogo from './assets/forensic.svg'
+import digital from './assets/forensic/digital.svg'
+import depth from './assets/forensic/depth.svg'
+import forensic from './assets/forensic/forensic.svg'
+
+import caseStudy from './assets/caseStudy.png'
+
+import responseLogo from './assets/response.svg'
+import headset from './assets/response/headset.svg'
+import malware from './assets/response/malware.svg'
+import threat from './assets/response/threat.svg'
+
+import legalLogo from './assets/legal.svg'
+import expert from './assets/legal/expert.svg'
+import compliance from './assets/legal/compliance.svg'
+import documentation from './assets/legal/documentation.svg'
+
+import trainingLogo from './assets/training.svg'
+import laptop from './assets/training/laptop.svg'
+import workshop from './assets/training/workshop.svg'
+import job from './assets/training/job.svg'
 
 export const images = {
     logo,
@@ -44,11 +69,36 @@ export const images = {
     profile,
 
     securityLogo,
+    dataLogo,
+    complianceLogo,
+    accessLogo,
 
     userFriendly,
     easyLogo,
     scalableLogo,
     tailorLogo,
+
+    forensicLogo,
+    digital,
+    depth,
+    forensic,
+
+	caseStudy,
+
+    responseLogo,
+    headset,
+    malware,
+    threat,
+
+    legalLogo,
+    expert,
+    compliance,
+    documentation,
+
+    trainingLogo,
+    laptop,
+    workshop,
+    job,
 }
 
 export const icons = {

@@ -17,7 +17,7 @@ function SubcapabilityRow({ subCapability, onLeft, last }: subCapabilityProp) {
     const bottomBorder = !last ? ("1px solid rgba(255, 255, 255, 0.3)") : ("0px")
     return (
         <div style={{ borderLeft: leftBorder, borderBottom: bottomBorder, borderRight: rightBorder, display: "flex", justifyContent: "space-between", gap: "40px" }}>
-            <div style={{ paddingTop: "52.5px", paddingLeft: "40px", paddingBottom: "52.5px" }}>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: "52.5px", paddingLeft: "40px", paddingBottom: "52.5px" }}>
                 <img src={subCapability.image} alt={subCapability.title} />
             </div>
             <div style={{ paddingTop: "32px", paddingRight: "52px", paddingBottom: "32px" }}>
