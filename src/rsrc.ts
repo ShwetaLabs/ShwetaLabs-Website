@@ -51,6 +51,23 @@ import laptop from './assets/training/laptop.svg'
 import workshop from './assets/training/workshop.svg'
 import job from './assets/training/job.svg'
 
+import dummyLogo from "./assets/dummyLogo.svg";
+import detective from "./assets/detective.svg";
+import shieldCircuit from "./assets/shieldCircuit.svg";
+import gear from "./assets/gear.svg";
+import decoding from "./assets/decoding.svg";
+
+import awardLogo from "./assets/awardLogo.svg";
+import quotes from "./assets/quotes.svg";
+import thumbnail from './assets/thumbnail.png';
+import strongholdsMap from './assets/strongholdsMap.svg';
+import harryKerluke from "./assets/people/harryKerluke.png";
+import blog1 from "./assets/blogs/blog1.png";
+import blog2 from "./assets/blogs/blog2.png";
+import blog3 from "./assets/blogs/blog3.png";
+
+import playButton from "./assets/icons/playButton.svg"
+
 export const images = {
     logo,
     // logo192,
@@ -99,11 +116,32 @@ export const images = {
     laptop,
     workshop,
     job,
+
+  dummyLogo,
+  detective,
+  shieldCircuit,
+  gear,
+  decoding,
+  quotes,
+  awardLogo,
+  thumbnail,
+  strongholdsMap
 }
 
 export const icons = {
     instagram,
     twitter,
     youtube,
-    facebook
+    facebook,
+	playButton,
+}
+
+export const people = {
+  harryKerluke,
+};
+
+export const blogImages = {
+  blog1,
+  blog2,
+  blog3,
 };

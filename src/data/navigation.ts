@@ -18,12 +18,12 @@ export interface routeSpec {
     path: string;
     element: ({ }: any) => JSX.Element;
 }
-const aboutLink = {
+export const aboutLink = {
     text: 'About',
     url: '/about',
     element: About
 };
-const productsLink = {
+export const productsLink = {
     text: 'Products',
     url: '/products',
     element: Products
@@ -34,24 +34,24 @@ const servicesLink = {
     url: '/services',
     element: Services
 };
-const blogLink = {
+export const blogLink = {
     text: 'Blog',
     url: '/blog',
     element: Blog
 };
-const podcastLink = {
+export const podcastLink = {
     text: 'Podcast',
     url: '/podcast',
     element: Podcast
 };
-const contactLink = {
+export const contactLink = {
     text: 'Contact',
     url: '/contact',
     element: Contact
 };
-const policyLink = {
-    text: 'Policy',
-    url: '/',
+export const policyLink = {
+    text:'Policy',
+    url:'/',
 }
 /**@private*/
 const staticHeaderLinks: linkSpec[] = [

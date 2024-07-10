@@ -10,7 +10,7 @@ export function Footer(): JSX.Element {
                 <img src={footerData.logo} />
             </div>
             <div className="col" key={footerData.quickLinksTitle} style={{ alignItems: "flex-start" }}>
-                <p className="footerTitle">{footerData.quickLinksTitle}</p>
+                <p className="shady-70">{footerData.quickLinksTitle}</p>
                 {
                     footerData.quickLinks.map((link) => {
                         return <LinkBox link={link} aClassName="footerLink" key={link.text} />
@@ -18,7 +18,7 @@ export function Footer(): JSX.Element {
                 }
             </div>
             <div className="col" key={footerData.policyLinksTitle} style={{ alignItems: "flex-start" }}>
-                <p className="footerTitle">{footerData.policyLinksTitle}</p>
+                <p className="shady-70">{footerData.policyLinksTitle}</p>
                 {
                     footerData.policyLinks.map((link) => {
                         return <LinkBox link={link} aClassName="footerLink" key={link.text} />
@@ -26,7 +26,7 @@ export function Footer(): JSX.Element {
                 }
             </div>
             <div className="col" key={footerData.addressTitle} style={{ alignItems: "flex-start" }}>
-                <p className="footerTitle">{footerData.addressTitle}</p>
+                <p className="shady-70">{footerData.addressTitle}</p>
                 {
                     <p className="stripped" key={footerData.address}>{footerData.address}</p>
                 }
@@ -37,13 +37,39 @@ export function Footer(): JSX.Element {
                 }
                 <div className="row" style={{ marginTop: 48 }}>
                     {
-                        footerData.socialLinks.map((link) => {
-                            return <LinkBox link={link} aClassName="button" key={link.url} />
+                        footerData.quickLinks.map((link) => {
+                            return <LinkBox link={link} aClassName="footerLink" key={link.text} />
                         })
                     }
                 </div>
+                <div className="col" key={footerData.policyLinksTitle} style={{ alignItems: "flex-start" }}>
+                    <p className="footerTitle">{footerData.policyLinksTitle}</p>
+                    {
+                        footerData.policyLinks.map((link) => {
+                            return <LinkBox link={link} aClassName="footerLink" key={link.text} />
+                        })
+                    }
+                </div>
+                <div className="col" key={footerData.addressTitle} style={{ alignItems: "flex-start" }}>
+                    <p className="footerTitle">{footerData.addressTitle}</p>
+                    {
+                        <p className="stripped" key={footerData.address}>{footerData.address}</p>
+                    }
+                    {
+                        footerData.businessDetails.map((value) => {
+                            return <p className="stripped" key={value}>{value}</p>
+                        })
+                    }
+                    <div className="row" style={{ marginTop: 48 }}>
+                        {
+                            footerData.socialLinks.map((link) => {
+                                return <LinkBox link={link} aClassName="button" key={link.url} />
+                            })
+                        }
+                    </div>
+                </div>
             </div>
+            <p className="fs-small" style={{ textAlign: 'center' }}>{footerData.copyrightText}</p>
         </div>
-        <p className="fs-small">{footerData.copyrightText}</p>
     </div>
 }
