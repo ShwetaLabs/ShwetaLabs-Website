@@ -7,18 +7,18 @@ interface profileProp {
 
 export default function Profile({ profile }: profileProp) {
     return (
-        <div>
-            <img style={{ width: "100%", borderRadius: "10%" }} src={profile.image} alt={profile.name} />
-            <div style={{ marginTop:"24px", display: "flex", justifyContent: "space-around" }}>
-                <div style={{ textAlign: "left", width: "50%" }}>
+        <div style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", padding: "20px" }}>
+            <img style={{ width: "100%" }} src={profile.image} alt={profile.name} />
+            <div style={{ marginTop: "24px", display: "flex", justifyContent: "space-between", gap: "12px" }}>
+                <div style={{ width: "80%", textAlign: "left", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
                     <strong> {profile.name}</strong>
-                    <div style={{opacity:"80%"}}> {profile.job}</div>
+                    <div style={{ fontSize: "14px", opacity: "80%" }}> {profile.job}</div>
                 </div>
-                <div style={{ width: "50%" }}>
+                <div style={{ width: "20%" }}>
                     <LinkBox link={profile.contact} aClassName="button" />
                 </div>
             </div>
-            <div style={{ textAlign: "left" }}>
+            <div style={{ textAlign: "left", fontSize: "14px" }}>
                 {profile.intro}
             </div>
         </div>

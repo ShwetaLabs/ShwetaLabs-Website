@@ -10,9 +10,9 @@ export function About(): JSX.Element {
         var rows: JSX.Element[] = [];
         var inRow: JSX.Element[] = [];
         for (var i = 0; i < values.length; i++) {
-            inRow.push(<div style={{ margin: "16px", width: "50%"}}><ValueCard valueCard={values[i]} onLeft={false} /></div>)
+            inRow.push(<div style={{ width: "calc(50% - 16px)" }}><ValueCard valueCard={values[i]} onLeft={false} /></div>)
             if (inRow.length === 2) {
-                rows.push(<div style={{ display: "flex", justifyContent: "space-between" }}>{inRow.concat()}</div>);
+                rows.push(<div style={{ height: "100%", display: "flex", justifyContent: "space-between" }}>{inRow.concat()}</div>);
                 inRow = [];
             }
         }
@@ -20,9 +20,11 @@ export function About(): JSX.Element {
         return rows;
     }
 
-    return <div style={{ padding: "160px" }}>
+    return <div style={{ padding: "160px", display: "flex", flexDirection: "column", gap: "160px" }}>
         <TitleInfo titleInfo={aboutData.titleInfo} onSide={true} />
-		{createRows(aboutData.visions)}
+        <div style={{ height: "467px" }}>
+            {createRows(aboutData.visions)}
+        </div>
         <Squad squad={aboutData.squad} />
         <Values values={aboutData.values} />
     </div>
