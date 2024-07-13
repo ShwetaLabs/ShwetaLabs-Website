@@ -1,21 +1,22 @@
-import {About} from '../pages/About';
+import { About } from '../pages/About';
 import { Blog } from '../pages/Blog';
 import { Contact } from '../pages/Contact';
 import { Home } from '../pages/Home';
 import { Podcast } from '../pages/Podcast';
 import { Products } from '../pages/Products';
+import { Services } from '../pages/Services';
 import { icons } from '../rsrc';
-export interface linkSpec{
-    text:string;
-    url:string;
-    icon?:string;
-    iconOnly?:boolean;
-    element?:({}:any)=>JSX.Element;
+export interface linkSpec {
+    text: string;
+    url: string;
+    icon?: string;
+    iconOnly?: boolean;
+    element?: ({ }: any) => JSX.Element;
 }
 //spec for routes within the website.
-export interface routeSpec{
-    path:string;
-    element:({}:any)=>JSX.Element;
+export interface routeSpec {
+    path: string;
+    element: ({ }: any) => JSX.Element;
 }
 export const aboutLink = {
     text: 'About',
@@ -26,6 +27,12 @@ export const productsLink = {
     text: 'Products',
     url: '/products',
     element: Products
+};
+
+const servicesLink = {
+    text: 'Services',
+    url: '/services',
+    element: Services
 };
 export const blogLink = {
     text: 'Blog',
@@ -47,41 +54,42 @@ export const policyLink = {
     url:'/',
 }
 /**@private*/
-const staticHeaderLinks:linkSpec[] = [
+const staticHeaderLinks: linkSpec[] = [
     aboutLink,
     productsLink,
-    blogLink,
+    servicesLink,
     podcastLink,
-    contactLink
+    blogLink,
+    // contactLink
 ];
-const socialLinks:linkSpec[] = [
+const socialLinks: linkSpec[] = [
     {
-        text:'Youtube',
-        url:'',
-        icon:icons.youtube
+        text: 'Youtube',
+        url: '',
+        icon: icons.youtube
         //todo: fill social links
     },
     {
-        text:'Facebook',
-        url:'',
-        icon:icons.facebook
-        
+        text: 'Facebook',
+        url: '',
+        icon: icons.facebook
+
     },
     {
-        text:'Instagram',
-        url:'',
-        icon:icons.instagram
-        
+        text: 'Instagram',
+        url: '',
+        icon: icons.instagram
+
     },
     {
-        text:'Twitter',
-        url:'',
-        icon:icons.twitter
-        
+        text: 'Twitter',
+        url: '',
+        icon: icons.twitter
+
     },
 ]
-export const quickLinks:linkSpec[] = [
-    {...aboutLink,text:'About Us'},
+export const quickLinks: linkSpec[] = [
+    { ...aboutLink, text: 'About Us' },
     productsLink,
     blogLink,
     podcastLink
@@ -103,19 +111,19 @@ const patentsLink = {
     url: ''
 };
 // may change this to button, onclick if action is too wild.
-export const requestDemoLink:linkSpec = {
+export const requestDemoLink: linkSpec = {
     text: 'REQUEST DEMO',
-    url:''
+    url: ''
 }
-export const policyLinks:linkSpec[] = [
+export const policyLinks: linkSpec[] = [
     termsLink,
     privacyAndSecurityLink,
     cookiesLink,
     patentsLink
 ]
-export function getSocialIconOnlyLinks():linkSpec[]{
-    return socialLinks.map((link)=>{
-        return {...link,iconOnly:true}
+export function getSocialIconOnlyLinks(): linkSpec[] {
+    return socialLinks.map((link) => {
+        return { ...link, iconOnly: true }
     });
 }
 export const homeLink:linkSpec = {
@@ -124,20 +132,20 @@ export const homeLink:linkSpec = {
     element:Home
 }
 
-export function getHeaderNavLinks():linkSpec[]{
+export function getHeaderNavLinks(): linkSpec[] {
     //using a function to allow dynamic/programmed collection of links.
     return staticHeaderLinks;
 }
 
-export function getMainAppRoutes():routeSpec[]{
+export function getMainAppRoutes(): routeSpec[] {
     //using a function to allow dynamic/programmed collection of links.
-    const routes:routeSpec[] = [];
-    routes.push(...getHeaderNavLinks().map(link=>linkToRoute(link)));
+    const routes: routeSpec[] = [];
+    routes.push(...getHeaderNavLinks().map(link => linkToRoute(link)));
     routes.push(linkToRoute(homeLink));
     return routes;
 }
 
-function linkToRoute(link:linkSpec):routeSpec{
+function linkToRoute(link: linkSpec): routeSpec {
     if (!(link.element)) {
         throw "Links passed to linkToRoute must specify a react element!";
     }

@@ -1,5 +1,3 @@
-// import { Route } from "@angular/router";
-
 import { routeSpec } from "./navigation";
 
 export interface paraSpec {
@@ -24,6 +22,11 @@ export interface textPageSpec {
 //     label: string;
 //     type?: 'facebook' | 'twitter' | 'email' | 'webpage' | 'resume';
 // }
+
+export interface titleInfoSpec {
+    title: String,
+    paras: string
+}
 
 export interface VersatilePageSpec {
     title: string;
