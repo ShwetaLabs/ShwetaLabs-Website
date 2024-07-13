@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shweta_labs/static/css/main.70592362.css",
-    "main.js": "/shweta_labs/static/js/main.097145d9.js",
+    "main.js": "/shweta_labs/static/js/main.6a7d0eeb.js",
     "static/js/453.2a676a10.chunk.js": "/shweta_labs/static/js/453.2a676a10.chunk.js",
     "static/media/strongholdsMap.svg": "/shweta_labs/static/media/strongholdsMap.83efb0896e2b12d107f9f73f83695e2b.svg",
     "static/media/thumbnail.png": "/shweta_labs/static/media/thumbnail.8d43f07a2623b9e1cb33.png",
@@ -75,11 +75,11 @@
     "static/media/quotes.svg": "/shweta_labs/static/media/quotes.dec71b9ad6a238fc601b5ef22c80f1a6.svg",
     "static/media/playButton.svg": "/shweta_labs/static/media/playButton.aab8be34346f38525700c9bf9890c672.svg",
     "main.70592362.css.map": "/shweta_labs/static/css/main.70592362.css.map",
-    "main.097145d9.js.map": "/shweta_labs/static/js/main.097145d9.js.map",
+    "main.6a7d0eeb.js.map": "/shweta_labs/static/js/main.6a7d0eeb.js.map",
     "453.2a676a10.chunk.js.map": "/shweta_labs/static/js/453.2a676a10.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70592362.css",
-    "static/js/main.097145d9.js"
+    "static/js/main.6a7d0eeb.js"
   ]
 }
