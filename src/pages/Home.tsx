@@ -29,17 +29,21 @@ export const Home: ({}) => JSX.Element = ({}) => {
   return (
     <div
       className='col home'
-      style={{ alignItems: 'stretch', width: '78%', marginInline: 'auto' }}
+      style={
+        isDesktop()
+          ? { alignItems: 'stretch', width: '78%', marginInline: 'auto' }
+          : {}
+      }
     >
       <BriefAdvert />
       <TrustedPartners />
       <WhatWeHave />
       <OurProducts />
-      <Awards />
-      <CaseStudies />
-      <PodcastAdvert />
-      <BlogsAdvert />
-      <Strongholds />
+      {isDesktop() ? <Awards /> : null}
+      {isDesktop() ? <CaseStudies /> : null}
+      {isDesktop() ? <PodcastAdvert /> : null}
+      {isDesktop() ? <BlogsAdvert /> : null}
+      {isDesktop() ? <Strongholds /> : null}
     </div>
   );
 };
@@ -79,7 +83,7 @@ function BriefAdvert(): JSX.Element {
   ) : (
     <div className='col'>
       <p className='title fs-xx-large'>{advertData.title}</p>
-      <p className='shady-70' style={{ marginTop: 24 }}>
+      <p className='shady-70 centered' style={{ marginTop: 24 }}>
         {advertData.description}
       </p>
       <span style={{ marginTop: 40 }}>
@@ -148,8 +152,15 @@ function WhatWeHave(): JSX.Element {
 }
 
 function OurProducts(): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col' style={{ width: '80%' }}>
+      <p className='title fs-xx-large'>{ourProductsData.title}</p>
+      {ourProductsData.products.map(product => {
+        return <Product product={product} key={product.title} />;
+      })}
+    </div>
+  ) : (
+    <div className='col'>
       <p className='title fs-xx-large'>{ourProductsData.title}</p>
       {ourProductsData.products.map(product => {
         return <Product product={product} key={product.title} />;

@@ -41,16 +41,16 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
       }
     </div>
   ) : (
-    <div className='col'>
+    <div className='col' style={{ alignItems: 'center' }}>
       <div
         style={{
           alignItems: 'center',
           justifyContent: 'center',
-          marginInline: 16,
           flexGrow: 1,
+          paddingBlock: 30,
         }}
       >
-        <img src={feature.image} style={{ width: '90%' }} />
+        <img src={feature.image} style={{ width: '60%' }} />
       </div>
       {
         <FeatureTextData
@@ -72,26 +72,25 @@ export function FeatureTextData({
   description,
   learnMoreUrl,
 }: IFeatureTextDataProps) {
-  return (
+  return isDesktop() ? (
     <div
       className='col bg2'
       style={{
         width: '50%',
-        padding: 40,
+        paddingBlock: 40,
         paddingInline: 52,
         marginInline: 16,
       }}
     >
       <p className='fs-x-large subtitle'>{title}</p>
-      <p className='offwhite fs-small'>{description}</p>
-      {learnMoreUrl ? (
-        <div className='row'>
-          <LinkBox
-            link={{ url: learnMoreUrl, text: whatWeHaveData.learnMore }}
-            aClassName='button-pill fs-smaller caret-right'
-          />
-        </div>
-      ) : null}
+      <p className='offwhite'>{description}</p>
+    </div>
+  ) : (
+    <div className='col bg2' style={{ padding: 24, marginBottom: 45 }}>
+      <p className='fs-x-large subtitle'>{title}</p>
+      <p className='offwhite' style={{ fontWeight: 550 }}>
+        {description}
+      </p>
     </div>
   );
 }
@@ -99,7 +98,7 @@ export interface IProductProps {
   product: featureSpec;
 }
 export function Product({ product }: IProductProps): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='row bg2 thin-bordered' style={{ alignItems: 'stretch' }}>
       <div className='row' style={{ flexGrow: 1, alignItems: 'center' }}>
         <img src={product.image} />
@@ -110,6 +109,33 @@ export function Product({ product }: IProductProps): JSX.Element {
         description={product.description}
         learnMoreUrl={product.learnMoreUrl}
       />
+    </div>
+  ) : (
+    <div className='col bg2 thin-bordered'>
+      <div
+        className='row'
+        style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}
+      >
+        <img style={{ width: '90%' }} src={product.image} />
+      </div>
+      {/* todo: single line between image and textdata */}
+      <div
+        className='col bg2'
+        style={{ padding: 20, borderTop: 'var(--accent) 0.5px solid' }}
+      >
+        <p className='fs-x-large subtitle'>{product.title}</p>
+        <p className='offwhite' style={{ fontWeight: 550 }}>
+          {product.description}
+        </p>
+        {product.learnMoreUrl ? (
+          <div className='row' style={{ justifyContent: 'flex-start' }}>
+            <LinkBox
+              link={{ url: product.learnMoreUrl, text: 'Learn More' }}
+              aClassName='button-pill fs-small caret-right'
+            />
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

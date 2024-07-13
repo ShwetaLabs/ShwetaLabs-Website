@@ -71,7 +71,7 @@ export interface ourProductsSpec {
   products: featureSpec[];
 }
 export const ourProductsData: ourProductsSpec = {
-  title: 'Our Products',
+  title: 'Secure and Speed-up your Investigation',
   products: [
     {
       title: 'Sleuth',
