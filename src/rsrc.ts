@@ -67,6 +67,7 @@ import blog2 from './assets/blogs/blog2.png';
 import blog3 from './assets/blogs/blog3.png';
 
 import playButton from './assets/icons/playButton.svg';
+import List from './assets/icons/List.svg';
 
 export const images = {
   logo,
@@ -134,6 +135,7 @@ export const icons = {
   youtube,
   facebook,
   playButton,
+  List,
 };
 
 export const people = {

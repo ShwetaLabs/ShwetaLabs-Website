@@ -8,9 +8,9 @@ const outerDivStyle: CSSProperties = {
   right: 0,
   left: 0,
 };
-export function Footer(): JSX.Element {
+export function Footer({ getDisplay }: any): JSX.Element {
   return (
-    <div className='col' style={outerDivStyle}>
+    <div className='col' style={{ ...outerDivStyle, display: getDisplay() }}>
       <div
         className='row thin-bordered'
         style={{
