@@ -11,9 +11,15 @@
   --tertiary-bg: #1a1a1a;
   --lightgray: #3a3a3a;
   --mgvwidth: 600px;
+  font-size: 4vw;
   letter-spacing: 0.5px;
-  font-size: 19.5px;
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
+}
+
+@media(min-width:800px){
+  :root{
+    font-size: 2vw;
+  }
 }
 
 .bg2 {
@@ -51,7 +57,6 @@ div.home > * {
 
 a.button {
   color: white;
-  font-size: 1.33rem;
   border-radius: 5px;
 }
 
@@ -75,31 +80,18 @@ p {
 
 .title {
   text-align: center;
-  font-size: 4rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
 }
 
 .subtitle {
-  font-size: 3rem;
   padding: 0;
   margin: 0;
 }
 
-.heading {
-  font-size: 1.33rem;
-  font-weight: bold;
-}
-
-.heading-colored {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--accent);
-}
 
 a.footerLink {
-  font-size: 1rem;
   color: white;
   padding: 5px;
 }
@@ -226,7 +218,6 @@ a.button3 {
   text-align: left;
 }
 a.button-pill {
-  font-size: 0.7rem;
   border-radius: 30px;
   background-color: var(--tertiary-bg);
   padding: 8px;
@@ -253,29 +244,32 @@ a.caret-right::after {
   padding-left: 4px;
   align-self: center;
 }
-
-.fs-small {
-  font-size: 0.8rem;
-}
+/* 
+TODO: employ only fs classes to set font sizes across elements.
+add media query for all fs-clases' font-size values.
+*/
 
 .fs-smaller {
   font-size: 0.6rem;
 }
 
-.fs-large {
-  font-size: 1.33rem;
-}
-
-.fs-x-large {
-  font-size: 1.66rem;
+.fs-small {
+  font-size: 0.8rem;
 }
 
 .fs-medium {
   font-size: 1rem;
 }
+.fs-large {
+  font-size: 1.33rem;
+}
 
 .fs-larger {
   font-size: 1.5rem;
+}
+
+.fs-x-large {
+  font-size: 1.66rem;
 }
 
 .fs-xx-large {
@@ -360,7 +354,6 @@ div.d3xn {
 .field.title {
   margin-top: 32px;
   margin-bottom: 0px;
-  font-size: small;
   text-align: start;
 }
 

@@ -9,6 +9,7 @@ import {
   whatWeHaveData,
 } from '../data/home';
 import { icons } from '../rsrc';
+import { isDesktop } from '../utils';
 import { LinkBox } from './linkBox/LinkBox';
 
 export interface IFeatureProps {
@@ -16,7 +17,7 @@ export interface IFeatureProps {
   reverse: boolean;
 }
 export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div
       className={reverse ? 'rrow' : 'row'}
       style={{ alignItems: 'center', margin: 25, marginInline: 'auto' }}
@@ -30,6 +31,26 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
         }}
       >
         <img src={feature.image} style={{ width: '60%' }} />
+      </div>
+      {
+        <FeatureTextData
+          title={feature.title}
+          description={feature.description}
+          learnMoreUrl={feature.learnMoreUrl}
+        />
+      }
+    </div>
+  ) : (
+    <div className='col'>
+      <div
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginInline: 16,
+          flexGrow: 1,
+        }}
+      >
+        <img src={feature.image} style={{ width: '90%' }} />
       </div>
       {
         <FeatureTextData
@@ -61,13 +82,13 @@ export function FeatureTextData({
         marginInline: 16,
       }}
     >
-      <p className='subtitle'>{title}</p>
+      <p className='fs-x-large subtitle'>{title}</p>
       <p className='offwhite fs-small'>{description}</p>
       {learnMoreUrl ? (
         <div className='row'>
           <LinkBox
             link={{ url: learnMoreUrl, text: whatWeHaveData.learnMore }}
-            aClassName='button-pill caret-right'
+            aClassName='button-pill fs-smaller caret-right'
           />
         </div>
       ) : null}
@@ -159,7 +180,7 @@ export function BlogTile({ blog }: IBlogProps): JSX.Element {
         </p>
         <LinkBox
           link={{ text: blogsAdvertData.readArticle, url: blog.url }}
-          aClassName='caret-right button-pill'
+          aClassName='caret-right button-pill fs-smaller'
         />
       </div>
     </div>

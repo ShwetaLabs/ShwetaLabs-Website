@@ -32,7 +32,7 @@ export default function Profile({ profile }: profileProp) {
           <div style={{ fontSize: '14px', opacity: '80%' }}> {profile.job}</div>
         </div>
         <div style={{ width: '20%' }}>
-          <LinkBox link={profile.contact} aClassName='button' />
+          <LinkBox link={profile.contact} aClassName='button fs-large' />
         </div>
       </div>
       <div style={{ textAlign: 'left', fontSize: '14px' }}>{profile.intro}</div>

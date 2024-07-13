@@ -36,7 +36,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
           <p className='shady-70'>{footerData.quickLinksTitle}</p>
           {footerData.quickLinks.map(link => {
             return (
-              <LinkBox link={link} aClassName='footerLink' key={link.text} />
+              <LinkBox
+                link={link}
+                aClassName='footerLink fs-medium'
+                key={link.text}
+              />
             );
           })}
         </div>
@@ -48,7 +52,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
           <p className='shady-70'>{footerData.policyLinksTitle}</p>
           {footerData.policyLinks.map(link => {
             return (
-              <LinkBox link={link} aClassName='footerLink' key={link.text} />
+              <LinkBox
+                link={link}
+                aClassName='footerLink fs-medium'
+                key={link.text}
+              />
             );
           })}
         </div>
@@ -110,7 +118,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
             <p className='shady-70'>{footerData.quickLinksTitle}</p>
             {footerData.quickLinks.map(link => {
               return (
-                <LinkBox link={link} aClassName='footerLink' key={link.text} />
+                <LinkBox
+                  link={link}
+                  aClassName='footerLink fs-medium'
+                  key={link.text}
+                />
               );
             })}
           </div>
@@ -122,7 +134,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
             <p className='shady-70'>{footerData.policyLinksTitle}</p>
             {footerData.policyLinks.map(link => {
               return (
-                <LinkBox link={link} aClassName='footerLink' key={link.text} />
+                <LinkBox
+                  link={link}
+                  aClassName='footerLink fs-medium'
+                  key={link.text}
+                />
               );
             })}
           </div>
@@ -169,7 +185,7 @@ export function SocialLinks() {
       {footerData.socialLinks.map(link => {
         return (
           <span style={{ marginInline: '12.5px' }}>
-            <LinkBox link={link} aClassName='button' key={link.url} />
+            <LinkBox link={link} aClassName='button fs-large' key={link.url} />
           </span>
         );
       })}

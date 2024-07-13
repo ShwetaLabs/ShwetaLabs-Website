@@ -102,7 +102,7 @@ export function HeaderButtonDesktop({
         marginInline: '10px',
       }}
     >
-      <LinkBox link={link} aClassName='button' />
+      <LinkBox link={link} aClassName='button fs-large' />
     </div>
   );
 }
@@ -118,7 +118,7 @@ export function HeaderButtonMobile({
         marginBlock: '25px',
       }}
     >
-      <LinkBox link={link} aClassName='button' />
+      <LinkBox link={link} aClassName='button fs-large' />
     </div>
   );
 }

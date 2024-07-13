@@ -13,7 +13,7 @@ interface IFormSpec {
 function MobileDiv(): JSX.Element {
   return (
     <div className='col' style={{ alignItems: 'flex-start' }}>
-      <p key={contactData.title} className='title'>
+      <p key={contactData.title} className='title fs-xx-large'>
         {contactData.title}
       </p>
       <p key={contactData.description}>{contactData.description}</p>
@@ -28,7 +28,7 @@ function DesktopDiv(): JSX.Element {
       style={{ justifyContent: 'space-evenly', alignItems: 'center' }}
     >
       <div className='col' style={{ alignItems: 'flex-start' }}>
-        <p key={contactData.title} className='title'>
+        <p key={contactData.title} className='title fs-xx-large'>
           {contactData.title}
         </p>
         <p key={contactData.description}>{contactData.description}</p>
@@ -158,7 +158,7 @@ function Field({
       className='col'
       style={{ alignItems: 'stretch', marginInlineEnd: '16px', flexGrow: 1 }}
     >
-      <p className='field title'>{title}</p>
+      <p className='field title fs-small'>{title}</p>
       {height && height > 0 ? (
         <textarea
           className='field input'
