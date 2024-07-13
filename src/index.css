@@ -18,7 +18,7 @@
 
 @media(min-width:800px){
   :root{
-    font-size: 2vw;
+    font-size: 1vw;
   }
 }
 
@@ -250,6 +250,7 @@ add media query for all fs-clases' font-size values.
 */
 
 .fs-smaller {
+  
   font-size: 0.6rem;
 }
 
@@ -269,11 +270,11 @@ add media query for all fs-clases' font-size values.
 }
 
 .fs-x-large {
-  font-size: 1.66rem;
+  font-size: 3rem;
 }
 
 .fs-xx-large {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .pointable {
