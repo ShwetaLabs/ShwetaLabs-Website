@@ -1,5 +1,5 @@
-import { features } from "process";
-import { LinkBox } from "../components/linkBox/LinkBox";
+import { features } from 'process'
+import { LinkBox } from '../components/linkBox/LinkBox'
 import {
   advertData,
   awardsData,
@@ -13,15 +13,22 @@ import {
   trustedPartnersData,
   userSpec,
   whatWeHaveData,
-} from "../data/home";
-import { contactLink } from "../data/navigation";
-import { AwardTile, BlogTile, Feature, PodcastEpisodeTile, Product, Testimony } from "../components/misc";
+} from '../data/home'
+import { contactLink } from '../data/navigation'
+import {
+  AwardTile,
+  BlogTile,
+  Feature,
+  PodcastEpisodeTile,
+  Product,
+  Testimony,
+} from '../components/misc'
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
     <div
-      className="col home"
-      style={{ alignItems: "stretch", width: "78%", marginInline: "auto" }}
+      className='col home'
+      style={{ alignItems: 'stretch', width: '78%', marginInline: 'auto' }}
     >
       <BriefAdvert />
       <TrustedPartners />
@@ -33,33 +40,33 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <BlogsAdvert />
       <Strongholds />
     </div>
-  );
-};
+  )
+}
 
 function BriefAdvert(): JSX.Element {
   return (
     <div
-      className="col"
-      style={{ alignItems: "center", width: "80%", marginInline: "auto" }}
+      className='col'
+      style={{ alignItems: 'center', width: '80%', marginInline: 'auto' }}
     >
-      <p style={{ width: "75%" }} className="title">
+      <p style={{ width: '75%' }} className='title'>
         {advertData.title}
       </p>
-      <p className="shady-70" style={{ textAlign: "center" }}>
+      <p className='shady-70' style={{ textAlign: 'center' }}>
         {advertData.description}
       </p>
-      <LinkBox link={contactLink} aClassName={"button2"} />
+      <LinkBox link={contactLink} aClassName={'button2 caret-right'} />
       <div
-        className="row"
+        className='row'
         style={{
-          width: "80%",
+          width: '80%',
           marginTop: 140,
-          justifyContent: "space-around",
-          alignItems: "center",
+          justifyContent: 'space-around',
+          alignItems: 'center',
         }}
       >
         <div>
-          <p className="shady-70" style={{ textAlign: "left", width: "500px" }}>
+          <p className='shady-70' style={{ textAlign: 'left', width: '500px' }}>
             {advertData.descriptionBesideLogo}
           </p>
         </div>
@@ -68,110 +75,125 @@ function BriefAdvert(): JSX.Element {
         </div>
       </div>
     </div>
-  );
+  )
 }
 function TrustedPartners(): JSX.Element {
   return (
-    <div className="row bg2" style={{ width: "80%" }}>
-      <div className="col" style={{ marginLeft: "52px", width: "55%" }}>
-        <p className="title" style={{ textAlign: "left" }}>
+    <div className='row bg2' style={{ width: '80%' }}>
+      <div className='col' style={{ marginLeft: '52px', width: '55%' }}>
+        <p className='title' style={{ textAlign: 'left' }}>
           {trustedPartnersData.title}
         </p>
-        <p className="description" style={{ width: "70%" }}>
+        <p className='description' style={{ width: '70%' }}>
           {trustedPartnersData.description}
         </p>
       </div>
-      <div className="grid d3xn" style={{ columnGap: "16%" }}>
-        {trustedPartnersData.logos.map((logo) => {
-          return <img src={logo} key={logo} />;
+      <div className='grid d3xn' style={{ columnGap: '16%' }}>
+        {trustedPartnersData.logos.map(logo => {
+          return <img src={logo} key={logo} />
         })}
       </div>
     </div>
-  );
+  )
 }
 function WhatWeHave(): JSX.Element {
   return (
-    <div className="col" style={{ width: "80%" }}>
-      <p className="title">{whatWeHaveData.title}</p>
+    <div className='col' style={{ width: '80%' }}>
+      <p className='title'>{whatWeHaveData.title}</p>
       {whatWeHaveData.features.map((feature, index, arr) => {
-        return <Feature feature={feature} reverse={index % 2 === 1} key={feature.title}/>;
+        return (
+          <Feature
+            feature={feature}
+            reverse={index % 2 === 1}
+            key={feature.title}
+          />
+        )
       })}
     </div>
-  );
+  )
 }
 
 function OurProducts(): JSX.Element {
-  return <div className="col" style={{width:'80%'}}>
-    <p className="title">{ourProductsData.title}</p>
-    {
-      ourProductsData.products.map((product)=>{
-        return <Product product={product} key={product.title}/>;
-      })
-    }
-  </div>;
+  return (
+    <div className='col' style={{ width: '80%' }}>
+      <p className='title'>{ourProductsData.title}</p>
+      {ourProductsData.products.map(product => {
+        return <Product product={product} key={product.title} />
+      })}
+    </div>
+  )
 }
 
 function Awards(): JSX.Element {
-  return <div style={{width:'80%'}}>
-    <p className="title" style={{width:'90%'}}>
-      {awardsData.title}
-    </p>
-    <p className="offwhite fs-small centered" style={{width:'85%'}}>
-      {awardsData.description}
-    </p>
-    <div className="row" style={{justifyContent:'center'}}>
-      {
-        awardsData.awards.map((award)=>{
-          return <AwardTile award={award} key={award.title}/>
-        })
-      }
+  return (
+    <div style={{ width: '80%' }}>
+      <p className='title' style={{ width: '90%' }}>
+        {awardsData.title}
+      </p>
+      <p className='offwhite fs-small centered' style={{ width: '85%' }}>
+        {awardsData.description}
+      </p>
+      <div className='row' style={{ justifyContent: 'center' }}>
+        {awardsData.awards.map(award => {
+          return <AwardTile award={award} key={award.title} />
+        })}
+      </div>
     </div>
-  </div>;
+  )
 }
 function CaseStudies(): JSX.Element {
-  return <div className="col" style={{width:'80%',alignContent:'flex-start'}}>
-    <p className="title" style={{textAlign:'left'}}>{caseStudiesData.title}</p>
-    <p className="offwhite" style={{width:'90%'}}>{caseStudiesData.description}</p>
-    <div className="row">
-      {
-        caseStudiesData.cases.map((testimony)=>{
-          return <Testimony testimony={testimony}/>
-        })
-      }
+  return (
+    <div className='col' style={{ width: '80%', alignContent: 'flex-start' }}>
+      <p className='title' style={{ textAlign: 'left' }}>
+        {caseStudiesData.title}
+      </p>
+      <p className='offwhite' style={{ width: '90%' }}>
+        {caseStudiesData.description}
+      </p>
+      <div className='row'>
+        {caseStudiesData.cases.map(testimony => {
+          return <Testimony testimony={testimony} />
+        })}
+      </div>
     </div>
-  </div>;
+  )
 }
 
 function PodcastAdvert(): JSX.Element {
-  return <div className="col" style={{width:'80%',alignItems:'center'}}>
-    <p className="title" style={{width:'80%'}}>{podcastAdvertData.title}</p>
-    <div className="row" style={{justifyContent:'center'}}>
-      {
-        podcastAdvertData.episodes.map((episode)=>{
-          return <PodcastEpisodeTile episode={episode} key={episode.title}/>
-        })
-      }
+  return (
+    <div className='col' style={{ width: '80%', alignItems: 'center' }}>
+      <p className='title' style={{ width: '80%' }}>
+        {podcastAdvertData.title}
+      </p>
+      <div className='row' style={{ justifyContent: 'center' }}>
+        {podcastAdvertData.episodes.map(episode => {
+          return <PodcastEpisodeTile episode={episode} key={episode.title} />
+        })}
+      </div>
     </div>
-  </div>;
+  )
 }
 function BlogsAdvert(): JSX.Element {
-  return <div className="col" style={{width:'80%',alignItems:'center'}}>
-    <p className="title" style={{marginBottom:48}}>{blogsAdvertData.title}</p>
-    <div className="row">
-      {
-        blogsAdvertData.blogs.map((blog)=>{
-          return <BlogTile blog={blog} key={blog.title}/>
-        })
-      }
+  return (
+    <div className='col' style={{ width: '80%', alignItems: 'center' }}>
+      <p className='title' style={{ marginBottom: 48 }}>
+        {blogsAdvertData.title}
+      </p>
+      <div className='row'>
+        {blogsAdvertData.blogs.map(blog => {
+          return <BlogTile blog={blog} key={blog.title} />
+        })}
+      </div>
     </div>
-
-  </div>;
+  )
 }
 function Strongholds(): JSX.Element {
-  return <div className="col" style={{width:'80%',alignItems:'center'}}>
-    <p className="title" style={{width:'80%'}}>
-      {strongholdsData.title}
-    </p>
-    <img style={{width:'90%'}} src={strongholdsData.map}/>
-  </div>;
+  return (
+    <div className='col' style={{ width: '80%', alignItems: 'center' }}>
+      <p className='title' style={{ width: '80%' }}>
+        {strongholdsData.title}
+      </p>
+      <img style={{ width: '90%' }} src={strongholdsData.map} />
+    </div>
+  )
 }
