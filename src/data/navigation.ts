@@ -120,7 +120,7 @@ export function getSocialIconOnlyLinks():linkSpec[]{
 }
 export const homeLink:linkSpec = {
     text:'Home',
-    url:'/',
+    url:'/home',
     element:Home
 }
 

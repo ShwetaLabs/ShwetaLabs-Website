@@ -13,9 +13,9 @@ export const Header: ({}) => JSX.Element = ({}) => {
         borderBottom: "grey 0.5px solid",
       }}
     >
-      <a href={headerData.logoLink.url}>
+      <Link to={headerData.logoLink.url}>
         <img src={headerData.logo} />
-      </a>
+      </Link>
       <div className="row">
         {headerData.navLinks.map((link) => {
           return (
