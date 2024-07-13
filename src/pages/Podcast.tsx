@@ -1,3 +1,3 @@
-export function Podcast():JSX.Element{
-    return <div>Podcast</div>
+export function Podcast(): JSX.Element {
+  return <div>Podcast</div>;
 }

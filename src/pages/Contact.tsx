@@ -1,21 +1,21 @@
-import { useState } from "react";
-import { contactData } from "../data/contact";
-import { DataService } from "../services/dataService";
+import { useState } from 'react';
+import { contactData } from '../data/contact';
+import { DataService } from '../services/dataService';
 
 export function Contact(): JSX.Element {
   //form elements be careful.
   return (
     <div
-      className="row"
-      style={{ justifyContent: "space-evenly", alignItems: "center" }}
+      className='row'
+      style={{ justifyContent: 'space-evenly', alignItems: 'center' }}
     >
-      <div className="col" style={{ alignItems: "flex-start" }}>
-        <p key={contactData.title} className="title">
+      <div className='col' style={{ alignItems: 'flex-start' }}>
+        <p key={contactData.title} className='title'>
           {contactData.title}
         </p>
         <p key={contactData.description}>{contactData.description}</p>
       </div>
-      <div className="col" style={{width:'35%'}}>
+      <div className='col' style={{ width: '35%' }}>
         <Form form={contactData.form} />
       </div>
     </div>
@@ -25,18 +25,18 @@ interface IFormSpec {
   form: typeof contactData.form;
 }
 function Form({ form }: IFormSpec): JSX.Element {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
-  const [message, setMessage] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [message, setMessage] = useState('');
 
   const sendData = () => {
     const dataService = new DataService();
     dataService.postContactUsForm(firstName, lastName, emailAddress, message);
   };
   return (
-    <div className="col">
-      <div className="row" style={{}}>
+    <div className='col'>
+      <div className='row' style={{}}>
         <Field
           title={form.firstName.title}
           placeholder={form.firstName.placeholder}
@@ -63,7 +63,11 @@ function Form({ form }: IFormSpec): JSX.Element {
         setValue={setMessage}
         height={167}
       />
-      <a className="button2 pointable" onClick={sendData} style={{ marginTop: "32px"}}>
+      <a
+        className='button2 pointable'
+        onClick={sendData}
+        style={{ marginTop: '32px' }}
+      >
         Submit
       </a>
     </div>
@@ -83,26 +87,29 @@ function Field({
   setValue,
   height,
 }: IFieldSpec): JSX.Element {
-  const heightStyle = height ? { height: height.toString() + "px" } : {};
+  const heightStyle = height ? { height: height.toString() + 'px' } : {};
   return (
-    <div className="col" style={{ alignItems: "stretch",marginInlineEnd:'16px',flexGrow:1 }}>
-      <p className="field title">{title}</p>
+    <div
+      className='col'
+      style={{ alignItems: 'stretch', marginInlineEnd: '16px', flexGrow: 1 }}
+    >
+      <p className='field title'>{title}</p>
       {height && height > 0 ? (
         <textarea
-          className="field input"
+          className='field input'
           placeholder={placeholder}
           value={value}
-          onChange={(ev) => {
+          onChange={ev => {
             setValue(ev.target.value);
           }}
-          style={{ ...heightStyle, textAlign: "start" }}
+          style={{ ...heightStyle, textAlign: 'start' }}
         />
       ) : (
         <input
-          className="field input"
+          className='field input'
           placeholder={placeholder}
           value={value}
-          onChange={(ev) => {
+          onChange={ev => {
             setValue(ev.target.value);
           }}
         />

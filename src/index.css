@@ -4,8 +4,8 @@
   /* TODO: change based on figma file */
   background-color: black;
   color: white;
-  --primary: #2A5C65;
-  --secondary-bg: #0F0F0F;
+  --primary: #2a5c65;
+  --secondary-bg: #0f0f0f;
   --accent: #1f1f1f;
   --offwhite: #b3b3b3;
   --tertiary-bg: #1a1a1a;
@@ -44,7 +44,7 @@ div.main {
   margin-inline: 0px;
 }
 
-div.home>* {
+div.home > * {
   margin: 80px;
   margin-inline: auto;
 }
@@ -137,12 +137,12 @@ img.profile {
   height: 56px;
   margin-right: 16px;
 }
-div.blogtile{
-  height:250px;
+div.blogtile {
+  height: 250px;
   overflow: hidden;
 }
-div.episodetile{
-  height:230px;
+div.episodetile {
+  height: 230px;
   overflow: hidden;
 }
 .student-img {
@@ -202,20 +202,25 @@ a.button2 {
   border-radius: 5px;
 }
 
-a.button3{
+a.button3 {
   background-color: rgba(255, 255, 255, 0.1);
   padding-inline: 16px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 20px;
 }
-.centered{
+.centered {
   text-align: center;
 }
-.gradient-shade{
-  background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7),rgba(0,0,0,0));
+.gradient-shade {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
 }
-.left{
+.left {
   text-align: left;
 }
 a.button-pill {
@@ -226,7 +231,7 @@ a.button-pill {
   padding-inline: 16px;
   text-transform: uppercase;
 }
-.clocked::before{
+.clocked::before {
   content: url('assets/clock.svg');
   position: relative;
   display: inline-block;
@@ -245,7 +250,6 @@ a.caret-right::after {
   margin: 0px;
   padding-left: 4px;
   align-self: center;
-
 }
 
 .fs-small {
@@ -284,7 +288,7 @@ a.caret-right::after {
   display: none;
 }
 
-@media(min-width:800px) {
+@media (min-width: 800px) {
   .desktop {
     display: block;
   }
@@ -327,13 +331,13 @@ div.d3xn {
   align-items: center;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .articlesgrid {
     grid-template-columns: 50% 50%;
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .articlesgrid {
     grid-template-columns: 33% 33% 33%;
   }
@@ -345,7 +349,7 @@ div.d3xn {
   align-items: center;
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .mentionsgrid {
     grid-template-columns: 50% 50%;
   }

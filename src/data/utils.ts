@@ -1,11 +1,11 @@
-import { routeSpec } from "./navigation";
+import { routeSpec } from './navigation';
 
 export interface paraSpec {
-    text?: string;
-    list?: string[];
-    internalLink?: routeSpec;
-    image?: string;
-    reverse?: boolean;
+  text?: string;
+  list?: string[];
+  internalLink?: routeSpec;
+  image?: string;
+  reverse?: boolean;
 }
 
 // export interface staggeredParaSpec {
@@ -13,8 +13,8 @@ export interface paraSpec {
 // }
 
 export interface textPageSpec {
-    title: string;
-    paragraphs: paraSpec[];
+  title: string;
+  paragraphs: paraSpec[];
 }
 // use the linkSpec in navigation.ts
 // export interface linkSpec {
@@ -24,21 +24,20 @@ export interface textPageSpec {
 // }
 
 export interface titleInfoSpec {
-    title: String,
-    paras: string
+  title: String;
+  paras: string;
 }
 
 export interface VersatilePageSpec {
-    title: string;
-    groups: {
-        title?: string;
-        paragraphs: paraSpec[];
-    }[];
+  title: string;
+  groups: {
+    title?: string;
+    paragraphs: paraSpec[];
+  }[];
 }
 
-
 export function objectToVals<T>(object: { [key: string]: T }): T[] {
-    return Object.keys(object).map((key) => object[key]);
+  return Object.keys(object).map(key => object[key]);
 }
 // export function parseRouteSpec(routespec: routeSpec) {
 //     let route: Route = {};

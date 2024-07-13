@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import { linkSpec } from '../../data/navigation'
+import { Link } from 'react-router-dom';
+import { linkSpec } from '../../data/navigation';
 
 export interface ILinkBoxProps {
-  link: linkSpec
-  aClassName?: string
+  link: linkSpec;
+  aClassName?: string;
 }
 export function LinkBox({ link, aClassName }: ILinkBoxProps): JSX.Element {
   // should take a linkSpec
@@ -16,5 +16,5 @@ export function LinkBox({ link, aClassName }: ILinkBoxProps): JSX.Element {
         {!link.iconOnly ? <>{link.text}</> : null}
       </Link>
     </a>
-  )
+  );
 }

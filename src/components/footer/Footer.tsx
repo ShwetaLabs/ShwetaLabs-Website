@@ -1,13 +1,13 @@
-import { CSSProperties } from 'react'
-import { footerData } from '../../data/footer'
-import { LinkBox } from '../linkBox/LinkBox'
+import { CSSProperties } from 'react';
+import { footerData } from '../../data/footer';
+import { LinkBox } from '../linkBox/LinkBox';
 const outerDivStyle: CSSProperties = {
   display: 'block',
   position: 'relative',
   bottom: 0,
   right: 0,
   left: 0,
-}
+};
 export function Footer(): JSX.Element {
   return (
     <div className='col' style={outerDivStyle}>
@@ -36,7 +36,7 @@ export function Footer(): JSX.Element {
           {footerData.quickLinks.map(link => {
             return (
               <LinkBox link={link} aClassName='footerLink' key={link.text} />
-            )
+            );
           })}
         </div>
         <div
@@ -48,7 +48,7 @@ export function Footer(): JSX.Element {
           {footerData.policyLinks.map(link => {
             return (
               <LinkBox link={link} aClassName='footerLink' key={link.text} />
-            )
+            );
           })}
         </div>
         <div
@@ -67,11 +67,11 @@ export function Footer(): JSX.Element {
               <p className='stripped' key={value}>
                 {value}
               </p>
-            )
+            );
           })}
           <div className='row' style={{ marginTop: 48 }}>
             {footerData.socialLinks.map(link => {
-              return <LinkBox link={link} aClassName='button' key={link.url} />
+              return <LinkBox link={link} aClassName='button' key={link.url} />;
             })}
           </div>
         </div>
@@ -80,5 +80,5 @@ export function Footer(): JSX.Element {
         {footerData.copyrightText}
       </p>
     </div>
-  )
+  );
 }
