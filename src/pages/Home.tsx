@@ -1,5 +1,5 @@
-import { features } from 'process'
-import { LinkBox } from '../components/linkBox/LinkBox'
+import { features } from 'process';
+import { LinkBox } from '../components/linkBox/LinkBox';
 import {
   advertData,
   awardsData,
@@ -13,8 +13,8 @@ import {
   trustedPartnersData,
   userSpec,
   whatWeHaveData,
-} from '../data/home'
-import { contactLink } from '../data/navigation'
+} from '../data/home';
+import { contactLink } from '../data/navigation';
 import {
   AwardTile,
   BlogTile,
@@ -22,7 +22,7 @@ import {
   PodcastEpisodeTile,
   Product,
   Testimony,
-} from '../components/misc'
+} from '../components/misc';
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
@@ -40,8 +40,8 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <BlogsAdvert />
       <Strongholds />
     </div>
-  )
-}
+  );
+};
 
 function BriefAdvert(): JSX.Element {
   return (
@@ -75,7 +75,7 @@ function BriefAdvert(): JSX.Element {
         </div>
       </div>
     </div>
-  )
+  );
 }
 function TrustedPartners(): JSX.Element {
   return (
@@ -90,11 +90,11 @@ function TrustedPartners(): JSX.Element {
       </div>
       <div className='grid d3xn' style={{ columnGap: '16%' }}>
         {trustedPartnersData.logos.map(logo => {
-          return <img src={logo} key={logo} />
+          return <img src={logo} key={logo} />;
         })}
       </div>
     </div>
-  )
+  );
 }
 function WhatWeHave(): JSX.Element {
   return (
@@ -107,10 +107,10 @@ function WhatWeHave(): JSX.Element {
             reverse={index % 2 === 1}
             key={feature.title}
           />
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
 function OurProducts(): JSX.Element {
@@ -118,10 +118,10 @@ function OurProducts(): JSX.Element {
     <div className='col' style={{ width: '80%' }}>
       <p className='title'>{ourProductsData.title}</p>
       {ourProductsData.products.map(product => {
-        return <Product product={product} key={product.title} />
+        return <Product product={product} key={product.title} />;
       })}
     </div>
-  )
+  );
 }
 
 function Awards(): JSX.Element {
@@ -135,11 +135,11 @@ function Awards(): JSX.Element {
       </p>
       <div className='row' style={{ justifyContent: 'center' }}>
         {awardsData.awards.map(award => {
-          return <AwardTile award={award} key={award.title} />
+          return <AwardTile award={award} key={award.title} />;
         })}
       </div>
     </div>
-  )
+  );
 }
 function CaseStudies(): JSX.Element {
   return (
@@ -152,11 +152,11 @@ function CaseStudies(): JSX.Element {
       </p>
       <div className='row'>
         {caseStudiesData.cases.map(testimony => {
-          return <Testimony testimony={testimony} />
+          return <Testimony testimony={testimony} />;
         })}
       </div>
     </div>
-  )
+  );
 }
 
 function PodcastAdvert(): JSX.Element {
@@ -167,11 +167,11 @@ function PodcastAdvert(): JSX.Element {
       </p>
       <div className='row' style={{ justifyContent: 'center' }}>
         {podcastAdvertData.episodes.map(episode => {
-          return <PodcastEpisodeTile episode={episode} key={episode.title} />
+          return <PodcastEpisodeTile episode={episode} key={episode.title} />;
         })}
       </div>
     </div>
-  )
+  );
 }
 function BlogsAdvert(): JSX.Element {
   return (
@@ -181,11 +181,11 @@ function BlogsAdvert(): JSX.Element {
       </p>
       <div className='row'>
         {blogsAdvertData.blogs.map(blog => {
-          return <BlogTile blog={blog} key={blog.title} />
+          return <BlogTile blog={blog} key={blog.title} />;
         })}
       </div>
     </div>
-  )
+  );
 }
 function Strongholds(): JSX.Element {
   return (
@@ -195,5 +195,5 @@ function Strongholds(): JSX.Element {
       </p>
       <img style={{ width: '90%' }} src={strongholdsData.map} />
     </div>
-  )
+  );
 }
