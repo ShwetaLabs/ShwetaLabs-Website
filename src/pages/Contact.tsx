@@ -102,7 +102,7 @@ function Form({ form }: IFormSpec): JSX.Element {
     </div>
   ) : (
     // mobile
-    <div className='col'>
+    <div className='col' style={{ width: '100%' }}>
       <Field
         title={form.firstName.title}
         placeholder={form.firstName.placeholder}

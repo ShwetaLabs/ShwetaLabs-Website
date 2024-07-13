@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { headerData } from '../../data/header';
 import { linkSpec } from '../../data/navigation';
 import { LinkBox } from '../linkBox/LinkBox';
 import { isDesktop } from '../../utils';
 import { icons } from '../../rsrc';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { SocialLinks } from '../footer/Footer';
 interface IHeaderProps {
   navBarVisible: any;
   setNavBarVisible: any;
@@ -13,6 +14,10 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
   navBarVisible,
   setNavBarVisible,
 }) => {
+  const location = useLocation();
+  useEffect(() => {
+    setNavBarVisible(false);
+  }, [location]);
   const toggleNavBar = () => {
     setNavBarVisible((isVisible: boolean) => !isVisible);
   };
@@ -22,7 +27,7 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       style={{
         justifyContent: 'space-around',
         padding: '20px',
-        borderBottom: 'grey 0.5px solid',
+        borderBottom: 'var(--lightgray) 0.5px solid',
       }}
     >
       <Link to={headerData.logoLink.url}>
@@ -40,27 +45,45 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
   ) : (
     <div className='col'>
       <div
-        className='row'
+        className={'row' + (navBarVisible ? ' bg-accent' : '')}
         style={{
           justifyContent: 'space-between',
           padding: '20px',
-          borderBottom: 'grey 0.5px solid',
+          borderBottom: 'var(--lightgray) 0.5px solid',
         }}
       >
         <Link to={headerData.logoLink.url}>
           <img src={headerData.logo} />
         </Link>
-        <img className='pointable' onClick={toggleNavBar} src={icons.List} />
+        <img
+          className='pointable'
+          onClick={toggleNavBar}
+          src={navBarVisible ? icons.Cross : icons.List}
+        />
       </div>
       {navBarVisible ? (
         <div
-          className='col'
+          className='col bg-accent'
           style={{ alignItems: 'center', alignContent: 'stretch' }}
         >
           {headerData.navLinks.map(link => (
             <HeaderButtonMobile link={link} key={link.text} />
           ))}
-          <LinkBox link={headerData.requestDemoLink} aClassName='button2' />
+          <span style={{ marginTop: '25px' }}>
+            <LinkBox link={headerData.requestDemoLink} aClassName='button2' />
+          </span>
+          <div
+            className='row'
+            style={{
+              width: '98%',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: 50,
+              borderTop: 'var(--lightgray) 0.5px solid',
+            }}
+          >
+            <SocialLinks />
+          </div>
         </div>
       ) : null}
     </div>

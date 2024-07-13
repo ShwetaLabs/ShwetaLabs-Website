@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { isDesktop } from './utils';
 function App() {
   const [navBarVisible, setNavBarVisible] = useState(false);
+
   return (
     <div className='App'>
       <Header
@@ -18,6 +19,7 @@ function App() {
         className='main'
         style={{
           display: getDisplay(),
+          marginInline: isDesktop() ? 'default' : '24px',
         }}
       >
         <Routes>
@@ -38,7 +40,7 @@ function App() {
   );
 
   function getDisplay() {
-    return isDesktop() || navBarVisible ? 'none' : 'block';
+    return isDesktop() || !navBarVisible ? 'block' : 'none';
   }
 }
 
