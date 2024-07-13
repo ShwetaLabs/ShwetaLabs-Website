@@ -11,7 +11,6 @@ function App() {
     <div className="App">
       <Header/>
       <div className="main">
-        <BrowserRouter>
         <Routes>
           {
             getMainAppRoutes().map((route)=>{
@@ -19,7 +18,6 @@ function App() {
             })
           }
         </Routes>
-        </BrowserRouter>
       </div>
       <Footer/>
     </div>
