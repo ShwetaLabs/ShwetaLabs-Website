@@ -26,6 +26,7 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       className='row'
       style={{
         justifyContent: 'space-around',
+        alignItems: 'center',
         padding: '20px',
         borderBottom: 'var(--lightgray) 0.5px solid',
       }}

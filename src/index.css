@@ -11,15 +11,28 @@
   --tertiary-bg: #1a1a1a;
   --lightgray: #3a3a3a;
   --mgvwidth: 600px;
-  font-size: 4vw;
   letter-spacing: 0.5px;
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
 }
-
+@media(max-width:800px){
+  :root{font-size: 4vw;}  
+  .fs-smaller {  font-size: 0.6rem; }
+  .fs-small {  font-size: 0.8rem; }
+  .fs-medium {  font-size: 1rem; }
+  .fs-large {  font-size: 1.5rem; }
+  .fs-larger {  font-size: 1.67rem; }
+  .fs-x-large {  font-size: 3rem; }
+  .fs-xx-large {  font-size: 2.5rem; }
+}
 @media(min-width:800px){
-  :root{
-    font-size: 1vw;
-  }
+  :root { font-size: 1vw; }
+  .fs-smaller {  font-size: 0.6rem; }
+  .fs-small {  font-size: 0.8rem; }
+  .fs-medium {  font-size: 1rem; }
+  .fs-large {  font-size: 1.33rem; }
+  .fs-larger {  font-size: 1.5rem; }
+  .fs-x-large {  font-size: 3rem; }
+  .fs-xx-large {  font-size: 4rem; }  
 }
 
 .bg2 {
@@ -249,33 +262,6 @@ TODO: employ only fs classes to set font sizes across elements.
 add media query for all fs-clases' font-size values.
 */
 
-.fs-smaller {
-  
-  font-size: 0.6rem;
-}
-
-.fs-small {
-  font-size: 0.8rem;
-}
-
-.fs-medium {
-  font-size: 1rem;
-}
-.fs-large {
-  font-size: 1.33rem;
-}
-
-.fs-larger {
-  font-size: 1.5rem;
-}
-
-.fs-x-large {
-  font-size: 3rem;
-}
-
-.fs-xx-large {
-  font-size: 4rem;
-}
 
 .pointable {
   cursor: pointer;
