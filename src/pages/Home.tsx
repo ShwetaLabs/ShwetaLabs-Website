@@ -64,9 +64,9 @@ function BriefAdvert(): JSX.Element {
       <div
         className='row'
         style={{
-          width: '80%',
+          width: '90%',
           marginTop: 140,
-          justifyContent: 'space-around',
+          justifyContent: 'space-between',
           alignItems: 'center',
         }}
       >

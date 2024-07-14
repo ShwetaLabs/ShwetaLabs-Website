@@ -50,19 +50,16 @@ export const whatWeHaveData: whatWeHaveSpec = {
       title: `Digital Detectives`,
       description: `Our tools use language that you and I would, They interpret and convey their findings in relatable and understandable language.`,
       image: images.detective,
-      learnMoreUrl: `/contact`,
     },
     {
       title: `Complexity and Simplicity`,
       description: `Our services are designed to handle vast amounts of investigative data and decode them in simple and implementation-friendly language to a Law Enforcement Officer.`,
       image: images.decoding,
-      learnMoreUrl: `/contact`,
     },
     {
       title: `Multi-purpose and Multi-dimensional`,
       description: `Shweta Labs is a full-circle cyber security company. Each of our tools are meant to be a spokes of a wheel of investigation - providing end-to-end - investigation and threat-elimination - services.`,
       image: images.gear,
-      learnMoreUrl: `/contact`,
     },
   ],
 };
@@ -71,7 +68,7 @@ export interface ourProductsSpec {
   products: featureSpec[];
 }
 export const ourProductsData: ourProductsSpec = {
-  title: 'Secure and Speed-up your Investigation',
+  title: 'Our Products' /*👊 Abhishek*/,
   products: [
     {
       title: 'Sleuth',

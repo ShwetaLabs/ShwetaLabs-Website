@@ -80,10 +80,19 @@ export function FeatureTextData({
         paddingBlock: 40,
         paddingInline: 52,
         marginInline: 16,
+        flexGrow: 1,
       }}
     >
       <p className='fs-x-large subtitle'>{title}</p>
       <p className='offwhite'>{description}</p>
+      {learnMoreUrl ? (
+        <div className='row'>
+          <LinkBox
+            link={{ url: learnMoreUrl, text: whatWeHaveData.learnMore }}
+            aClassName='button-pill fs-smaller caret-right'
+          />
+        </div>
+      ) : null}
     </div>
   ) : (
     <div className='col bg2' style={{ padding: 24, marginBottom: 45 }}>
@@ -91,6 +100,14 @@ export function FeatureTextData({
       <p className='offwhite' style={{ fontWeight: 550 }}>
         {description}
       </p>
+      {learnMoreUrl ? (
+        <div className='row'>
+          <LinkBox
+            link={{ url: learnMoreUrl, text: whatWeHaveData.learnMore }}
+            aClassName='button-pill fs-smaller caret-right'
+          />
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -99,16 +116,29 @@ export interface IProductProps {
 }
 export function Product({ product }: IProductProps): JSX.Element {
   return isDesktop() ? (
-    <div className='row bg2 thin-bordered' style={{ alignItems: 'stretch' }}>
-      <div className='row' style={{ flexGrow: 1, alignItems: 'center' }}>
-        <img src={product.image} />
+    <div
+      className='row bg2 thin-bordered'
+      style={{ alignItems: 'center', justifyContent: 'space-between' }}
+    >
+      <div
+        className='row'
+        style={{ alignItems: 'center', width: '50%', paddingInline: 40 }}
+      >
+        <img style={{ width: '100%' }} src={product.image} />
       </div>
-      {/* todo: single line between image and textdata */}
-      <FeatureTextData
-        title={product.title}
-        description={product.description}
-        learnMoreUrl={product.learnMoreUrl}
-      />
+      <div
+        className='row'
+        style={{
+          borderLeft: '0.5px var(--accent) solid',
+          flexGrow: 1,
+        }}
+      >
+        <FeatureTextData
+          title={product.title}
+          description={product.description}
+          learnMoreUrl={product.learnMoreUrl}
+        />
+      </div>
     </div>
   ) : (
     <div className='col bg2 thin-bordered'>
