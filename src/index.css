@@ -11,7 +11,6 @@
   --tertiary-bg: #1a1a1a;
   --lightgray: #3a3a3a;
   --mgvwidth: 600px;
-  letter-spacing: 0.5px;
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
 }
 @media(max-width:800px){
@@ -307,6 +306,13 @@ div.d3xn {
   grid-template-columns: 33% 33% 33%;
   align-items: center;
 }
+
+div.d2xn {
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+
 
 .articlesgrid {
   display: grid;

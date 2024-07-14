@@ -39,7 +39,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <TrustedPartners />
       <WhatWeHave />
       <OurProducts />
-      {isDesktop() ? <Awards /> : null}
+      <Awards />
       {isDesktop() ? <CaseStudies /> : null}
       {isDesktop() ? <PodcastAdvert /> : null}
       {isDesktop() ? <BlogsAdvert /> : null}
@@ -161,7 +161,9 @@ function OurProducts(): JSX.Element {
     </div>
   ) : (
     <div className='col'>
-      <p className='title fs-xx-large'>{ourProductsData.title}</p>
+      <p className='title fs-xx-large' style={{ marginBottom: 24 }}>
+        {ourProductsData.title}
+      </p>
       {ourProductsData.products.map(product => {
         return <Product product={product} key={product.title} />;
       })}
@@ -170,7 +172,7 @@ function OurProducts(): JSX.Element {
 }
 
 function Awards(): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div style={{ width: '80%' }}>
       <p className='title fs-xx-large' style={{ width: '90%' }}>
         {awardsData.title}
@@ -179,6 +181,25 @@ function Awards(): JSX.Element {
         {awardsData.description}
       </p>
       <div className='row' style={{ justifyContent: 'center' }}>
+        {awardsData.awards.map(award => {
+          return <AwardTile award={award} key={award.title} />;
+        })}
+      </div>
+    </div>
+  ) : (
+    <div>
+      <p className='title fs-xx-large'>{awardsData.title}</p>
+      <p className='offwhite fs-small centered'>{awardsData.description}</p>
+      <div
+        className='grid d2xn'
+        style={{
+          justifyContent: 'center',
+          rowGap: 8,
+          columnGap: 8,
+          alignItems: 'center',
+          justifyItems: 'center',
+        }}
+      >
         {awardsData.awards.map(award => {
           return <AwardTile award={award} key={award.title} />;
         })}

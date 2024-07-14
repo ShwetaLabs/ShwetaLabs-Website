@@ -246,7 +246,7 @@ export interface IAwardTileProps {
   award: awardSpec;
 }
 export function AwardTile({ award }: IAwardTileProps): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col bg2' style={{ margin: 16 }}>
       <div style={{ padding: 40, paddingInline: 52, paddingBottom: 24 }}>
         <img src={award.logo} />
@@ -263,6 +263,31 @@ export function AwardTile({ award }: IAwardTileProps): JSX.Element {
         <p className='fs-small stripped'>{award.title}</p>
         <p className='fs-smaller stripped offwhite'>{award.category}</p>
       </div>
+    </div>
+  ) : (
+    <div className='bg2'>
+      <div
+        style={{
+          paddingTop: 40,
+          // padding: 40, use this instead to get a normal view.
+          paddingBottom: 24,
+          paddingInline: 32,
+        }}
+      >
+        <img style={{ width: '100%' }} src={award.logo} />
+      </div>
+      {/* <div
+        className='col'
+        style={{
+          padding: 24,
+          paddingInline: 40,
+          alignItems: 'center',
+          borderTop: 'var(--accent) 0.5px solid',
+        }}
+      >
+        <p className='fs-small stripped'>{award.title}</p>
+        <p className='fs-smaller stripped offwhite'>{award.category}</p>
+      </div> */}
     </div>
   );
 }
