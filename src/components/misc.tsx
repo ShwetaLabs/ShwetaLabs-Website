@@ -83,7 +83,7 @@ export function FeatureTextData({
         flexGrow: 1,
       }}
     >
-      <p className='fs-x-large subtitle'>{title}</p>
+      <p className='fs-larger subtitle'>{title}</p>
       <p className='offwhite'>{description}</p>
       {learnMoreUrl ? (
         <div className='row'>
@@ -96,7 +96,7 @@ export function FeatureTextData({
     </div>
   ) : (
     <div className='col bg2' style={{ padding: 24, marginBottom: 45 }}>
-      <p className='fs-x-large subtitle'>{title}</p>
+      <p className='fs-larger subtitle'>{title}</p>
       <p className='offwhite' style={{ fontWeight: 550 }}>
         {description}
       </p>
@@ -153,7 +153,7 @@ export function Product({ product }: IProductProps): JSX.Element {
         className='col bg2'
         style={{ padding: 20, borderTop: 'var(--accent) 0.5px solid' }}
       >
-        <p className='fs-x-large subtitle'>{product.title}</p>
+        <p className='fs-larger subtitle'>{product.title}</p>
         <p className='offwhite' style={{ fontWeight: 550 }}>
           {product.description}
         </p>
@@ -161,7 +161,7 @@ export function Product({ product }: IProductProps): JSX.Element {
           <div className='row' style={{ justifyContent: 'flex-start' }}>
             <LinkBox
               link={{ url: product.learnMoreUrl, text: 'Learn More' }}
-              aClassName='button-pill fs-small caret-right'
+              aClassName='button-pill fs-smaller caret-right'
             />
           </div>
         ) : null}
@@ -188,7 +188,7 @@ export function Testimony({ testimony }: ITestimonyProps): JSX.Element {
           <img src={testimony.quoteImage} />
         </div>
         <div>
-          <p className='offwhite fs-small'>{testimony.description}</p>
+          <p className='offwhite fs-smaller'>{testimony.description}</p>
         </div>
       </div>
       <UserBox user={testimony.user} />
@@ -260,8 +260,8 @@ export function AwardTile({ award }: IAwardTileProps): JSX.Element {
           borderTop: 'var(--accent) 0.5px solid',
         }}
       >
-        <p className='fs stripped'>{award.title}</p>
-        <p className='fs-small stripped offwhite'>{award.category}</p>
+        <p className='stripped'>{award.title}</p>
+        <p className='fs-smaller stripped offwhite'>{award.category}</p>
       </div>
     </div>
   ) : (
@@ -284,7 +284,7 @@ export function AwardTile({ award }: IAwardTileProps): JSX.Element {
         }}
       >
         <p className='stripped'>{award.title}</p>
-        <p className='fs-small stripped offwhite'>{award.category}</p>
+        <p className='fs-smaller stripped offwhite'>{award.category}</p>
       </div>
     </div>
   );
@@ -341,8 +341,8 @@ export function PodcastEpisodeTile({
               padding: 24,
             }}
           >
-            <p className='fs-small stripped'>{episode.date}</p>
-            <p className='fs-small stripped clocked'>{episode.length}</p>
+            <p className='fs-smaller stripped'>{episode.date}</p>
+            <p className='fs-smaller stripped clocked'>{episode.length}</p>
           </div>
         </div>
       </div>

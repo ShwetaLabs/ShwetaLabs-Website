@@ -10,11 +10,13 @@ export function LinkBox({ link, aClassName }: ILinkBoxProps): JSX.Element {
   // and render it
   // should make use of iconOnly option
   return (
-    <a className={aClassName || ''}>
-      <Link to={link.url}>
-        {link.icon ? <img src={link.icon} /> : null}
-        {!link.iconOnly ? <>{link.text}</> : null}
-      </Link>
-    </a>
+    <Link
+      to={link.url}
+      className={aClassName || ''}
+      style={{ verticalAlign: 'middle', lineHeight: 0 }}
+    >
+      {link.icon ? <img src={link.icon} /> : null}
+      {!link.iconOnly ? <>{link.text}</> : null}
+    </Link>
   );
 }

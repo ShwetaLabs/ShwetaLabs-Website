@@ -38,7 +38,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
             return (
               <LinkBox
                 link={link}
-                aClassName='footerLink fs-medium'
+                aClassName='footerLink fs-smaller'
                 key={link.text}
               />
             );
@@ -54,7 +54,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
             return (
               <LinkBox
                 link={link}
-                aClassName='footerLink fs-medium'
+                aClassName='footerLink fs-smaller'
                 key={link.text}
               />
             );
@@ -81,7 +81,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
           {<SocialLinks />}
         </div>
       </div>
-      <p className='fs-small' style={{ textAlign: 'center' }}>
+      <p className='fs-smaller' style={{ textAlign: 'center' }}>
         {footerData.copyrightText}
       </p>
     </div>
@@ -120,7 +120,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
               return (
                 <LinkBox
                   link={link}
-                  aClassName='footerLink fs-medium'
+                  aClassName='footerLink fs-smaller'
                   key={link.text}
                 />
               );
@@ -136,7 +136,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
               return (
                 <LinkBox
                   link={link}
-                  aClassName='footerLink fs-medium'
+                  aClassName='footerLink fs-smaller'
                   key={link.text}
                 />
               );
@@ -173,7 +173,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
           {<SocialLinks />}
         </div>
       </div>
-      <p className='fs-small' style={{ textAlign: 'center' }}>
+      <p className='fs-smaller' style={{ textAlign: 'center' }}>
         {footerData.copyrightText}
       </p>
     </div>

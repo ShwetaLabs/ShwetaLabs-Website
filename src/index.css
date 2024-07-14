@@ -14,26 +14,27 @@
   line-height: 150%;
   letter-spacing: 1px;
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
+  font-weight: 550; /*semi-bold for figma. 600 wasn't looking right.*/
 }
 @media(max-width:800px){
   :root{font-size: 4vw;}  
-  .fs-smaller {  font-size: 0.6rem; }
-  .fs-small {  font-size: 0.8rem; }
-  .fs-medium {  font-size: 1rem; }
-  .fs-large {  font-size: 1.5rem; }
-  .fs-larger {  font-size: 1.67rem; }
-  .fs-x-large {  font-size: 2rem; }
-  .fs-xx-large {  font-size: 2.5rem; }
+  .fs-smaller {  font-size: 0.6rem; } /*figma: 14*/
+  .fs-small {  font-size: 0.8rem; } /*figma: 16*/
+  .fs-medium {  font-size: 1rem; } /*figma: 20*/
+  .fs-large {  font-size: 1.5rem; } 
+  .fs-larger {  font-size: 1.67rem; } /*figma: 64*/
+  .fs-x-large {  font-size: 2rem; } /*figma: 80*/
+  .fs-xx-large {  font-size: 2.5rem; } /*figma: 96*/
 }
 @media(min-width:800px){
-  :root { font-size: 1vw; }
-  .fs-smaller {  font-size: 0.6rem; }
-  .fs-small {  font-size: 0.8rem; }
-  .fs-medium {  font-size: 1rem; }
-  .fs-large {  font-size: 1.33rem; }
-  .fs-larger {  font-size: 1.5rem; }
-  .fs-x-large {  font-size: 3rem; }
-  .fs-xx-large {  font-size: 4rem; }  
+  :root { font-size: 1.1vw; }
+  .fs-smaller {  font-size: 0.7rem; } /*figma: 14*/
+  .fs-small {  font-size: 0.8rem; } /*figma: 16*/
+  .fs-medium {  font-size: 1rem; } /*figma: 20*/
+  .fs-large {  font-size: 1.33rem; } 
+  .fs-larger {  font-size: 3.2rem; } /*figma: 64*/
+  .fs-x-large {  font-size: 4rem; } /*figma: 80*/
+  .fs-xx-large {  font-size: 4.8rem; }  /*figma: 96*/
 }
 
 .bg2 {
@@ -72,6 +73,8 @@ div.home > * {
 a.button {
   color: white;
   border-radius: 5px;
+  padding-block: 10;
+  padding-inline: 16;
 }
 
 p.shady-70 {
@@ -212,6 +215,13 @@ a.button2 {
   border-radius: 5px;
 }
 
+a.button4{
+  background-color: var(--primary);
+  padding-inline: 24px;
+  padding-block: 18.5px;
+  border-radius: 5px;
+}
+
 a.button3 {
   background-color: rgba(255, 255, 255, 0.1);
   padding-inline: 16px;
@@ -315,8 +325,6 @@ div.d2xn {
   grid-template-columns: 50% 50%;
   align-items: center;
 }
-
-
 
 .articlesgrid {
   display: grid;

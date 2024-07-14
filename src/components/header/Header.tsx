@@ -34,13 +34,16 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       <Link to={headerData.logoLink.url}>
         <img src={headerData.logo} />
       </Link>
-      <div className='row' style={{ justifyContent: 'space-between' }}>
+      <div className='row' style={{ columnGap: 24 }}>
         {headerData.navLinks.map(link => {
           return <HeaderButtonDesktop link={link} key={link.text} />;
         })}
       </div>
       <div>
-        <LinkBox link={headerData.requestDemoLink} aClassName='button2' />
+        <LinkBox
+          link={headerData.requestDemoLink}
+          aClassName='button2 fs-smaller'
+        />
       </div>
     </div>
   ) : (
@@ -103,7 +106,7 @@ export function HeaderButtonDesktop({
         marginInline: '10px',
       }}
     >
-      <LinkBox link={link} aClassName='button fs-large' />
+      <LinkBox link={link} aClassName='button fs-smaller' />
     </div>
   );
 }
