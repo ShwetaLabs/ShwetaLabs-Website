@@ -36,7 +36,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       }
     >
       <BriefAdvert />
-      <TrustedPartners />
+      {/* <TrustedPartners /> */}
       <WhatWeHave />
       <OurProducts />
       <Awards />
