@@ -11,6 +11,8 @@
   --tertiary-bg: #1a1a1a;
   --lightgray: #3a3a3a;
   --mgvwidth: 600px;
+  line-height: 150%;
+  letter-spacing: 1px;
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
 }
 @media(max-width:800px){
@@ -91,6 +93,7 @@ p {
 }
 
 .title {
+  line-height: 129%;
   text-align: center;
   font-weight: bold;
   padding: 0;
@@ -98,6 +101,7 @@ p {
 }
 
 .subtitle {
+  line-height: 104%;
   padding: 0;
   margin: 0;
 }

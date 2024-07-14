@@ -174,7 +174,7 @@ export interface awardSpec {
   category: string;
 }
 export const awardsData = {
-  title: 'Recognizing Excellence in Innovation and Dedication',
+  title: 'Awards and Recognition',
   description:
     'Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium dolorum. Consequatur sint cum illo eum harum odit delectus sed. Quis deleniti aut alias.',
   awards: [

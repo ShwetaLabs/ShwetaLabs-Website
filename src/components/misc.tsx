@@ -260,34 +260,32 @@ export function AwardTile({ award }: IAwardTileProps): JSX.Element {
           borderTop: 'var(--accent) 0.5px solid',
         }}
       >
-        <p className='fs-small stripped'>{award.title}</p>
-        <p className='fs-smaller stripped offwhite'>{award.category}</p>
+        <p className='fs stripped'>{award.title}</p>
+        <p className='fs-small stripped offwhite'>{award.category}</p>
       </div>
     </div>
   ) : (
     <div className='bg2'>
       <div
         style={{
-          paddingTop: 40,
-          // padding: 40, use this instead to get a normal view.
+          padding: 40,
           paddingBottom: 24,
-          paddingInline: 32,
+          paddingInline: '17%',
         }}
       >
         <img style={{ width: '100%' }} src={award.logo} />
       </div>
-      {/* <div
+      <div
         className='col'
         style={{
-          padding: 24,
-          paddingInline: 40,
+          paddingBlock: 24,
           alignItems: 'center',
           borderTop: 'var(--accent) 0.5px solid',
         }}
       >
-        <p className='fs-small stripped'>{award.title}</p>
-        <p className='fs-smaller stripped offwhite'>{award.category}</p>
-      </div> */}
+        <p className='stripped'>{award.title}</p>
+        <p className='fs-small stripped offwhite'>{award.category}</p>
+      </div>
     </div>
   );
 }

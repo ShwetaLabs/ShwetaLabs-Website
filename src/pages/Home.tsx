@@ -173,11 +173,11 @@ function OurProducts(): JSX.Element {
 
 function Awards(): JSX.Element {
   return isDesktop() ? (
-    <div style={{ width: '80%' }}>
+    <div className='col' style={{ width: '80%', alignItems: 'center' }}>
       <p className='title fs-xx-large' style={{ width: '90%' }}>
         {awardsData.title}
       </p>
-      <p className='offwhite fs-small centered' style={{ width: '85%' }}>
+      <p className='offwhite centered' style={{ width: '85%' }}>
         {awardsData.description}
       </p>
       <div className='row' style={{ justifyContent: 'center' }}>
@@ -189,7 +189,7 @@ function Awards(): JSX.Element {
   ) : (
     <div>
       <p className='title fs-xx-large'>{awardsData.title}</p>
-      <p className='offwhite fs-small centered'>{awardsData.description}</p>
+      <p className='offwhite centered'>{awardsData.description}</p>
       <div
         className='grid d2xn'
         style={{
