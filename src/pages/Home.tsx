@@ -54,7 +54,7 @@ function BriefAdvert(): JSX.Element {
       className='col'
       style={{ alignItems: 'center', width: '80%', marginInline: 'auto' }}
     >
-      <p style={{ width: '75%' }} className='title fs-xx-large'>
+      <p style={{ width: '80%' }} className='title fs-xx-large'>
         {advertData.title}
       </p>
       <p className='shady-70' style={{ textAlign: 'center' }}>

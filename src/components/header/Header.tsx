@@ -25,16 +25,17 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
     <div
       className='row'
       style={{
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
+        paddingInline: '11%',
         alignItems: 'center',
-        padding: '20px',
+        paddingBlock: '20px',
         borderBottom: 'var(--lightgray) 0.5px solid',
       }}
     >
       <Link to={headerData.logoLink.url}>
         <img src={headerData.logo} />
       </Link>
-      <div className='row' style={{ columnGap: 24 }}>
+      <div className='row' style={{ columnGap: '1.8vw' }}>
         {headerData.navLinks.map(link => {
           return <HeaderButtonDesktop link={link} key={link.text} />;
         })}
@@ -103,7 +104,7 @@ export function HeaderButtonDesktop({
     <div
       style={{
         textTransform: 'uppercase',
-        marginInline: '10px',
+        paddingInline: '1.2vw' /*16px/1320px*/,
       }}
     >
       <LinkBox link={link} aClassName='button fs-smaller' />

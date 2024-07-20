@@ -3,6 +3,9 @@ import logo from './assets/logo.svg';
 import instagram from './assets/icons/instagram.svg';
 import twitter from './assets/icons/twitter.svg';
 import youtube from './assets/icons/youtube.svg';
+import github from './assets/icons/github.svg';
+import medium from './assets/icons/medium.svg';
+import linkedin from './assets/icons/linkedin.svg';
 import facebook from './assets/icons/facebook.svg';
 import footerLogo from './assets/footerLogo.svg';
 import LinkedinLogo from './assets/LinkedinLogo.svg';
@@ -145,6 +148,9 @@ export const icons = {
   phone,
   location,
   mail,
+  github,
+  linkedin,
+  medium,
 };
 
 export const people = {

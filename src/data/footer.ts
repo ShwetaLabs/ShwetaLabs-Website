@@ -28,7 +28,7 @@ export const footerData = {
   socialLinks: getSocialIconOnlyLinks(),
   copyrightText: `© 2024 Shweta Labs. A Unit of Anjana Group of Companies`,
   policyLinks: policyLinks,
-  policyLinksTitle: `POLICY`,
+  policyLinksTitle: `RESOURCES`,
   quickLinks: quickLinks,
   quickLinksTitle: `QUICK LINKS`,
   addressTitle: `ADDRESS`,

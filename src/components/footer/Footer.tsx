@@ -15,8 +15,10 @@ export function Footer({ getDisplay }: any): JSX.Element {
       <div
         className='row thin-bordered'
         style={{
-          padding: '20px',
-          justifyContent: 'space-around',
+          paddingInline: '12.5vw',
+          paddingTop: '6vw',
+          paddingBottom: '3.94vw',
+          justifyContent: 'space-between',
           borderInline: 0,
         }}
       >
@@ -33,13 +35,10 @@ export function Footer({ getDisplay }: any): JSX.Element {
           key={footerData.quickLinksTitle}
           style={{ alignItems: 'flex-start' }}
         >
-          <p className='shady-70'>{footerData.quickLinksTitle}</p>
+          <p className='shady-70 fs-smaller'>{footerData.quickLinksTitle}</p>
           {footerData.quickLinks.map(link => {
             return (
-              <span
-                style={{ paddingBlock: '10px', letterSpacing: '1.5%' }}
-                key={link.text}
-              >
+              <span style={{ paddingBlock: '0.6vw' }} key={link.text}>
                 <LinkBox link={link} aClassName='footerLink fs-smaller' />
               </span>
             );
@@ -50,7 +49,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
           key={footerData.policyLinksTitle}
           style={{ alignItems: 'flex-start' }}
         >
-          <p className='shady-70'>{footerData.policyLinksTitle}</p>
+          <p className='shady-70 fs-smaller'>{footerData.policyLinksTitle}</p>
           {footerData.policyLinks.map(link => {
             return (
               <span
@@ -71,10 +70,13 @@ export function Footer({ getDisplay }: any): JSX.Element {
           key={footerData.addressTitle}
           style={{ alignItems: 'flex-start' }}
         >
-          <p className='shady-70'>{footerData.addressTitle}</p>
+          <p className='shady-70 fs-smaller'>{footerData.addressTitle}</p>
           {footerData.businessDetails.map(value => {
             return (
-              <div className='row' style={{ alignItems: 'center' }}>
+              <div
+                className='row'
+                style={{ alignItems: 'center', rowGap: '0.45vw' }}
+              >
                 <img src={value.icon} style={{ paddingRight: 10 }} />
                 <p className='stripped fs-smaller' key={value.text}>
                   {value.text}
@@ -85,7 +87,10 @@ export function Footer({ getDisplay }: any): JSX.Element {
           {<SocialLinks />}
         </div>
       </div>
-      <p className='fs-smaller' style={{ textAlign: 'center' }}>
+      <p
+        className='fs-smaller'
+        style={{ textAlign: 'center', marginBlock: '2.4vw' }}
+      >
         {footerData.copyrightText}
       </p>
     </div>
@@ -119,7 +124,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
             key={footerData.quickLinksTitle}
             style={{ alignItems: 'flex-start' }}
           >
-            <p className='shady-70'>{footerData.quickLinksTitle}</p>
+            <p className='shady-70 fs-smaller'>{footerData.quickLinksTitle}</p>
             {footerData.quickLinks.map(link => {
               return (
                 <LinkBox
@@ -135,7 +140,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
             key={footerData.policyLinksTitle}
             style={{ alignItems: 'flex-start' }}
           >
-            <p className='shady-70'>{footerData.policyLinksTitle}</p>
+            <p className='shady-70 fs-smaller'>{footerData.policyLinksTitle}</p>
             {footerData.policyLinks.map(link => {
               return (
                 <LinkBox
@@ -150,7 +155,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
         <div
           className='col'
           key={footerData.addressTitle}
-          style={{ alignItems: 'flex-start' }}
+          style={{ alignItems: 'flex-start', rowGap: '0.45vw' }}
         >
           {footerData.businessDetails.map(value => {
             return (
@@ -180,7 +185,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
 }
 export function SocialLinks() {
   return (
-    <div className='row' style={{ marginTop: 48 }}>
+    <div className='row' style={{ marginTop: '1.96vw' }}>
       {footerData.socialLinks.map(link => {
         return (
           <span style={{ marginInline: '12.5px' }}>

@@ -70,14 +70,19 @@ const socialLinks: linkSpec[] = [
     //todo: fill social links
   },
   {
-    text: 'Facebook',
+    text: 'Github',
     url: '',
-    icon: icons.facebook,
+    icon: icons.github,
   },
   {
-    text: 'Instagram',
+    text: 'Medium',
     url: '',
-    icon: icons.instagram,
+    icon: icons.medium,
+  },
+  {
+    text: 'LinkedIn',
+    url: '',
+    icon: icons.linkedin,
   },
   {
     text: 'Twitter',
