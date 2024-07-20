@@ -39,7 +39,7 @@ export const footerData = {
     },
     {
       icon: icons.phone,
-      text: `+919901493300`,
+      text: `+91 99014 93300`,
     },
     {
       icon: icons.mail,
