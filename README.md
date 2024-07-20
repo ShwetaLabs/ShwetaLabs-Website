@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `npm run deploy`
+
+1. Keep the CNAME file on each branch that you may run this script from. Take it from `hardik`.
+2. After running the script, go to [Github Pages Settings](https://github.com/ShwetaLabs/shwetalabs-website/settings/pages) and add `shwetalabs.com` as a custom domain.
+
 In the project directory, you can run:
 
 ### `npm start`

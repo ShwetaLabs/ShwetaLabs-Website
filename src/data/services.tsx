@@ -2,9 +2,9 @@ import { images } from '../rsrc';
 import { capabilitiesSpec } from './capabilities';
 
 export const servicesData: capabilitiesSpec = {
-  title: 'Enim beatae quas snt accusantium',
+  title: 'SCOPE',
   subtitle:
-    'Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium.',
+    "SCOPE is a 360-degree service bundle keeping your multiple requirements in mind. It provides Digital Forensics, Evidence Collection, In-depth analysis as well as Legal Compliance Support. It is both broad and focused - it provides a bird's eye view as well as a focused microscopic lens on your case.",
   capababilites: [
     {
       title: 'Comprehensive Forensic Investigations',

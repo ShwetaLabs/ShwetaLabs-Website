@@ -39,7 +39,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
           {' '}
           {values.title}{' '}
         </div>
-        <div style={{ opacity: '0.6' }}> {values.para} </div>
+        {/* <div style={{ opacity: '0.6' }}> {values.para} </div> */}
       </div>
       <div> {createRows(values.cards)} </div>
     </div>
