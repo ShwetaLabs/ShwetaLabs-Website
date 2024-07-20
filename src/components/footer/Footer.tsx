@@ -36,11 +36,12 @@ export function Footer({ getDisplay }: any): JSX.Element {
           <p className='shady-70'>{footerData.quickLinksTitle}</p>
           {footerData.quickLinks.map(link => {
             return (
-              <LinkBox
-                link={link}
-                aClassName='footerLink fs-smaller'
+              <span
+                style={{ paddingBlock: '10px', letterSpacing: '1.5%' }}
                 key={link.text}
-              />
+              >
+                <LinkBox link={link} aClassName='footerLink fs-smaller' />
+              </span>
             );
           })}
         </div>
@@ -52,11 +53,16 @@ export function Footer({ getDisplay }: any): JSX.Element {
           <p className='shady-70'>{footerData.policyLinksTitle}</p>
           {footerData.policyLinks.map(link => {
             return (
-              <LinkBox
-                link={link}
-                aClassName='footerLink fs-smaller'
+              <span
+                style={{ paddingBlock: '10px', letterSpacing: '1.5%' }}
                 key={link.text}
-              />
+              >
+                <LinkBox
+                  link={link}
+                  aClassName='footerLink fs-smaller'
+                  key={link.text}
+                />
+              </span>
             );
           })}
         </div>
@@ -66,16 +72,14 @@ export function Footer({ getDisplay }: any): JSX.Element {
           style={{ alignItems: 'flex-start' }}
         >
           <p className='shady-70'>{footerData.addressTitle}</p>
-          {
-            <p className='stripped' key={footerData.address}>
-              {footerData.address}
-            </p>
-          }
           {footerData.businessDetails.map(value => {
             return (
-              <p className='stripped' key={value}>
-                {value}
-              </p>
+              <div className='row' style={{ alignItems: 'center' }}>
+                <img src={value.icon} style={{ paddingRight: 10 }} />
+                <p className='stripped fs-smaller' key={value.text}>
+                  {value.text}
+                </p>
+              </div>
             );
           })}
           {<SocialLinks />}
@@ -148,16 +152,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
           key={footerData.addressTitle}
           style={{ alignItems: 'flex-start' }}
         >
-          <p className='shady-70'>{footerData.addressTitle}</p>
-          {
-            <p className='stripped' key={footerData.address}>
-              {footerData.address}
-            </p>
-          }
           {footerData.businessDetails.map(value => {
             return (
-              <p className='stripped' key={value}>
-                {value}
+              <p className='stripped fs-smaller' key={value.text}>
+                <img src={value.icon} />
+                {value.text}
               </p>
             );
           })}

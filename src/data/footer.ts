@@ -1,4 +1,4 @@
-import { images } from '../rsrc';
+import { icons, images } from '../rsrc';
 import {
   getSocialIconOnlyLinks,
   linkSpec,
@@ -23,7 +23,7 @@ export interface footerSpec {
   logo: string;
 }
 
-export const footerData: footerSpec = {
+export const footerData = {
   logo: images.footerLogo,
   socialLinks: getSocialIconOnlyLinks(),
   copyrightText: `© 2024 Shweta Labs. A Unit of Anjana Group of Companies`,
@@ -31,7 +31,23 @@ export const footerData: footerSpec = {
   policyLinksTitle: `POLICY`,
   quickLinks: quickLinks,
   quickLinksTitle: `QUICK LINKS`,
-  address: 'Belgaum, KA, INDIA. 590 001',
   addressTitle: `ADDRESS`,
-  businessDetails: [`CIN: U62013KA2023OPC178060`, `GST: 29ABLCS6015J1ZX`],
+  businessDetails: [
+    {
+      icon: icons.location,
+      text: `Belgaum, KA, INDIA - 590 001`,
+    },
+    {
+      icon: icons.phone,
+      text: `+919901493300`,
+    },
+    {
+      icon: icons.mail,
+      text: `contacts@shweta.com`,
+    },
+    {
+      icon: icons.cin,
+      text: `U62013KA2023OPC178060`,
+    },
+  ],
 };

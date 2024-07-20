@@ -69,7 +69,10 @@ import blog3 from './assets/blogs/blog3.png';
 import playButton from './assets/icons/playButton.svg';
 import List from './assets/icons/List.svg';
 import Cross from './assets/icons/Cross.svg';
-
+import cin from './assets/footer/cin.svg';
+import phone from './assets/footer/phone.svg';
+import location from './assets/footer/location.svg';
+import mail from './assets/footer/mail.svg';
 export const images = {
   logo,
   // logo192,
@@ -138,6 +141,10 @@ export const icons = {
   playButton,
   List,
   Cross,
+  cin,
+  phone,
+  location,
+  mail,
 };
 
 export const people = {

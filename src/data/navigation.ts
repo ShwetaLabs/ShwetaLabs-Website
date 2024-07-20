@@ -116,7 +116,6 @@ export const policyLinks: linkSpec[] = [
   termsLink,
   privacyAndSecurityLink,
   cookiesLink,
-  patentsLink,
 ];
 export function getSocialIconOnlyLinks(): linkSpec[] {
   return socialLinks.map(link => {
