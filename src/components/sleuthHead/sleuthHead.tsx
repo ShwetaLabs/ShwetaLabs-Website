@@ -15,7 +15,9 @@ export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
         }}
       >
         <img src={sleuthHead.img} alt='Sleuth' />
-        <div style={{ fontSize: '80px' }}>{sleuthHead.title}</div>
+        <div style={{ fontSize: '80px' }} className='title2'>
+          {sleuthHead.title}
+        </div>
       </div>
       <div style={{ paddingLeft: '96px', paddingRight: '96px' }}>
         <div style={{ paddingBottom: '32px' }}>{sleuthHead.paras}</div>

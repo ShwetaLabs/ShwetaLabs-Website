@@ -11,12 +11,6 @@ export function Products(): JSX.Element {
       </div>
 
       <div>
-        <div style={{ marginLeft: '192px', marginRight: '192px' }}>
-          <div style={{ fontSize: '80px' }}>
-            {productData.capabilities.title}
-          </div>
-          <p>{productData.capabilities.subtitle}</p>
-        </div>
         {productData.capabilities.capababilites.map((it, index) => (
           <div style={{ margin: '30px' }}>
             <CapabilityRow capability={it} imageOnLeft={index % 2 == 0} />
@@ -24,9 +18,9 @@ export function Products(): JSX.Element {
         ))}
       </div>
 
-      <div>
+      {/* <div>
         <CaseStudy caseStudy={productData.caseStudy} perRow={3} />
-      </div>
+      </div> */}
     </div>
   );
 }

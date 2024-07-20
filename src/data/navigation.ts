@@ -115,7 +115,7 @@ const patentsLink = {
 // may change this to button, onclick if action is too wild.
 export const requestDemoLink: linkSpec = {
   text: 'REQUEST DEMO',
-  url: '',
+  url: '/contact',
 };
 export const policyLinks: linkSpec[] = [
   termsLink,

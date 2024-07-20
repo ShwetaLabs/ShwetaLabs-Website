@@ -63,7 +63,7 @@ function BriefAdvert(): JSX.Element {
       <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
         <LinkBox
           link={contactLink}
-          aClassName={'button2 caret-right fs-small'}
+          aClassName={'button4 caret-right fs-small'}
         />
       </span>
       <div
@@ -92,7 +92,7 @@ function BriefAdvert(): JSX.Element {
         {advertData.description}
       </p>
       <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
-        <LinkBox link={contactLink} aClassName='button2 caret-right fs-small' />
+        <LinkBox link={contactLink} aClassName='button4 caret-right fs-small' />
       </span>
       <img src={advertData.logo} style={{ marginTop: 120 }} />
       <p className='shady-70' style={{ marginTop: 40 }}>
