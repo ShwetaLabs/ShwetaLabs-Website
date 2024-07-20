@@ -37,12 +37,12 @@ Founder, Naveen A. witnessed first-hand the hurdles law enforcement faced in his
     {
       image: images.visionLogo,
       title: 'Our Vision',
-      para: 'Our vision is to make the world fearless, empowered and free; and to remove the obstacles that get in the way of our freedom and flourishing.',
+      para: 'To make the world fearless, empowered and free; and to remove the obstacles that get in the way of our freedom and flourishing.',
     },
     {
       image: images.missionLogo,
       title: 'Our Mission',
-      para: 'To provide the services and software needed for a secure and fearless world',
+      para: 'To provide the software and services needed for a secure and fearless world.',
     },
   ],
   squad: squadData,
