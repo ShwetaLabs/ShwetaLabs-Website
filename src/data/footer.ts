@@ -43,7 +43,7 @@ export const footerData = {
     },
     {
       icon: icons.mail,
-      text: `contacts@shweta.com`,
+      text: `contacts@shwetalabs.com`,
     },
     {
       icon: icons.cin,
