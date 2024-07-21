@@ -26,9 +26,9 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       className='row'
       style={{
         justifyContent: 'space-between',
-        paddingInline: '11%',
+        paddingInline: '11vw',
         alignItems: 'center',
-        paddingBlock: '20px',
+        paddingBlock: '1.51vw',
         borderBottom: 'var(--lightgray) 0.5px solid',
       }}
     >
@@ -104,7 +104,6 @@ export function HeaderButtonDesktop({
     <div
       style={{
         textTransform: 'uppercase',
-        paddingInline: '1.2vw' /*16px/1320px*/,
       }}
     >
       <LinkBox link={link} aClassName='button fs-smaller' />

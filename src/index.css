@@ -73,8 +73,8 @@ div.home > * {
 a.button {
   color: white;
   border-radius: 5px;
-  padding-block: 10;
-  padding-inline: 16;
+  padding-block: 0.76vw;
+  padding-inline: 1.2vw;
   letter-spacing: 50%;
 }
 
