@@ -24,6 +24,7 @@ import {
   Testimony,
 } from '../components/misc';
 import { isDesktop } from '../utils';
+import Marquee from 'react-fast-marquee';
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
@@ -36,7 +37,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       }
     >
       <BriefAdvert />
-      {/* <TrustedPartners /> */}
+      <TrustedPartners />
       <WhatWeHave />
       <OurProducts />
       <Awards />
@@ -103,26 +104,47 @@ function BriefAdvert(): JSX.Element {
 }
 function TrustedPartners(): JSX.Element {
   return isDesktop() ? (
-    <div className='row bg2' style={{ width: '80%' }}>
-      <div className='col' style={{ marginLeft: '52px', width: '55%' }}>
-        <p className='title fs-x-large' style={{ textAlign: 'left' }}>
-          {trustedPartnersData.title}
-        </p>
-        <p className='description' style={{ width: '70%' }}>
-          {trustedPartnersData.description}
-        </p>
-      </div>
-      <div className='grid d3xn' style={{ columnGap: '16%' }}>
-        {trustedPartnersData.logos.map(logo => {
-          return <img src={logo} key={logo} />;
-        })}
+    <div
+      className='col bg2'
+      style={{ width: '80%', marginInline: 'auto', alignItems: 'center' }}
+    >
+      <p className='title fs-x-large'>{trustedPartnersData.title}</p>
+      <div
+        className='inline-fade'
+        style={{ width: '68vw', overflow: 'hidden' }}
+      >
+        <span style={{ zIndex: 'inherit' }}>
+          <Marquee>
+            <div className='row' style={{ alignItems: 'center' }}>
+              {trustedPartnersData.logos.map(logo => {
+                return (
+                  <img style={{ paddingInline: '5vw' }} key={logo} src={logo} />
+                );
+              })}
+            </div>
+          </Marquee>
+        </span>
       </div>
     </div>
   ) : (
     <div className='col bg2'>
       <p className='title fs-x-large'>{trustedPartnersData.title}</p>
-      {/* TODO: marquee */}
-      <p>marquee goes here</p>
+      <div
+        className='inline-fade'
+        style={{ width: '95vw', overflow: 'hidden' }}
+      >
+        <span style={{ zIndex: 'inherit' }}>
+          <Marquee>
+            <div className='row' style={{ alignItems: 'center' }}>
+              {trustedPartnersData.logos.map(logo => {
+                return (
+                  <img style={{ paddingInline: '5vw' }} key={logo} src={logo} />
+                );
+              })}
+            </div>
+          </Marquee>
+        </span>
+      </div>
     </div>
   );
 }

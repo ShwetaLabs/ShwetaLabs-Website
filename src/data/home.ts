@@ -9,22 +9,8 @@ export const advertData = {
 };
 
 export const trustedPartnersData = {
-  title: 'Our Trusted Partners',
-  description: `Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium dolorum. `,
-  logos: [
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-    images.dummyLogo,
-  ],
+  title: 'Our Partners',
+  logos: [images.iitkgp, images.dell, images.aws, images.nvidia],
 };
 export interface featureSpec {
   title: string;
