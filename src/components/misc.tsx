@@ -238,9 +238,9 @@ export function BlogTile({ blog }: IBlogProps): JSX.Element {
       </div>
     </div>
   ) : (
-    <div className='col' style={{}}>
+    <div className='col' style={{ marginTop: 32 }}>
       <div className='blogtile'>
-        <img src={blog.image} style={{ width: '80vw' }} />
+        <img src={blog.image} style={{ maxWidth: '100%', maxHeight: '100%' }} />
       </div>
       <div
         className='row'
@@ -316,12 +316,79 @@ export interface IPodcastEpisodeProps {
 export function PodcastEpisodeTile({
   episode,
 }: IPodcastEpisodeProps): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col thin-bordered' style={{ margin: 16 }}>
       <div className='episodetile' style={{ position: 'relative' }}>
         <img
           src={episode.thumbnail}
           style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 0 }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          className='row'
+        >
+          <img
+            className='pointable'
+            onClick={() => (window.location = episode.link as any)}
+            src={icons.playButton}
+            style={{}}
+          />
+        </div>
+        <div
+          className='row'
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 1,
+          }}
+        >
+          <div
+            className='row gradient-shade'
+            style={{
+              justifyContent: 'space-between',
+              width: '100%',
+              padding: 24,
+            }}
+          >
+            <p className='fs-smaller stripped'>{episode.date}</p>
+            <p className='fs-smaller stripped clocked'>{episode.length}</p>
+          </div>
+        </div>
+      </div>
+      <div className='col bg2' style={{ padding: 24 }}>
+        <p
+          className='stripped'
+          style={{ textTransform: 'uppercase', paddingBottom: 12 }}
+        >
+          {episode.episode}
+        </p>
+        <p className='stripped'>{episode.title}</p>
+      </div>
+    </div>
+  ) : (
+    <div className='col thin-bordered' style={{ margin: 16 }}>
+      <div className='episodetile' style={{ position: 'relative' }}>
+        <img
+          src={episode.thumbnail}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 0,
+            maxWidth: '100%',
+            maxHeight: '100%',
+          }}
         />
         <div
           style={{

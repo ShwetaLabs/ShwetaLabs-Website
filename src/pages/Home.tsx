@@ -42,7 +42,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <OurProducts />
       <Awards />
       {isDesktop() ? <CaseStudies /> : null}
-      {isDesktop() ? <PodcastAdvert /> : null}
+      <PodcastAdvert />
       <BlogsAdvert />
       {isDesktop() ? <Strongholds /> : null}
     </div>
@@ -253,7 +253,7 @@ function CaseStudies(): JSX.Element {
 }
 
 function PodcastAdvert(): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignItems: 'center' }}>
       <p className='title fs-x-large' style={{ width: '80%' }}>
         {podcastAdvertData.title}
@@ -263,6 +263,15 @@ function PodcastAdvert(): JSX.Element {
           return <PodcastEpisodeTile episode={episode} key={episode.title} />;
         })}
       </div>
+    </div>
+  ) : (
+    <div className='col' style={{ alignItems: 'center' }}>
+      <p className='title fs-x-large' style={{ width: '80%' }}>
+        {podcastAdvertData.title}
+      </p>
+      {podcastAdvertData.episodes.map(episode => {
+        return <PodcastEpisodeTile episode={episode} key={episode.title} />;
+      })}
     </div>
   );
 }
