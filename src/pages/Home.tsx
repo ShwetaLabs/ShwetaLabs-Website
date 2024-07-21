@@ -41,10 +41,10 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <WhatWeHave />
       <OurProducts />
       <Awards />
-      {isDesktop() ? <CaseStudies /> : null}
+      <CaseStudies />
       <PodcastAdvert />
       <BlogsAdvert />
-      {isDesktop() ? <Strongholds /> : null}
+      <Strongholds />
     </div>
   );
 };
@@ -235,7 +235,7 @@ function Awards(): JSX.Element {
   );
 }
 function CaseStudies(): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignContent: 'flex-start' }}>
       <p className='title fs-x-large' style={{ textAlign: 'left' }}>
         {caseStudiesData.title}
@@ -248,6 +248,18 @@ function CaseStudies(): JSX.Element {
           return <Testimony testimony={testimony} />;
         })}
       </div>
+    </div>
+  ) : (
+    <div className='col' style={{ alignContent: 'flex-start' }}>
+      <p className='title fs-x-large' style={{ textAlign: 'left' }}>
+        {caseStudiesData.title}
+      </p>
+      <p className='offwhite' style={{ width: '90%' }}>
+        {caseStudiesData.description}
+      </p>
+      {caseStudiesData.cases.map(testimony => {
+        return <Testimony testimony={testimony} />;
+      })}
     </div>
   );
 }
@@ -302,11 +314,20 @@ function BlogsAdvert(): JSX.Element {
 }
 function Strongholds(): JSX.Element {
   return (
-    <div className='col' style={{ width: '80%', alignItems: 'center' }}>
-      <p className='title fs-x-large' style={{ width: '80%' }}>
+    <div
+      className='col'
+      style={{ width: isDesktop() ? '80%' : '100%', alignItems: 'center' }}
+    >
+      <p
+        className='title fs-x-large'
+        style={{ width: isDesktop() ? '80%' : '100%' }}
+      >
         {strongholdsData.title}
       </p>
-      <img style={{ width: '90%' }} src={strongholdsData.map} />
+      <img
+        style={{ maxWidth: '100%', maxHeight: '100%' }}
+        src={strongholdsData.map}
+      />
     </div>
   );
 }
