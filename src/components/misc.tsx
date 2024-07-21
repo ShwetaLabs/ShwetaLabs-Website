@@ -84,7 +84,9 @@ export function FeatureTextData({
         flexGrow: 1,
       }}
     >
-      <p className='fs-larger subtitle'>{title}</p>
+      <p className='fs-larger subtitle' style={{ textAlign: 'left' }}>
+        {title}
+      </p>
       <p className='offwhite'>{description}</p>
       {learnMoreUrl ? (
         <div className='row'>

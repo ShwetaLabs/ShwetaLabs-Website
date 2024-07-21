@@ -2,6 +2,7 @@ import {
   capabilityCardSpec,
   subCapabilitiesCardSpec,
 } from '../../data/capabilities';
+import { isDesktop } from '../../utils';
 
 interface capabilitesProp {
   capability: capabilityCardSpec;
@@ -48,7 +49,7 @@ function SubcapabilityRow({ subCapability, onLeft, last }: subCapabilityProp) {
           paddingBottom: '32px',
         }}
       >
-        <span className=''> {subCapability.title} </span>
+        <span className='fw-bold'> {subCapability.title} </span>
         <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
       </div>
     </div>
@@ -59,56 +60,91 @@ export default function CapabilityRow({
   capability,
   imageOnLeft,
 }: capabilitesProp) {
-  const imagePortion = (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        width: '40%',
-        marginLeft: '52px',
-        marginTop: '32px',
-        marginRight: '32px',
-        marginBottom: '32px',
-      }}
-    >
-      <span className='fs-large fw-bold'>{capability.title}</span>
+  if (isDesktop()) {
+    return (
       <div
-        style={{ alignContent: 'center', marginTop: '49px', height: '100%' }}
+        className={imageOnLeft ? 'row' : 'rrow'}
+        style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
       >
-        <img
-          style={{ objectFit: 'cover' }}
-          src={capability.image}
-          alt={capability.title}
-        />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '40%',
+            marginLeft: '52px',
+            marginTop: '32px',
+            marginRight: '32px',
+            marginBottom: '32px',
+          }}
+        >
+          <span className='fs-large fw-bold'>{capability.title}</span>
+          <div
+            style={{
+              alignContent: 'center',
+              marginTop: '49px',
+              height: '100%',
+            }}
+          >
+            <img
+              style={{ objectFit: 'cover' }}
+              src={capability.image}
+              alt={capability.title}
+            />
+          </div>
+        </div>
+        <div style={{ width: '60%', textAlign: 'left' }}>
+          {capability.subcap.map((it, index) => (
+            <SubcapabilityRow
+              subCapability={it}
+              onLeft={imageOnLeft}
+              last={index === capability.subcap.length - 1}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  );
-
-  const listPortion = (
-    <div style={{ width: '60%', textAlign: 'left' }}>
-      {capability.subcap.map((it, index) => (
-        <SubcapabilityRow
-          subCapability={it}
-          onLeft={imageOnLeft}
-          last={index === capability.subcap.length - 1}
-        />
-      ))}
-    </div>
-  );
-
-  return imageOnLeft ? (
-    <div
-      style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-    >
-      {imagePortion}
-      {listPortion}
-    </div>
-  ) : (
-    <div
-      style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-    >
-      {listPortion}
-      {imagePortion}
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div
+        className='col'
+        style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '40%',
+            marginLeft: '52px',
+            marginTop: '32px',
+            marginRight: '32px',
+            marginBottom: '32px',
+          }}
+        >
+          <span className='fs-large fw-bold'>{capability.title}</span>
+          <div
+            style={{
+              alignContent: 'center',
+              marginTop: '49px',
+              height: '100%',
+            }}
+          >
+            <img
+              style={{ objectFit: 'cover' }}
+              src={capability.image}
+              alt={capability.title}
+            />
+          </div>
+        </div>
+        <div style={{ width: '60%', textAlign: 'left' }}>
+          {capability.subcap.map((it, index) => (
+            <SubcapabilityRow
+              subCapability={it}
+              onLeft={imageOnLeft}
+              last={index === capability.subcap.length - 1}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 }

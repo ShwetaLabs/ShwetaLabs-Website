@@ -60,7 +60,7 @@ const staticHeaderLinks: linkSpec[] = [
   servicesLink,
   podcastLink,
   blogLink,
-  // contactLink
+  contactLink,
 ];
 const socialLinks: linkSpec[] = [
   {

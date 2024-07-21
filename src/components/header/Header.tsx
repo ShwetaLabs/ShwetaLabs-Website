@@ -25,28 +25,34 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
     <div
       className='row'
       style={{
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         paddingInline: '11vw',
-        alignItems: 'center',
         paddingBlock: '1.51vw',
         borderBottom: 'var(--lightgray) 0.5px solid',
         backgroundColor: 'black',
       }}
     >
-      <Link to={headerData.logoLink.url}>
-        <img src={headerData.logo} />
-      </Link>
-      <div className='row' style={{ columnGap: '1.8vw' }}>
+      <div
+        className='row'
+        style={{
+          columnGap: '1.8vw',
+
+          alignItems: 'center',
+        }}
+      >
+        <Link to={headerData.logoLink.url}>
+          <img src={headerData.logo} />
+        </Link>
         {headerData.navLinks.map(link => {
           return <HeaderButtonDesktop link={link} key={link.text} />;
         })}
       </div>
-      <div>
+      {/* <div>
         <LinkBox
           link={headerData.requestDemoLink}
           aClassName='button2 fs-smaller'
         />
-      </div>
+      </div> */}
     </div>
   ) : (
     <div
@@ -80,9 +86,9 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
           {headerData.navLinks.map(link => (
             <HeaderButtonMobile link={link} key={link.text} />
           ))}
-          <span style={{ marginTop: '25px' }}>
+          {/* <span style={{ marginTop: '25px' }}>
             <LinkBox link={headerData.requestDemoLink} aClassName='button2' />
-          </span>
+          </span> */}
           <div
             className='row'
             style={{
@@ -128,7 +134,7 @@ export function HeaderButtonMobile({
         marginBlock: '25px',
       }}
     >
-      <LinkBox link={link} aClassName='headerButton fs-large' />
+      <LinkBox link={link} aClassName='headerButton' />
     </div>
   );
 }

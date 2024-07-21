@@ -37,11 +37,11 @@ export const Home: ({}) => JSX.Element = ({}) => {
       }
     >
       <BriefAdvert />
+      <CaseStudies />
       <TrustedPartners />
       <WhatWeHave />
       <OurProducts />
       <Awards />
-      <CaseStudies />
       <PodcastAdvert />
       <BlogsAdvert />
       <Strongholds />
@@ -61,12 +61,12 @@ function BriefAdvert(): JSX.Element {
       <p className='shady-70' style={{ textAlign: 'center' }}>
         {advertData.description}
       </p>
-      <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
+      {/* <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
         <LinkBox
           link={contactLink}
           aClassName={'button4 caret-right fs-small'}
         />
-      </span>
+      </span> */}
       <div
         className='row'
         style={{
@@ -105,16 +105,16 @@ function BriefAdvert(): JSX.Element {
 function TrustedPartners(): JSX.Element {
   return isDesktop() ? (
     <div
-      className='col bg2'
+      className='col'
       style={{ width: '80%', marginInline: 'auto', alignItems: 'center' }}
     >
       <p className='title fs-x-large'>{trustedPartnersData.title}</p>
       <div
         className='inline-fade'
-        style={{ width: '68vw', overflow: 'hidden' }}
+        style={{ width: '68vw', overflow: 'hidden', marginTop: 50 }}
       >
         <span style={{ zIndex: 'inherit' }}>
-          <Marquee>
+          <Marquee speed={40}>
             <div className='row' style={{ alignItems: 'center' }}>
               {trustedPartnersData.logos.map(logo => {
                 return (
@@ -237,7 +237,7 @@ function Awards(): JSX.Element {
 function CaseStudies(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignContent: 'flex-start' }}>
-      <p className='title fs-x-large' style={{ textAlign: 'left' }}>
+      <p className='title fs-x-large' style={{}}>
         {caseStudiesData.title}
       </p>
       <p className='offwhite' style={{ width: '90%' }}>
