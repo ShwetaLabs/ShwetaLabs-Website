@@ -131,7 +131,7 @@ function TrustedPartners(): JSX.Element {
       <p className='title fs-x-large'>{trustedPartnersData.title}</p>
       <div
         className='inline-fade'
-        style={{ width: '95vw', overflow: 'hidden' }}
+        style={{ width: '90vw', overflow: 'hidden' }}
       >
         <span style={{ zIndex: 'inherit' }}>
           <Marquee>
