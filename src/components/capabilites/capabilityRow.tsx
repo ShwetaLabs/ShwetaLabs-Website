@@ -48,8 +48,8 @@ function SubcapabilityRow({ subCapability, onLeft, last }: subCapabilityProp) {
           paddingBottom: '32px',
         }}
       >
-        <strong> {subCapability.title} </strong>
-        <p> {subCapability.paras} </p>
+        <span className=''> {subCapability.title} </span>
+        <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
       </div>
     </div>
   );
@@ -71,7 +71,7 @@ export default function CapabilityRow({
         marginBottom: '32px',
       }}
     >
-      <strong style={{ fontSize: '32px' }}>{capability.title}</strong>
+      <span className='fs-large fw-bold'>{capability.title}</span>
       <div
         style={{ alignContent: 'center', marginTop: '49px', height: '100%' }}
       >

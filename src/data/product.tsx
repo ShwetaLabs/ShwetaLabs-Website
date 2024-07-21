@@ -26,24 +26,13 @@ export interface productSpec {
   caseStudy: caseStudySpec;
 }
 
-export const sleuthHead = (
-  <div
-    style={{ paddingLeft: '96px', paddingRight: '96px', marginBottom: '32px' }}
-  >
-    <img src={images.sleuthLogo} alt='Sleuth' />
-    <div style={{ fontSize: '80px' }}>
-      A law Enforcement Officer's best friend.
-    </div>
-  </div>
-);
-
 export const productData = {
   head: {
     img: images.sleuthLogo,
     title: "A Law Enforcement Officer's best friend.",
     paras:
       'SLEUTH is a sophisticated CDR (Call Detail Record) and IPDR (Internet Protocol Detail Record) analysis tool. It helps agencies analyse CDRs or IPDRs - of individuals and to uncover patterns: such as who they spoke to most frequently, the timing of their last call, their location when the call was made.',
-    buttonText: 'Book a Demo >',
+    buttonText: 'Book a Demo',
   },
   capabilities: {
     capababilites: [

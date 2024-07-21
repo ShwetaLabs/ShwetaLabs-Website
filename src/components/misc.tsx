@@ -97,9 +97,7 @@ export function FeatureTextData({
   ) : (
     <div className='col bg2' style={{ padding: 24, marginBottom: 45 }}>
       <p className='fs-larger subtitle'>{title}</p>
-      <p className='offwhite' style={{ fontWeight: 550 }}>
-        {description}
-      </p>
+      <p className='offwhite fw-bold'>{description}</p>
       {learnMoreUrl ? (
         <div className='row'>
           <LinkBox
@@ -154,9 +152,7 @@ export function Product({ product }: IProductProps): JSX.Element {
         style={{ padding: 20, borderTop: 'var(--accent) 0.5px solid' }}
       >
         <p className='fs-larger subtitle'>{product.title}</p>
-        <p className='offwhite' style={{ fontWeight: 550 }}>
-          {product.description}
-        </p>
+        <p className='offwhite fw-bold'>{product.description}</p>
         {product.learnMoreUrl ? (
           <div className='row' style={{ justifyContent: 'flex-start' }}>
             <LinkBox

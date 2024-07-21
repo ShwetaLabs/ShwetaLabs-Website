@@ -106,7 +106,7 @@ export function HeaderButtonDesktop({
         textTransform: 'uppercase',
       }}
     >
-      <LinkBox link={link} aClassName='button fs-smaller' />
+      <LinkBox link={link} aClassName='headerButton fs-smaller' />
     </div>
   );
 }
@@ -122,7 +122,7 @@ export function HeaderButtonMobile({
         marginBlock: '25px',
       }}
     >
-      <LinkBox link={link} aClassName='button fs-large' />
+      <LinkBox link={link} aClassName='headerButton fs-large' />
     </div>
   );
 }
