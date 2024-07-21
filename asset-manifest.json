@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.feba37c9.css",
-    "main.js": "/static/js/main.73c34aa7.js",
+    "main.css": "/static/css/main.9cd4cffb.css",
+    "main.js": "/static/js/main.53e95ebf.js",
     "static/js/453.2a676a10.chunk.js": "/static/js/453.2a676a10.chunk.js",
-    "static/media/strongholdsMap.svg": "/static/media/strongholdsMap.cd204141051a26e9ccd0e6007bf030d2.svg",
+    "static/media/strongholdsMap.svg": "/static/media/strongholdsMap.164cb1bb2c2feb5168aca541397a8591.svg",
     "static/media/thumbnail.png": "/static/media/thumbnail.8d43f07a2623b9e1cb33.png",
+    "static/media/iitkgp.svg": "/static/media/iitkgp.8ee783871a7f090bb287b60af6765dd8.svg",
     "static/media/blog1.png": "/static/media/blog1.8fb8c0278a361a6b0942.png",
     "static/media/blog3.png": "/static/media/blog3.1091a49df0b7ad67c737.png",
     "static/media/ProximaNova-ThinIt.eot": "/static/media/ProximaNova-ThinIt.2fc09bf975dabcf05ce7.eot",
@@ -66,6 +67,7 @@
     "static/media/ProximaNova-Extrabld.woff2": "/static/media/ProximaNova-Extrabld.51e73062e691a23fb801.woff2",
     "static/media/ProximaNovaT-Thin.woff2": "/static/media/ProximaNovaT-Thin.bd087ed2c1c95fc74e2c.woff2",
     "static/media/ProximaNova-Black.woff2": "/static/media/ProximaNova-Black.5eca80c598e6bc1bd4af.woff2",
+    "static/media/dell.svg": "/static/media/dell.0b229a418044fb81b2bdc6485941420d.svg",
     "static/media/awardLogo.svg": "/static/media/awardLogo.db332f98b97af3a034a9d11f78c5bf46.svg",
     "static/media/footerLogo.svg": "/static/media/footerLogo.e6e572c69ef4d91009f272d66e74a389.svg",
     "static/media/sleuth.svg": "/static/media/sleuth.2fe017d81bfff9e7ef3abfbd749a8e6d.svg",
@@ -73,6 +75,7 @@
     "static/media/Proactive.svg": "/static/media/Proactive.66a67051edd9065003a62d27ba259901.svg",
     "static/media/Intelligent.svg": "/static/media/Intelligent.6c78dd345a6d2617cac26de612fc8af8.svg",
     "static/media/userFriendly.svg": "/static/media/userFriendly.aed98f0e57290a268b652bcb61042447.svg",
+    "static/media/aws.svg": "/static/media/aws.6ea34e802af310216787cea6023988c7.svg",
     "static/media/Care.svg": "/static/media/Care.86be5955d83fcf502fbfb331d56f1922.svg",
     "static/media/accessibility.svg": "/static/media/accessibility.c74616937720eee6f23100c628c80595.svg",
     "static/media/forensic.svg": "/static/media/forensic.2ac3b8aceae7613f932f2a8d82144f0d.svg",
@@ -86,6 +89,7 @@
     "static/media/legal.svg": "/static/media/legal.6bf4dcaca8b8e635b14d899ab9e0ba0d.svg",
     "static/media/security.svg": "/static/media/security.a2b3eda75fcc715d73a3054c3ad3b523.svg",
     "static/media/training.svg": "/static/media/training.c4d03a0d0562bfb7f89ec6ed69f62fbd.svg",
+    "static/media/nvidia.svg": "/static/media/nvidia.ff9c09c6b8824daf707ff7651a49fe28.svg",
     "static/media/logo.svg": "/static/media/logo.1f12ee42f7c42438e38bbe4f3f871e7a.svg",
     "static/media/compliance.svg": "/static/media/compliance.dd8b33f94aa8f14a804e59c497f6266e.svg",
     "static/media/job.svg": "/static/media/job.b06c604ce71605f33b089597811c2272.svg",
@@ -126,12 +130,12 @@
     "static/media/medium.svg": "/static/media/medium.ec92a69252c2309b0e2d5eb0d2ccb3e4.svg",
     "static/media/quotes.svg": "/static/media/quotes.7c7645f14605bed4fc761db06faa85a8.svg",
     "static/media/playButton.svg": "/static/media/playButton.86eb663013125133a01b09c31eebb11a.svg",
-    "main.feba37c9.css.map": "/static/css/main.feba37c9.css.map",
-    "main.73c34aa7.js.map": "/static/js/main.73c34aa7.js.map",
+    "main.9cd4cffb.css.map": "/static/css/main.9cd4cffb.css.map",
+    "main.53e95ebf.js.map": "/static/js/main.53e95ebf.js.map",
     "453.2a676a10.chunk.js.map": "/static/js/453.2a676a10.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.feba37c9.css",
-    "static/js/main.73c34aa7.js"
+    "static/css/main.9cd4cffb.css",
+    "static/js/main.53e95ebf.js"
   ]
 }
