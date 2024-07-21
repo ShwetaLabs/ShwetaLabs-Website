@@ -11,11 +11,14 @@ export default function TitleInfo({
 }: titleInfoProp): JSX.Element {
   return onSide ? (
     <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-      <div style={{ textAlign: 'start', width: '50%', fontSize: '96px' }}>
-        <strong>{titleInfo.title}</strong>
+      <div
+        className='title fs-xx-large'
+        style={{ textAlign: 'start', width: '50%' }}
+      >
+        {titleInfo.title}
       </div>
       <div style={{ width: '50%', whiteSpace: 'pre-wrap', textAlign: 'left' }}>
-        {titleInfo.paras}
+        <p className='shady-70'>{titleInfo.paras}</p>
       </div>
     </div>
   ) : (

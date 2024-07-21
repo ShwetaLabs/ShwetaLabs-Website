@@ -48,8 +48,8 @@ export function About(): JSX.Element {
     >
       <TitleInfo titleInfo={aboutData.titleInfo} onSide={true} />
       <div style={{ height: '467px' }}>{createRows(aboutData.visions)}</div>
-      <Squad squad={aboutData.squad} />
       <Values values={aboutData.values} />
+      <Squad squad={aboutData.squad} />
     </div>
   );
 }

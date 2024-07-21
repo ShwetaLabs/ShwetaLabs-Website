@@ -52,9 +52,9 @@ function BriefAdvert(): JSX.Element {
   return isDesktop() ? (
     <div
       className='col'
-      style={{ alignItems: 'center', width: '80%', marginInline: 'auto' }}
+      style={{ alignItems: 'center', width: '70vw', marginInline: 'auto' }}
     >
-      <p style={{ width: '80%' }} className='title fs-xx-large'>
+      <p style={{ width: '60vw' }} className='title fs-xx-large'>
         {advertData.title}
       </p>
       <p className='shady-70' style={{ textAlign: 'center' }}>
