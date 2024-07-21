@@ -30,6 +30,7 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
         alignItems: 'center',
         paddingBlock: '1.51vw',
         borderBottom: 'var(--lightgray) 0.5px solid',
+        backgroundColor: 'black',
       }}
     >
       <Link to={headerData.logoLink.url}>
@@ -48,7 +49,12 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       </div>
     </div>
   ) : (
-    <div className='col'>
+    <div
+      className='col'
+      style={{
+        backgroundColor: 'black',
+      }}
+    >
       <div
         className={'row' + (navBarVisible ? ' bg-accent' : '')}
         style={{

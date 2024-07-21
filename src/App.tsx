@@ -11,10 +11,20 @@ function App() {
 
   return (
     <div className='App'>
-      <Header
-        navBarVisible={navBarVisible}
-        setNavBarVisible={setNavBarVisible}
-      />
+      <span
+        style={{
+          position: 'sticky',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 3,
+        }}
+      >
+        <Header
+          navBarVisible={navBarVisible}
+          setNavBarVisible={setNavBarVisible}
+        />
+      </span>
       <div
         className='main'
         style={{

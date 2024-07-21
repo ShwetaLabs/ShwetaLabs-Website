@@ -171,7 +171,7 @@ div.inline-fade::before {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;/*huge to ensure overlay over most elements*/
+  z-index: 2;/*huge to ensure overlay over most elements*/
   background-image: linear-gradient(to right,
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0),
