@@ -114,6 +114,7 @@ p {
 .title2{
   line-height: 100%;
   font-weight: bold;
+  text-align: center;
   padding: 0;
   margin: 0;
 }

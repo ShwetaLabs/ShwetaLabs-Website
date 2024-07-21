@@ -8,6 +8,7 @@ import {
   userSpec,
   whatWeHaveData,
 } from '../data/home';
+import { comingSoonData } from '../data/podcast';
 import { icons } from '../rsrc';
 import { isDesktop } from '../utils';
 import { LinkBox } from './linkBox/LinkBox';
@@ -351,6 +352,17 @@ export function PodcastEpisodeTile({
         </p>
         <p className='stripped'>{episode.title}</p>
       </div>
+    </div>
+  );
+}
+
+export function ComingSoon() {
+  return (
+    <div
+      className='title fs-x-large bg-accent'
+      style={{ marginTop: '8vw', padding: '2vw', borderRadius: '5px' }}
+    >
+      {comingSoonData.text}
     </div>
   );
 }
