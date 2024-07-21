@@ -90,12 +90,7 @@ const socialLinks: linkSpec[] = [
     icon: icons.twitter,
   },
 ];
-export const quickLinks: linkSpec[] = [
-  { ...aboutLink, text: 'About Us' },
-  productsLink,
-  blogLink,
-  podcastLink,
-];
+export const quickLinks: linkSpec[] = [...getHeaderNavLinks()];
 const termsLink = {
   text: 'Terms',
   url: ``,

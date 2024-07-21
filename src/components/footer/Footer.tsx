@@ -37,11 +37,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
         >
           <p className='shady-70 fs-smaller'>{footerData.quickLinksTitle}</p>
           {footerData.quickLinks.map(link => {
-            return (
-              <span style={{ paddingBlock: '0.6vw' }} key={link.text}>
-                <LinkBox link={link} aClassName='footerLink fs-smaller' />
-              </span>
-            );
+            return <LinkBox link={link} aClassName='footerLink fs-smaller' />;
           })}
         </div>
         <div
@@ -52,16 +48,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
           <p className='shady-70 fs-smaller'>{footerData.policyLinksTitle}</p>
           {footerData.policyLinks.map(link => {
             return (
-              <span
-                style={{ paddingBlock: '10px', letterSpacing: '1.5%' }}
+              <LinkBox
+                link={link}
+                aClassName='footerLink fs-smaller'
                 key={link.text}
-              >
-                <LinkBox
-                  link={link}
-                  aClassName='footerLink fs-smaller'
-                  key={link.text}
-                />
-              </span>
+              />
             );
           })}
         </div>

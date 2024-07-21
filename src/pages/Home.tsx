@@ -41,7 +41,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <TrustedPartners />
       <WhatWeHave />
       <OurProducts />
-      <Awards />
+      {/* <Awards /> */}
       <PodcastAdvert />
       <BlogsAdvert />
       <Strongholds />
@@ -55,7 +55,7 @@ function BriefAdvert(): JSX.Element {
       className='col'
       style={{ alignItems: 'center', width: '70vw', marginInline: 'auto' }}
     >
-      <p style={{ width: '60vw' }} className='title fs-xx-large'>
+      <p style={{ width: '50vw' }} className='title fs-x-large'>
         {advertData.title}
       </p>
       <p className='shady-70' style={{ textAlign: 'center' }}>
@@ -71,18 +71,18 @@ function BriefAdvert(): JSX.Element {
         className='row'
         style={{
           width: '90%',
-          marginTop: 140,
+          marginTop: 40,
           justifyContent: 'space-between',
           alignItems: 'center',
         }}
       >
         <div>
-          <p className='shady-70' style={{ textAlign: 'left', width: '30vw' }}>
+          <p className='shady-70' style={{ width: '30vw' }}>
             {advertData.descriptionBesideLogo}
           </p>
         </div>
         <div>
-          <img style={{ width: '25vw' }} src={advertData.logo} />
+          <img style={{ width: '22.5vw' }} src={advertData.logo} />
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@ function TrustedPartners(): JSX.Element {
 function WhatWeHave(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%' }}>
-      <p className='title fs-x-large'>{whatWeHaveData.title}</p>
+      <p className='title fs-larger'>{whatWeHaveData.title}</p>
       {whatWeHaveData.features.map((feature, index, arr) => {
         return (
           <Feature
@@ -181,7 +181,9 @@ function WhatWeHave(): JSX.Element {
 function OurProducts(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%' }}>
-      <p className='title fs-x-large'>{ourProductsData.title}</p>
+      <p className='title fs-x-large' style={{ marginBottom: 30 }}>
+        {ourProductsData.title}
+      </p>
       {ourProductsData.products.map(product => {
         return <Product product={product} key={product.title} />;
       })}
@@ -237,13 +239,13 @@ function Awards(): JSX.Element {
 function CaseStudies(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignContent: 'flex-start' }}>
-      <p className='title fs-x-large' style={{}}>
+      <p className='title fs-larger' style={{}}>
         {caseStudiesData.title}
       </p>
-      <p className='offwhite' style={{ width: '90%' }}>
+      {/* <p className='offwhite' style={{ width: '90%' }}>
         {caseStudiesData.description}
-      </p>
-      <div className='row'>
+      </p> */}
+      <div className='row' style={{ marginTop: 30 }}>
         {caseStudiesData.cases.map(testimony => {
           return <Testimony testimony={testimony} />;
         })}
@@ -267,7 +269,7 @@ function CaseStudies(): JSX.Element {
 function PodcastAdvert(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignItems: 'center' }}>
-      <p className='title fs-x-large' style={{ width: '80%' }}>
+      <p className='title fs-larger' style={{ width: '80%' }}>
         {podcastAdvertData.title}
       </p>
       <div className='row' style={{ justifyContent: 'center' }}>
@@ -290,7 +292,7 @@ function PodcastAdvert(): JSX.Element {
 function BlogsAdvert(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignItems: 'center' }}>
-      <p className='title fs-x-large' style={{ marginBottom: 48 }}>
+      <p className='title fs-larger' style={{ marginBottom: 48 }}>
         {blogsAdvertData.title}
       </p>
       <div className='row'>
@@ -319,7 +321,7 @@ function Strongholds(): JSX.Element {
       style={{ width: isDesktop() ? '80%' : '100%', alignItems: 'center' }}
     >
       <p
-        className='title fs-x-large'
+        className='title fs-larger'
         style={{ width: isDesktop() ? '80%' : '100%' }}
       >
         {strongholdsData.title}

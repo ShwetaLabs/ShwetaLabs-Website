@@ -25,13 +25,16 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
     <div
       className='row'
       style={{
-        justifyContent: 'flex-start',
+        justifyContent: 'space-between',
         paddingInline: '11vw',
         paddingBlock: '1.51vw',
         borderBottom: 'var(--lightgray) 0.5px solid',
         backgroundColor: 'black',
       }}
     >
+      <Link to={headerData.logoLink.url}>
+        <img src={headerData.logo} />
+      </Link>
       <div
         className='row'
         style={{
@@ -40,9 +43,6 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
           alignItems: 'center',
         }}
       >
-        <Link to={headerData.logoLink.url}>
-          <img src={headerData.logo} />
-        </Link>
         {headerData.navLinks.map(link => {
           return <HeaderButtonDesktop link={link} key={link.text} />;
         })}

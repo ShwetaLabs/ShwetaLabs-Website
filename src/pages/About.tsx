@@ -41,6 +41,7 @@ export function About(): JSX.Element {
     <div
       style={{
         padding: '160px',
+        paddingTop: '80px',
         display: 'flex',
         flexDirection: 'column',
         gap: '160px',
