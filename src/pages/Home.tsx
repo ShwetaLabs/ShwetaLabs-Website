@@ -43,7 +43,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <Awards />
       {isDesktop() ? <CaseStudies /> : null}
       {isDesktop() ? <PodcastAdvert /> : null}
-      {isDesktop() ? <BlogsAdvert /> : null}
+      <BlogsAdvert />
       {isDesktop() ? <Strongholds /> : null}
     </div>
   );
@@ -200,11 +200,11 @@ function OurProducts(): JSX.Element {
 
 function Awards(): JSX.Element {
   return isDesktop() ? (
-    <div className='col' style={{ width: '80%', alignItems: 'center' }}>
-      <p className='title fs-x-large' style={{ width: '90%' }}>
+    <div className='col' style={{ width: '61.2vw', alignItems: 'center' }}>
+      <p className='title fs-x-large' style={{}}>
         {awardsData.title}
       </p>
-      <p className='offwhite centered' style={{ width: '85%' }}>
+      <p className='offwhite centered' style={{}}>
         {awardsData.description}
       </p>
       <div className='row' style={{ justifyContent: 'center' }}>
@@ -267,12 +267,23 @@ function PodcastAdvert(): JSX.Element {
   );
 }
 function BlogsAdvert(): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignItems: 'center' }}>
       <p className='title fs-x-large' style={{ marginBottom: 48 }}>
         {blogsAdvertData.title}
       </p>
       <div className='row'>
+        {blogsAdvertData.blogs.map(blog => {
+          return <BlogTile blog={blog} key={blog.title} />;
+        })}
+      </div>
+    </div>
+  ) : (
+    <div className='col'>
+      <p className='title fs-x-large' style={{ marginBottom: 48 }}>
+        {blogsAdvertData.title}
+      </p>
+      <div className='col'>
         {blogsAdvertData.blogs.map(blog => {
           return <BlogTile blog={blog} key={blog.title} />;
         })}

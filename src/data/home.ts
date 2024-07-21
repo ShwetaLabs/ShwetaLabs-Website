@@ -77,7 +77,7 @@ export interface testimonySpec {
   user: userSpec;
 }
 export const caseStudiesData = {
-  title: 'Voices of Trust and Success',
+  title: 'Appreciated By',
   description:
     'Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium dolorum. Consequatur sint cum illo eum harum odit delectus sed. Quis deleniti aut alias.',
   cases: [
@@ -160,7 +160,7 @@ export interface awardSpec {
   category: string;
 }
 export const awardsData = {
-  title: 'Awards and Recognition',
+  title: 'Recognizing Excellence in Innovation and Dedication',
   description:
     'Qui numquam blanditiis est aut dicta. Ab unde qui adipisci harum alias est qui temporibus aut. Accusantium eligendi est veniam qui praesentium dolorum. Consequatur sint cum illo eum harum odit delectus sed. Quis deleniti aut alias.',
   awards: [

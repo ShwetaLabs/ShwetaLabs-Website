@@ -215,10 +215,32 @@ export interface IBlogProps {
 }
 
 export function BlogTile({ blog }: IBlogProps): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div className='col' style={{ marginInline: 16 }}>
       <div className='blogtile'>
         <img src={blog.image} />
+      </div>
+      <div
+        className='row'
+        style={{ justifyContent: 'space-between', marginTop: 24 }}
+      >
+        <p className='offwhite fs-smaller stripped'>{blog.date}</p>
+        <p className='offwhite fs-smaller stripped clocked'>{blog.length}</p>
+      </div>
+      <div className='col' style={{ alignItems: 'flex-start' }}>
+        <p className='stripped' style={{ marginBottom: 12 }}>
+          {blog.title}
+        </p>
+        <LinkBox
+          link={{ text: blogsAdvertData.readArticle, url: blog.url }}
+          aClassName='caret-right button-pill fs-smaller'
+        />
+      </div>
+    </div>
+  ) : (
+    <div className='col' style={{}}>
+      <div className='blogtile'>
+        <img src={blog.image} style={{ width: '80vw' }} />
       </div>
       <div
         className='row'

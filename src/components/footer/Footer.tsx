@@ -100,7 +100,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
         className='col thin-bordered'
         style={{
           padding: '20px',
-          justifyContent: 'space-around',
+          justifyContent: 'space-between',
           borderInline: 0,
         }}
       >
@@ -157,12 +157,18 @@ export function Footer({ getDisplay }: any): JSX.Element {
           key={footerData.addressTitle}
           style={{ alignItems: 'flex-start', rowGap: '0.45vw' }}
         >
+          <p className='shady-70 fs-smaller'>{footerData.addressTitle}</p>
           {footerData.businessDetails.map(value => {
             return (
-              <p className='stripped fs-smaller' key={value.text}>
-                <img src={value.icon} />
-                {value.text}
-              </p>
+              <div
+                className='row'
+                style={{ alignItems: 'center', rowGap: '0.45vw' }}
+              >
+                <img src={value.icon} style={{ paddingRight: 10 }} />
+                <p className='stripped fs-smaller' key={value.text}>
+                  {value.text}
+                </p>
+              </div>
             );
           })}
         </div>
