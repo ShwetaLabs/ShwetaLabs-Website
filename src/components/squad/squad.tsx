@@ -1,4 +1,5 @@
 import { profileSpec, squadSpec } from '../../data/squad';
+import { isDesktop } from '../../utils';
 import Profile from '../profile/profile';
 
 interface squadProp {
@@ -27,14 +28,24 @@ export default function Squad({ squad }: squadProp) {
     rows.push(<div style={{ margin: '10px' }}>{inRow.concat()}</div>);
     return rows;
   }
-  return (
+  return isDesktop() ? (
     <div>
-      <strong style={{ fontSize: '80px' }}> {squad.title} </strong>
+      <p className='fw-bold fs-x-large'> {squad.title} </p>
       <div
         className='row'
         style={{ justifyContent: 'center', alignItems: 'center' }}
       >
         {createRows(squad.profiles, squad.perRow)}
+      </div>
+    </div>
+  ) : (
+    <div>
+      <p className='fw-bold fs-x-large centered'> {squad.title} </p>
+      <div
+        className='row'
+        style={{ justifyContent: 'center', alignItems: 'center' }}
+      >
+        {createRows(squad.profiles, 1)}
       </div>
     </div>
   );

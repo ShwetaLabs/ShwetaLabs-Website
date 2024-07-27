@@ -27,12 +27,15 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
         </div>
         <div style={{ width: '63%', marginTop: '16px', marginRight: '40px' }}>
           <div style={{ marginBottom: '16px' }}>
-            <span style={{ marginBottom: '16px', fontSize: '20px' }}>
+            <span className='fs-large' style={{ marginBottom: '16px' }}>
               {' '}
               {valueCard.title}{' '}
             </span>
           </div>
-          <div style={{ textAlign: 'left', fontSize: '14px', opacity: '0.6' }}>
+          <div
+            className='fs-smaller'
+            style={{ textAlign: 'left', opacity: '0.6' }}
+          >
             {' '}
             {valueCard.para}{' '}
           </div>
@@ -41,28 +44,28 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
     </div>
   ) : (
     <div
+      className='col bg-accent'
       style={{
-        paddingRight: '52px',
-        paddingLeft: '52px',
         height: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-        display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 20,
+        padding: 20,
       }}
     >
-      <div>
+      <div style={{}}>
         <img
           style={{ objectFit: 'cover' }}
           src={valueCard.image}
           alt={valueCard.title}
         />
       </div>
-      <div>
-        <strong style={{ fontSize: '64px' }}> {valueCard.title} </strong>
-        <p style={{ textAlign: 'center', opacity: '0.6' }}>{valueCard.para}</p>
-      </div>
+      <p style={{ marginBlock: 20 }} className='fw-bold fs-large stripped'>
+        {valueCard.title}
+      </p>
+      <p className='' style={{ textAlign: 'center', opacity: '0.6' }}>
+        {valueCard.para}
+      </p>
     </div>
   );
 }

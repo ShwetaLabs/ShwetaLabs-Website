@@ -1,4 +1,5 @@
 import { valuesSpec, valueCardSpec } from '../../data/about';
+import { isDesktop } from '../../utils';
 import ValueCard from './valueCard';
 
 interface valuesProp {
@@ -31,7 +32,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
     );
     return rows;
   }
-  return (
+  return isDesktop() ? (
     <div>
       <div style={{ padding: '0px 215px', marginBottom: '48px' }}>
         {/* <div style={{ fontSize: "20px" }} > {values.superTitle} </div> */}
@@ -42,6 +43,17 @@ export default function Values({ values }: valuesProp): JSX.Element {
         {/* <div style={{ opacity: '0.6' }}> {values.para} </div> */}
       </div>
       <div> {createRows(values.cards)} </div>
+    </div>
+  ) : (
+    <div>
+      <div style={{}}>
+        <p className='fs-x-large title2'>{values.title}</p>
+      </div>
+      <div>
+        {values.cards.map(card => {
+          return <ValueCard valueCard={card} onLeft={false} key={card.title} />;
+        })}
+      </div>
     </div>
   );
 }

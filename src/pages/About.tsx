@@ -3,6 +3,7 @@ import TitleInfo from '../components/titleInfo/titleInfo';
 import { aboutData, valueCardSpec } from '../data/about';
 import Values from '../components/values/values';
 import ValueCard from '../components/values/valueCard';
+import { isDesktop } from '../utils';
 
 export function About(): JSX.Element {
   function createRows(values: valueCardSpec[]) {
@@ -37,7 +38,7 @@ export function About(): JSX.Element {
     return rows;
   }
 
-  return (
+  return isDesktop() ? (
     <div
       style={{
         padding: '160px',
@@ -47,8 +48,35 @@ export function About(): JSX.Element {
         gap: '160px',
       }}
     >
-      <TitleInfo titleInfo={aboutData.titleInfo} onSide={true} />
+      <TitleInfo titleInfo={aboutData.titleInfo} />
       <div style={{ height: '467px' }}>{createRows(aboutData.visions)}</div>
+      <Values values={aboutData.values} />
+      <Squad squad={aboutData.squad} />
+    </div>
+  ) : (
+    <div
+      className='col'
+      style={{
+        gap: '160px',
+      }}
+    >
+      <TitleInfo titleInfo={aboutData.titleInfo} />
+      <div style={{}}>
+        {aboutData.visions.map(visionCard => {
+          return (
+            <div
+              className='col bg-accent'
+              style={{ alignItems: 'center', marginTop: 24 }}
+            >
+              <div>
+                <img src={visionCard.image} />
+              </div>
+              <p className='fs-larger fw-bold'>{visionCard.title}</p>
+              <p className='shady-70 centered'>{visionCard.para}</p>
+            </div>
+          );
+        })}
+      </div>
       <Values values={aboutData.values} />
       <Squad squad={aboutData.squad} />
     </div>

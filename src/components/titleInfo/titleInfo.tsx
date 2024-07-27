@@ -1,15 +1,12 @@
 import { titleInfoSpec } from '../../data/utils';
+import { isDesktop } from '../../utils';
 
 interface titleInfoProp {
   titleInfo: titleInfoSpec;
-  onSide: boolean;
 }
 
-export default function TitleInfo({
-  titleInfo,
-  onSide,
-}: titleInfoProp): JSX.Element {
-  return onSide ? (
+export default function TitleInfo({ titleInfo }: titleInfoProp): JSX.Element {
+  return isDesktop() ? (
     <div
       style={{
         display: 'flex',
@@ -17,20 +14,24 @@ export default function TitleInfo({
         alignItems: 'center',
       }}
     >
-      <div
+      <p
         className='title fs-xx-large'
         style={{ textAlign: 'start', width: '50%' }}
       >
         {titleInfo.title}
-      </div>
+      </p>
       <div style={{ width: '50%', whiteSpace: 'pre-wrap', textAlign: 'left' }}>
         <p className='shady-70'>{titleInfo.paras}</p>
       </div>
     </div>
   ) : (
     <div>
-      {titleInfo.title}
-      {titleInfo.paras}
+      <p className='title fs-xx-large' style={{ textAlign: 'start' }}>
+        {titleInfo.title}
+      </p>
+      <div style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>
+        <p className='shady-70'>{titleInfo.paras}</p>
+      </div>
     </div>
   );
 }
