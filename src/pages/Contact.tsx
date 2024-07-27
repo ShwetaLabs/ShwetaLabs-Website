@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { contactData } from '../data/contact';
-import { DataService } from '../services/dataService';
+import { MailService } from '../services/dataService';
 import { isDesktop } from '../utils';
 
 export function Contact(): JSX.Element {
@@ -51,7 +51,7 @@ function Form({ form }: IFormSpec): JSX.Element {
     setMessage('');
   };
   const sendData = async () => {
-    const dataService = new DataService();
+    const dataService = new MailService();
     const response = await dataService.postContactUsForm(
       firstName,
       lastName,
