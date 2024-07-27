@@ -13,13 +13,20 @@ interface subCapabilityProp {
   subCapability: subCapabilitiesCardSpec;
   onLeft: boolean;
   last: boolean;
+  first: boolean;
 }
 
-function SubcapabilityRow({ subCapability, onLeft, last }: subCapabilityProp) {
+function SubcapabilityRow({
+  first,
+  subCapability,
+  onLeft,
+  last,
+}: subCapabilityProp) {
   const leftBorder = onLeft ? '1px solid rgba(255, 255, 255, 0.3)' : '0px';
   const rightBorder = !onLeft ? '1px solid rgba(255, 255, 255, 0.3)' : '0px';
   const bottomBorder = !last ? '1px solid rgba(255, 255, 255, 0.3)' : '0px';
-  return (
+  const topBorder = first ? '1px solid rgba(255, 255, 255, 0.3)' : '';
+  return isDesktop() ? (
     <div
       style={{
         borderLeft: leftBorder,
@@ -53,6 +60,38 @@ function SubcapabilityRow({ subCapability, onLeft, last }: subCapabilityProp) {
         <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
       </div>
     </div>
+  ) : (
+    <div
+      style={{
+        borderTop: topBorder,
+        borderBottom: bottomBorder,
+        display: 'flex',
+        justifyContent: 'space-between',
+        gap: '40px',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          paddingTop: '52.5px',
+          paddingLeft: '40px',
+          paddingBottom: '52.5px',
+        }}
+      >
+        <img src={subCapability.image} alt={subCapability.title} />
+      </div>
+      <div
+        style={{
+          paddingTop: '32px',
+          paddingBottom: '32px',
+        }}
+      >
+        <span className='fw-bold'> {subCapability.title} </span>
+        <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
+      </div>
+    </div>
   );
 }
 
@@ -71,22 +110,25 @@ export default function CapabilityRow({
             display: 'flex',
             flexDirection: 'column',
             width: '40%',
-            marginLeft: '52px',
-            marginTop: '32px',
-            marginRight: '32px',
-            marginBottom: '32px',
+            marginTop: 32,
           }}
         >
-          <span className='fs-large fw-bold'>{capability.title}</span>
+          <span
+            className='fs-large fw-bold centered'
+            style={{ width: '85%', marginInline: 'auto' }}
+          >
+            {capability.title}
+          </span>
           <div
+            className='row'
             style={{
-              alignContent: 'center',
+              justifyContent: 'center',
               marginTop: '49px',
               height: '100%',
             }}
           >
             <img
-              style={{ objectFit: 'cover' }}
+              style={{ width: '50%' }}
               src={capability.image}
               alt={capability.title}
             />
@@ -98,6 +140,7 @@ export default function CapabilityRow({
               subCapability={it}
               onLeft={imageOnLeft}
               last={index === capability.subcap.length - 1}
+              first={index === 0}
             />
           ))}
         </div>
@@ -107,24 +150,29 @@ export default function CapabilityRow({
     return (
       <div
         className='col'
-        style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+        style={{
+          alignItems: 'center',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        }}
       >
         <div
+          className='col'
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '40%',
-            marginLeft: '52px',
+            alignItems: 'center',
             marginTop: '32px',
-            marginRight: '32px',
-            marginBottom: '32px',
           }}
         >
-          <span className='fs-large fw-bold'>{capability.title}</span>
+          <span
+            className='fs-large fw-bold centered'
+            style={{ width: '85%', marginInline: 'auto' }}
+          >
+            {capability.title}
+          </span>
           <div
             style={{
               alignContent: 'center',
               marginTop: '49px',
+              marginBottom: '30px',
               height: '100%',
             }}
           >
@@ -135,12 +183,13 @@ export default function CapabilityRow({
             />
           </div>
         </div>
-        <div style={{ width: '60%', textAlign: 'left' }}>
+        <div style={{ textAlign: 'left' }}>
           {capability.subcap.map((it, index) => (
             <SubcapabilityRow
               subCapability={it}
               onLeft={imageOnLeft}
               last={index === capability.subcap.length - 1}
+              first={index === 0}
             />
           ))}
         </div>

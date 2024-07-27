@@ -8,7 +8,7 @@ interface SleuthHeadProp {
 
 export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
   return isDesktop() ? (
-    <>
+    <div className='col' style={{ alignItems: 'center' }}>
       <div
         style={{
           paddingLeft: '96px',
@@ -39,7 +39,7 @@ export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
       >
         <div className='title2 fs-larger'>{sleuthHead.title}</div>
       </div>
-    </>
+    </div>
   ) : (
     <div className='col' style={{ alignItems: 'center' }}>
       <div
@@ -57,12 +57,12 @@ export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
         <div style={{ paddingBottom: '32px' }}>
           <p className='shady-70 centered'>{sleuthHead.paras}</p>
         </div>
-        <span className='fw-bold' style={{ textTransform: 'uppercase' }}>
+        {/* <span className='fw-bold' style={{ textTransform: 'uppercase' }}>
           <LinkBox
             link={{ text: sleuthHead.buttonText, url: '/contact' }}
             aClassName='button4 caret-right'
           />
-        </span>
+        </span> */}
       </div>
       <div
         style={{

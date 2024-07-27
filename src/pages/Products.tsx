@@ -31,7 +31,7 @@ export function Products(): JSX.Element {
 
       <div>
         {productData.capabilities.capababilites.map((it, index) => (
-          <div style={{ margin: '30px' }}>
+          <div style={{}}>
             <CapabilityRow capability={it} imageOnLeft={index % 2 == 0} />
           </div>
         ))}
