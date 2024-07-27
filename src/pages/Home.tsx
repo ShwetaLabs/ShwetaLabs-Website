@@ -163,7 +163,10 @@ function WhatWeHave(): JSX.Element {
       })}
     </div>
   ) : (
-    <div className='col'>
+    <div
+      className='col'
+      style={{ alignItems: 'center', alignContent: 'center' }}
+    >
       <p className='title fs-x-large'>{whatWeHaveData.title}</p>
       {whatWeHaveData.features.map((feature, index, arr) => {
         return (

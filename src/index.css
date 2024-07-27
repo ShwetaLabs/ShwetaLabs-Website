@@ -5,6 +5,7 @@
   background-color: black;
   color: white;
   --primary: #2a5c65;
+  --primary-light: #4494a2;
   --secondary-bg: #0f0f0f;
   --accent: #1f1f1f;
   --offwhite: #b3b3b3;
@@ -16,6 +17,10 @@
   font-family: 'ProximaNovaRegular', Helvetica, sans-serif !important;
   font-weight: 400;
   text-align: justify;
+  text-justify: newspaper;
+  /* word-break: normal;
+  hyphens: auto;
+  -webkit-hyphens: auto; */
   /*semi-bold for figma. 600 wasn't looking right.*/
 }
 
@@ -135,13 +140,12 @@ a {
 }
 
 div.main {
-  margin-top: 0vh;
+  margin-top: 15vh;
   margin-bottom: 5vh;
   margin-inline: 0px;
 }
 
 div.home>* {
-  margin: 80px;
   margin-inline: auto;
 }
 
@@ -152,7 +156,14 @@ a.headerButton {
   padding-inline: 1.2vw;
   letter-spacing: 50%;
 }
-
+a.hoverColor:hover{
+  color: var(--primary-light);
+}
+a.hoverUnderline:hover{
+  border-bottom: solid 3px var(--primary);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 a.button {
   color: white;
   border-radius: 5px;
@@ -187,10 +198,6 @@ div.inline-fade::before {
 
 p.shady-70 {
   opacity: 70%;
-}
-
-p {
-  text-align: justify;
 }
 
 .bg-accent {

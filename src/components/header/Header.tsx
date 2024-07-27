@@ -81,7 +81,11 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       {navBarVisible ? (
         <div
           className='col bg-accent'
-          style={{ alignItems: 'center', alignContent: 'stretch' }}
+          style={{
+            alignItems: 'center',
+            alignContent: 'stretch',
+            justifyContent: 'stretch',
+          }}
         >
           {headerData.navLinks.map(link => (
             <HeaderButtonMobile link={link} key={link.text} />
@@ -95,7 +99,8 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
               width: '98%',
               alignItems: 'center',
               justifyContent: 'center',
-              marginTop: 50,
+              marginTop: 30,
+              paddingBlock: 30,
               borderTop: 'var(--lightgray) 0.5px solid',
             }}
           >
@@ -118,7 +123,10 @@ export function HeaderButtonDesktop({
         textTransform: 'uppercase',
       }}
     >
-      <LinkBox link={link} aClassName='headerButton fs-smaller' />
+      <LinkBox
+        link={link}
+        aClassName='headerButton fs-smaller hoverUnderline'
+      />
     </div>
   );
 }

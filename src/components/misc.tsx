@@ -44,6 +44,7 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
   ) : (
     <div className='col' style={{ alignItems: 'center' }}>
       <div
+        className='row'
         style={{
           alignItems: 'center',
           justifyContent: 'center',
@@ -451,7 +452,7 @@ export function ComingSoon() {
   return (
     <div
       className='title fs-x-large bg-accent'
-      style={{ marginTop: '8vw', padding: '2vw', borderRadius: '5px' }}
+      style={{ padding: '2vw', borderRadius: '5px' }}
     >
       {comingSoonData.text}
     </div>

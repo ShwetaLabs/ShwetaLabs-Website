@@ -37,7 +37,13 @@ export function Footer({ getDisplay }: any): JSX.Element {
         >
           <p className='shady-70 fs-smaller'>{footerData.quickLinksTitle}</p>
           {footerData.quickLinks.map(link => {
-            return <LinkBox link={link} aClassName='footerLink fs-smaller' />;
+            return (
+              <LinkBox
+                key={link.text}
+                link={link}
+                aClassName='footerLink hoverColor fs-smaller'
+              />
+            );
           })}
         </div>
         <div
@@ -50,7 +56,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
             return (
               <LinkBox
                 link={link}
-                aClassName='footerLink fs-smaller'
+                aClassName='footerLink hoverColor fs-smaller'
                 key={link.text}
               />
             );
@@ -120,7 +126,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
               return (
                 <LinkBox
                   link={link}
-                  aClassName='footerLink fs-smaller'
+                  aClassName='footerLink hoverColor fs-smaller'
                   key={link.text}
                 />
               );
@@ -136,7 +142,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
               return (
                 <LinkBox
                   link={link}
-                  aClassName='footerLink fs-smaller'
+                  aClassName='footerLink hoverColor fs-smaller'
                   key={link.text}
                 />
               );
