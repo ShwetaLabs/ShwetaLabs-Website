@@ -86,6 +86,7 @@ function SubcapabilityRow({
         style={{
           paddingTop: '32px',
           paddingBottom: '32px',
+          paddingRight: '10px',
         }}
       >
         <span className='fw-bold'> {subCapability.title} </span>
