@@ -93,7 +93,7 @@ function Form({ form }: IFormSpec): JSX.Element {
         height={167}
       />
       <a
-        className='button2 pointable'
+        className='button2 pointable centered'
         onClick={sendData}
         style={{ marginTop: '32px' }}
       >

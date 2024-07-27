@@ -3,6 +3,7 @@ import axios from 'axios';
 const routes = {
   contactUsForm: '/contactus',
 };
+// switch to emailjs.
 const mailerSendBase = 'https://api.mailersend.com/v1/';
 const token = process.env.MAILER_SEND_API_TOKEN as string;
 // const mailerSend = new MailerSend({
