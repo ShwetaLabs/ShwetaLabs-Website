@@ -1,6 +1,5 @@
-import { images } from '../rsrc';
+import { images, people } from '../rsrc';
 import { linkSpec } from './navigation';
-import profilePic from '../assets/profilePicture.png';
 
 export interface profileSpec {
   image: string;
@@ -10,12 +9,11 @@ export interface profileSpec {
   contact: linkSpec;
 }
 
-export const profileData = {
-  image: profilePic,
-  name: 'Belinda Pacocha',
+export const naveenData: profileSpec = {
+  image: people.naveenA,
+  name: 'Naveeen ',
   job: 'Chief Executive Office',
-  intro:
-    'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+  intro: 'We want to make the bad guys pay.',
   contact: {
     text: 'linkedin',
     url: 'google.com',
@@ -32,15 +30,6 @@ export interface squadSpec {
 
 export const squadData = {
   title: 'The Squad',
-  profiles: [
-    profileData,
-    profileData,
-    profileData,
-    profileData,
-    profileData,
-    profileData,
-    profileData,
-    profileData,
-  ],
+  profiles: [naveenData],
   perRow: 4,
 };

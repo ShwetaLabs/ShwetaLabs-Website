@@ -30,7 +30,12 @@ export default function Squad({ squad }: squadProp) {
   return (
     <div>
       <strong style={{ fontSize: '80px' }}> {squad.title} </strong>
-      <div>{createRows(squad.profiles, squad.perRow)}</div>
+      <div
+        className='row'
+        style={{ justifyContent: 'center', alignItems: 'center' }}
+      >
+        {createRows(squad.profiles, squad.perRow)}
+      </div>
     </div>
   );
 }

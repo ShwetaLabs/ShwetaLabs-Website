@@ -192,7 +192,12 @@ export function SocialLinks() {
       {footerData.socialLinks.map(link => {
         return (
           <span style={{ marginInline: '12.5px' }}>
-            <LinkBox link={link} aClassName='button fs-large' key={link.url} />
+            <LinkBox
+              link={link}
+              aClassName='button fs-large'
+              key={link.url}
+              target={'_blank'}
+            />
           </span>
         );
       })}

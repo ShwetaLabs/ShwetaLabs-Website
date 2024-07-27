@@ -1,5 +1,6 @@
 import logo from './assets/logo.svg';
 // import logo192 from './assets/logo192.png';
+import naveenA from './assets/people/naveen.jpeg';
 import instagram from './assets/icons/instagram.svg';
 import twitter from './assets/icons/twitter.svg';
 import youtube from './assets/icons/youtube.svg';
@@ -163,6 +164,7 @@ export const icons = {
 
 export const people = {
   harryKerluke,
+  naveenA,
 };
 
 export const blogImages = {

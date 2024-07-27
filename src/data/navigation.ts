@@ -68,13 +68,13 @@ const staticHeaderLinks: linkSpec[] = [
 const socialLinks: linkSpec[] = [
   {
     text: 'Youtube',
-    url: '',
+    url: 'https://www.youtube.com/@ShwetaLabs',
     icon: icons.youtube,
     //todo: fill social links
   },
   {
     text: 'Github',
-    url: '',
+    url: 'https://github.com/ShwetaLabs',
     icon: icons.github,
   },
   {
@@ -84,12 +84,12 @@ const socialLinks: linkSpec[] = [
   },
   {
     text: 'LinkedIn',
-    url: '',
+    url: 'https://www.linkedin.com/in/shwetalabs/',
     icon: icons.linkedin,
   },
   {
     text: 'Twitter',
-    url: '',
+    url: 'https://twitter.com/ShwetaLabs',
     icon: icons.twitter,
   },
 ];

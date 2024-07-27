@@ -8,9 +8,17 @@ interface profileProp {
 export default function Profile({ profile }: profileProp) {
   return (
     <div
-      style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', padding: '20px' }}
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        padding: '20px',
+        maxWidth: '300px',
+      }}
     >
-      <img style={{ width: '100%' }} src={profile.image} alt={profile.name} />
+      <img
+        style={{ maxWidth: '100%' }}
+        src={profile.image}
+        alt={profile.name}
+      />
       <div
         style={{
           marginTop: '24px',
