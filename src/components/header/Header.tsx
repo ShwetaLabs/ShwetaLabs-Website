@@ -17,6 +17,7 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
   const location = useLocation();
   useEffect(() => {
     setNavBarVisible(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location]);
   const toggleNavBar = () => {
     setNavBarVisible((isVisible: boolean) => !isVisible);
