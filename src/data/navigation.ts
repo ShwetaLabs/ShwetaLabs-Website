@@ -2,6 +2,9 @@ import { About } from '../pages/About';
 import { Blog } from '../pages/Blog';
 import { Contact } from '../pages/Contact';
 import { Home } from '../pages/Home';
+import { Cookies } from '../pages/legal/Cookies';
+import { Privacy } from '../pages/legal/Privacy';
+import { Terms } from '../pages/legal/Terms';
 import { Podcast } from '../pages/Podcast';
 import { Products } from '../pages/Products';
 import { Services } from '../pages/Services';
@@ -93,15 +96,18 @@ const socialLinks: linkSpec[] = [
 export const quickLinks: linkSpec[] = [...getHeaderNavLinks()];
 const termsLink = {
   text: 'Terms',
-  url: ``,
+  url: `/terms`,
+  element: Terms,
 };
 const privacyAndSecurityLink = {
   text: 'Privacy and Security',
-  url: ``,
+  url: `/privacy`,
+  element: Privacy,
 };
 const cookiesLink = {
   text: 'Cookies',
-  url: '',
+  url: '/cookies',
+  element: Cookies,
 };
 const patentsLink = {
   text: 'Patents',
@@ -139,6 +145,7 @@ export function getMainAppRoutes(): routeSpec[] {
   routes.push(...getHeaderNavLinks().map(link => linkToRoute(link)));
   routes.push(linkToRoute(homeLink));
   routes.push(linkToRoute(contactLink));
+  routes.push(...policyLinks.map(link => linkToRoute(link)));
   return routes;
 }
 
