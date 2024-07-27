@@ -135,7 +135,8 @@ a {
 }
 
 div.main {
-  margin: 77px;
+  margin-top: 0vh;
+  margin-bottom: 5vh;
   margin-inline: 0px;
 }
 

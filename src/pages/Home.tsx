@@ -92,10 +92,10 @@ function BriefAdvert(): JSX.Element {
       <p className='shady-70 centered' style={{ marginTop: 24 }}>
         {advertData.description}
       </p>
-      <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
+      {/* <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
         <LinkBox link={contactLink} aClassName='button4 caret-right fs-small' />
-      </span>
-      <img src={advertData.logo} style={{ marginTop: 120 }} />
+      </span> */}
+      <img src={advertData.logo} style={{ marginTop: '10vh' }} />
       <p className='shady-70' style={{ marginTop: 40 }}>
         {advertData.descriptionBesideLogo}
       </p>
