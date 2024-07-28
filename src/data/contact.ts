@@ -13,19 +13,19 @@ export const contactData = {
   form: {
     firstName: {
       title: 'First name',
-      placeholder: 'Jane',
+      placeholder: 'Enter First Name',
     },
     lastName: {
       title: 'Last name',
-      placeholder: 'Smitherton',
+      placeholder: 'Enter Last Name',
     },
     emailAddress: {
       title: 'Email address',
-      placeholder: 'email@janesfakedomain.net',
+      placeholder: 'Enter Email Address',
     },
     message: {
       title: 'Your message',
-      placeholder: 'Enter your question or message',
+      placeholder: 'Type your message here.',
     },
   },
 };
