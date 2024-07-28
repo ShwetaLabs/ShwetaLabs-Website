@@ -92,6 +92,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
       </p>
     </div>
   ) : (
+    /*Mobile */
     <div className='col' style={{ ...outerDivStyle, display: getDisplay() }}>
       <div
         className='col thin-bordered'
@@ -102,11 +103,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
         }}
       >
         <div
-          className='col'
+          className='row'
           key={footerData.logo}
           style={{
-            justifyContent: 'space-around',
-            width: '70%',
+            justifyContent: 'center',
+            width: '100%',
             marginBottom: 82,
           }}
         >
@@ -114,7 +115,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
         </div>
         <div
           className='row'
-          style={{ justifyContent: 'space-between', marginBottom: 48 }}
+          style={{
+            justifyContent: 'space-between',
+            marginBottom: 48,
+            marginInline: '15vw',
+          }}
         >
           <div
             className='col'
@@ -152,7 +157,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
         <div
           className='col'
           key={footerData.addressTitle}
-          style={{ alignItems: 'flex-start', rowGap: '0.45vw' }}
+          style={{
+            alignItems: 'flex-start',
+            rowGap: '0.45vw',
+            marginInline: '15vw',
+          }}
         >
           <p className='shady-70 fs-smaller'>{footerData.addressTitle}</p>
           {footerData.businessDetails.map(value => {

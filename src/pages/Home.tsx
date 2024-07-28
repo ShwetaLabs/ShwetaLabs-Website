@@ -41,7 +41,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       {/* <CaseStudies /> */}
       <TrustedPartners />
       {/* <Awards /> */}
-      <PodcastAdvert />
+      {/* <PodcastAdvert /> */}
       <BlogsAdvert />
       <Strongholds />
     </div>
@@ -54,9 +54,11 @@ function BriefAdvert(): JSX.Element {
       className='col'
       style={{ alignItems: 'center', width: '70vw', marginInline: 'auto' }}
     >
-      <p style={{ width: '50vw' }} className='title fs-larger'>
-        {advertData.title}
-      </p>
+      <p
+        style={{ width: '50vw' }}
+        className='title fs-larger'
+        dangerouslySetInnerHTML={{ __html: advertData.title }}
+      ></p>
       <p className='shady-70' style={{ textAlign: 'center' }}>
         {advertData.description}
       </p>
@@ -87,7 +89,10 @@ function BriefAdvert(): JSX.Element {
     </div>
   ) : (
     <div className='col'>
-      <p className='title fs-xx-large'>{advertData.title}</p>
+      <p
+        className='title fs-xx-large'
+        dangerouslySetInnerHTML={{ __html: advertData.title }}
+      ></p>
       <p className='shady-70 centered' style={{ marginTop: 24 }}>
         {advertData.description}
       </p>
@@ -171,7 +176,10 @@ function WhatWeHave(): JSX.Element {
       className='col'
       style={{ alignItems: 'center', alignContent: 'center' }}
     >
-      <p className='title fs-larger'>{whatWeHaveData.title}</p>
+      <p
+        className='title fs-larger'
+        dangerouslySetInnerHTML={{ __html: whatWeHaveData.title }}
+      ></p>
       {whatWeHaveData.features.map((feature, index, arr) => {
         return (
           <Feature

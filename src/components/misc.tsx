@@ -150,7 +150,7 @@ export function Product({ product }: IProductProps): JSX.Element {
         className='row'
         style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}
       >
-        <img style={{ width: '90%' }} src={product.image} />
+        <img style={{ width: '70%' }} src={product.image} />
       </div>
       {/* todo: single line between image and textdata */}
       <div
@@ -244,7 +244,7 @@ export function BlogTile({ blog }: IBlogProps): JSX.Element {
     </div>
   ) : (
     <div className='col' style={{ marginTop: 32 }}>
-      <div className='blogtile'>
+      <div className='blogtile row' style={{ justifyContent: 'center' }}>
         <img src={blog.image} style={{ maxWidth: '100%', maxHeight: '100%' }} />
       </div>
       <div
@@ -453,8 +453,8 @@ export function PodcastEpisodeTile({
 export function ComingSoon() {
   return (
     <div
-      className='title fs-x-large bg-accent'
-      style={{ padding: '2vw', borderRadius: '5px' }}
+      className='title fs-larger'
+      style={{ margin: '2vw', borderRadius: '5px' }}
     >
       {comingSoonData.text}
     </div>
