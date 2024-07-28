@@ -32,8 +32,13 @@ export const Home: ({}) => JSX.Element = ({}) => {
       className='col home'
       style={
         isDesktop()
-          ? { alignItems: 'stretch', width: '78%', marginInline: 'auto' }
-          : {}
+          ? {
+              alignItems: 'stretch',
+              width: '78%',
+              marginInline: 'auto',
+              rowGap: 160,
+            }
+          : { rowGap: 120 }
       }
     >
       <BriefAdvert />
@@ -127,11 +132,11 @@ function TrustedPartners(): JSX.Element {
       </div>
     </div>
   ) : (
-    <div className='col bg2'>
+    <div className='col'>
       <p className='title fs-x-large'>{trustedPartnersData.title}</p>
       <div
         className='inline-fade'
-        style={{ width: '90vw', overflow: 'hidden' }}
+        style={{ width: '90vw', overflow: 'hidden', marginTop: 50 }}
       >
         <span style={{ zIndex: 'inherit' }}>
           <Marquee>
