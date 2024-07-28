@@ -1,4 +1,3 @@
-
 const routes = {
   contactUsForm: '/contactus',
 };
@@ -16,7 +15,7 @@ export class MailService {
       success: false,
       data: null,
     };
-    const url = mailerSendBase + 'email';
+    const url = '';
     const sender = {
       email: 'MS_qldS2v@trial-o65qngkjv83lwr12.mlsender.net',
       name: 'contactus',
