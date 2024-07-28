@@ -103,11 +103,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
         }}
       >
         <div
-          className='col'
+          className='row'
           key={footerData.logo}
           style={{
-            justifyContent: 'space-around',
-            width: '70%',
+            justifyContent: 'center',
+            width: '100%',
             marginBottom: 82,
           }}
         >
@@ -118,7 +118,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
           style={{
             justifyContent: 'space-between',
             marginBottom: 48,
-            marginInline: '10vw',
+            marginInline: '15vw',
           }}
         >
           <div
@@ -160,7 +160,7 @@ export function Footer({ getDisplay }: any): JSX.Element {
           style={{
             alignItems: 'flex-start',
             rowGap: '0.45vw',
-            marginInline: '10vw',
+            marginInline: '15vw',
           }}
         >
           <p className='shady-70 fs-smaller'>{footerData.addressTitle}</p>

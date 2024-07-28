@@ -41,7 +41,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       {/* <CaseStudies /> */}
       <TrustedPartners />
       {/* <Awards /> */}
-      <PodcastAdvert />
+      {/* <PodcastAdvert /> */}
       <BlogsAdvert />
       <Strongholds />
     </div>
