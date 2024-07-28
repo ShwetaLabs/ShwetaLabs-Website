@@ -171,7 +171,10 @@ function WhatWeHave(): JSX.Element {
       className='col'
       style={{ alignItems: 'center', alignContent: 'center' }}
     >
-      <p className='title fs-larger'>{whatWeHaveData.title}</p>
+      <p
+        className='title fs-larger'
+        dangerouslySetInnerHTML={{ __html: whatWeHaveData.title }}
+      ></p>
       {whatWeHaveData.features.map((feature, index, arr) => {
         return (
           <Feature

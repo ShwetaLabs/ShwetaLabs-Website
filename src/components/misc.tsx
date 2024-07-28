@@ -453,8 +453,8 @@ export function PodcastEpisodeTile({
 export function ComingSoon() {
   return (
     <div
-      className='title fs-x-large bg-accent'
-      style={{ padding: '2vw', borderRadius: '5px' }}
+      className='title fs-larger'
+      style={{ margin: '2vw', borderRadius: '5px' }}
     >
       {comingSoonData.text}
     </div>
