@@ -24,6 +24,7 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
       style={{ alignItems: 'center', margin: 25, marginInline: 'auto' }}
     >
       <div
+        className='row'
         style={{
           alignItems: 'center',
           justifyContent: 'center',
