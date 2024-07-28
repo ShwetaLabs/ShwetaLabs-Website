@@ -56,11 +56,18 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       </div> */}
     </div>
   ) : (
+    /* Mobile page:*/
     <div
       className='col'
-      style={{
-        backgroundColor: 'black',
-      }}
+      style={
+        navBarVisible
+          ? {
+              height: '100vh',
+              justifyContent: 'space-between',
+              backgroundColor: 'var(--accent)',
+            }
+          : { backgroundColor: 'black' }
+      }
     >
       <div
         className={'row' + (navBarVisible ? ' bg-accent' : '')}
@@ -83,14 +90,17 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
         <div
           className='col bg-accent'
           style={{
+            height: '100%',
             alignItems: 'center',
             alignContent: 'stretch',
-            justifyContent: 'stretch',
+            justifyContent: 'space-between',
           }}
         >
-          {headerData.navLinks.map(link => (
-            <HeaderButtonMobile link={link} key={link.text} />
-          ))}
+          <div className='col' style={{ justifyContent: 'space-around' }}>
+            {headerData.navLinks.map(link => (
+              <HeaderButtonMobile link={link} key={link.text} />
+            ))}
+          </div>
           {/* <span style={{ marginTop: '25px' }}>
             <LinkBox link={headerData.requestDemoLink} aClassName='button2' />
           </span> */}
