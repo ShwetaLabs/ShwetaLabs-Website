@@ -127,7 +127,7 @@ function Form({ form }: IFormSpec): JSX.Element {
       <a
         className='button2 pointable centered'
         onClick={sendData}
-        style={{ marginTop: '32px' }}
+        style={{ marginTop: '32px', width: '91%' }}
       >
         Submit
       </a>
