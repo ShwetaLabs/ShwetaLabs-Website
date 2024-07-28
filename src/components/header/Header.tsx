@@ -62,8 +62,8 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
       style={
         navBarVisible
           ? {
-              height: '100vh',
-              justifyContent: 'space-between',
+              minHeight: '100vh',
+              justifyContent: 'flex-start',
               backgroundColor: 'var(--accent)',
             }
           : { backgroundColor: 'black' }
@@ -92,7 +92,6 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
           style={{
             height: '100%',
             alignItems: 'center',
-            alignContent: 'stretch',
             justifyContent: 'space-between',
           }}
         >
