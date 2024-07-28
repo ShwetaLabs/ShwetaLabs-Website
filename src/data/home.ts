@@ -3,7 +3,7 @@ import { contactLink } from './navigation';
 
 export const advertData = {
   title: 'For Enforcement <br> and Enforcers',
-  description: `Shweta Labs Cyber-Security tools are made for law enforcement agencies - keeping the end user - the investigating officer or “enforcer” - in mind. Our tools are easy-to-use and “enforcer-friendly.”`,
+  description: `Shweta Labs Cyber-Security tools are made for law enforcement agencies - keeping the end user - the investigating officer or “enforcer” - in mind. Our tools are easy-to-use and “enforcer-friendly".`,
   descriptionBesideLogo: `Our services coalesce into a single point - designed to meet all Law Enforcement Needs in Cyber Security. Our products and services are meant to support requirements as diverse as tracking suspects and profiling perpetrators. In other words – we aim to be a holistic, all-encompassing cyber support for our clients and customers.`,
   logo: images.footerLogo,
 };
