@@ -25,7 +25,8 @@ export interface whatWeHaveSpec {
 }
 export const whatWeHaveData: whatWeHaveSpec = {
   learnMore: 'Learn More',
-  title: 'Secure and Speed-up your Investigation',
+  title: `Secure and Speed-up
+  <br>your Investigation`,
   features: [
     {
       title: `Next Gen Defence`,
@@ -54,7 +55,7 @@ export interface ourProductsSpec {
   products: featureSpec[];
 }
 export const ourProductsData: ourProductsSpec = {
-  title: 'Our Products' /*👊 Abhishek*/,
+  title: 'Our Products and Services' /*👊 Abhishek*/,
   products: [
     {
       title: 'Sleuth',

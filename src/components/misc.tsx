@@ -30,9 +30,10 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
           justifyContent: 'center',
           marginInline: 16,
           flexGrow: 1,
+          width: '25%',
         }}
       >
-        <img src={feature.image} style={{ width: '60%' }} />
+        <img src={feature.image} style={{ maxWidth: '40%' }} />
       </div>
       {
         <FeatureTextData

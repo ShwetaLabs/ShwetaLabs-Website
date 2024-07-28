@@ -164,6 +164,8 @@ a.headerButton {
   border-radius: 5px;
   padding-block: 0.76vw;
   padding-inline: 1.2vw;
+  letter-spacing: 0.1em;
+
 }
 a.hoverColor:hover{
   color: var(--primary-light);

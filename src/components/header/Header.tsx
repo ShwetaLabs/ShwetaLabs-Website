@@ -133,10 +133,7 @@ export function HeaderButtonDesktop({
         textTransform: 'uppercase',
       }}
     >
-      <LinkBox
-        link={link}
-        aClassName='headerButton fs-smaller hoverUnderline'
-      />
+      <LinkBox link={link} aClassName='headerButton fs-small hoverUnderline' />
     </div>
   );
 }
