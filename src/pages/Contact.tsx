@@ -12,29 +12,61 @@ interface IFormSpec {
 }
 function MobileDiv(): JSX.Element {
   return (
-    <div className='col' style={{ alignItems: 'flex-start' }}>
+    <div className='col' style={{ alignItems: 'center' }}>
       <p key={contactData.title} className='title fs-xx-large'>
         {contactData.title}
       </p>
-      <p key={contactData.description}>{contactData.description}</p>
+      <p className='centered' key={contactData.description}>
+        {contactData.description}
+      </p>
       <Form form={contactData.form} />
+      <div
+        className='row'
+        style={{
+          justifyContent: 'center',
+          marginTop: 40,
+          marginBottom: '-4vh',
+        }}
+      >
+        <p
+          className='stripped fs-smaller'
+          dangerouslySetInnerHTML={{ __html: contactData.message }}
+        ></p>
+      </div>
     </div>
   );
 }
 function DesktopDiv(): JSX.Element {
   return (
-    <div
-      className='row'
-      style={{ justifyContent: 'space-evenly', alignItems: 'center' }}
-    >
-      <div className='col' style={{ alignItems: 'flex-start' }}>
-        <p key={contactData.title} className='title fs-xx-large'>
-          {contactData.title}
-        </p>
-        <p key={contactData.description}>{contactData.description}</p>
+    <div className='col'>
+      <div
+        className='row'
+        style={{ justifyContent: 'space-evenly', alignItems: 'center' }}
+      >
+        <div className='col' style={{ alignItems: 'center' }}>
+          <p key={contactData.title} className='title fs-xx-large'>
+            {contactData.title}
+          </p>
+          <p className='centered' key={contactData.description}>
+            {contactData.description}
+          </p>
+        </div>
+        <div className='col' style={{ width: '35%' }}>
+          <Form form={contactData.form} />
+        </div>
       </div>
-      <div className='col' style={{ width: '35%' }}>
-        <Form form={contactData.form} />
+      <div
+        className='row'
+        style={{
+          justifyContent: 'center',
+          marginTop: 40,
+          marginBottom: '-4vh',
+        }}
+      >
+        <p
+          className='stripped fs-smaller'
+          dangerouslySetInnerHTML={{ __html: contactData.message }}
+        ></p>
       </div>
     </div>
   );
