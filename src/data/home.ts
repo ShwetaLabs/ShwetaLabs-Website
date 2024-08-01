@@ -35,7 +35,7 @@ export const whatWeHaveData: whatWeHaveSpec = {
     },
     {
       title: `Digital Detectives`,
-      description: `Our tools use language that you and I would, They interpret and convey their findings in relatable and understandable language.`,
+      description: `Our tools use language that you and I would. They interpret and convey their findings in relatable and understandable language, ensuring clarity. This helps make complex technical data easily accessible and actionable for all users.`,
       image: images.detective,
     },
     {
