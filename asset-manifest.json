@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.73b822cc.css",
-    "main.js": "/static/js/main.14e98a03.js",
+    "main.js": "/static/js/main.0a6aa2ee.js",
     "static/js/453.fcc3645f.chunk.js": "/static/js/453.fcc3645f.chunk.js",
     "static/media/strongholdsMap.svg": "/static/media/strongholdsMap.164cb1bb2c2feb5168aca541397a8591.svg",
     "static/media/featuredBlog.png": "/static/media/featuredBlog.e229d2eb9304c32ca6b7.png",
@@ -76,13 +76,13 @@
     "static/media/gear.svg": "/static/media/gear.c01cb265b041987ee4f36aafd83fec53.svg",
     "static/media/SL Web Blog 010.md": "/static/media/SL Web Blog 010.1c2700f96cd289d488c5.md",
     "static/media/SL Web Blog 002.md": "/static/media/SL Web Blog 002.2477be079dc58d0dba95.md",
-    "static/media/SL Web Blog 009.md": "/static/media/SL Web Blog 009.80190547c440a7716fd4.md",
+    "static/media/SL Web Blog 009.md": "/static/media/SL Web Blog 009.96c3c2ae475b34e387a6.md",
     "static/media/SL Web Blog 011.md": "/static/media/SL Web Blog 011.8d7528efae841d6f6252.md",
     "static/media/SL Web Blog 001.txt": "/static/media/SL Web Blog 001.4e05d032c563d5118f4b.txt",
     "static/media/Proactive.svg": "/static/media/Proactive.f270c754a7df9961092caf83af5b6f5a.svg",
     "static/media/Intelligent.svg": "/static/media/Intelligent.662f1a3767821b7ef8d468962c975da2.svg",
     "static/media/SL Web Blog 008.md": "/static/media/SL Web Blog 008.822ff6ae9e5b2c843bcf.md",
-    "static/media/SL Web Blog 003.md": "/static/media/SL Web Blog 003.a8f672af01c1183c949c.md",
+    "static/media/SL Web Blog 003.md": "/static/media/SL Web Blog 003.27148d9dd713c712bd70.md",
     "static/media/SL Web Blog 004.md": "/static/media/SL Web Blog 004.0890b072ca8b93b94222.md",
     "static/media/SL Web Blog 005.md": "/static/media/SL Web Blog 005.fec43ef8b16c980ac3bd.md",
     "static/media/aws.svg": "/static/media/aws.6ea34e802af310216787cea6023988c7.svg",
@@ -144,11 +144,11 @@
     "static/media/search.svg": "/static/media/search.878de9bc6331bcbe2c10a530cc6141db.svg",
     "static/media/playButton.svg": "/static/media/playButton.aab8be34346f38525700c9bf9890c672.svg",
     "main.73b822cc.css.map": "/static/css/main.73b822cc.css.map",
-    "main.14e98a03.js.map": "/static/js/main.14e98a03.js.map",
+    "main.0a6aa2ee.js.map": "/static/js/main.0a6aa2ee.js.map",
     "453.fcc3645f.chunk.js.map": "/static/js/453.fcc3645f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73b822cc.css",
-    "static/js/main.14e98a03.js"
+    "static/js/main.0a6aa2ee.js"
   ]
 }

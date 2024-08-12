@@ -1,5 +1,4 @@
-**Leveraging AI and Machine Learning in Cyber Forensics: Enhancing Efficiency
-and Accuracy**
+**Leveraging AI and Machine Learning in Cyber Forensics: Enhancing Efficiency and Accuracy**
 
 In today's increasingly digital landscape, the complexity and volume of
 cybercrimes have escalated dramatically. This evolution necessitates advanced
