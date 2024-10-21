@@ -56,7 +56,7 @@ function SubcapabilityRow({
           paddingBottom: '32px',
         }}
       >
-        <span className='fw-bold'> {subCapability.title} </span>
+        <div className='fw-bold' style={{marginBottom:"10px"}}> {subCapability.title} </div>
         <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
       </div>
     </div>
@@ -89,7 +89,7 @@ function SubcapabilityRow({
           paddingRight: '10px',
         }}
       >
-        <span className='fw-bold'> {subCapability.title} </span>
+        <div className='fw-bold' style={{marginBottom:"10px"}}> {subCapability.title} </div>
         <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
       </div>
     </div>
@@ -116,7 +116,7 @@ export default function CapabilityRow({
         >
           <span
             className='fs-large fw-bold centered'
-            style={{ width: '85%', marginInline: 'auto' }}
+            style={{ width: '85%', marginInline: 'auto', lineHeight: '45px' }}
           >
             {capability.title}
           </span>
@@ -165,7 +165,7 @@ export default function CapabilityRow({
         >
           <span
             className='fs-large fw-bold centered'
-            style={{ width: '85%', marginInline: 'auto' }}
+            style={{ width: '85%', marginInline: 'auto',lineHeight: '45px' }}
           >
             {capability.title}
           </span>

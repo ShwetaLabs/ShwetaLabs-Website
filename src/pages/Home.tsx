@@ -42,7 +42,7 @@ export const Home: ({}) => JSX.Element = ({}) => {
       <TrustedPartners />
       {/* <Awards /> */}
       {/* <PodcastAdvert /> */}
-      <BlogsAdvert />
+      {/* <BlogsAdvert /> */}
       <Strongholds />
     </div>
   );

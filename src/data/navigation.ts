@@ -37,11 +37,11 @@ const servicesLink = {
   url: '/services',
   element: Services,
 };
-export const blogLink = {
-  text: 'Blog',
-  url: '/blog',
-  element: Blog,
-};
+// export const blogLink = {
+//   text: 'Blog',
+//   url: '/blog',
+//   element: Blog,
+// };
 export const podcastLink = {
   text: 'Podcast',
   url: '/podcast',
@@ -62,7 +62,7 @@ const staticHeaderLinks: linkSpec[] = [
   productsLink,
   servicesLink,
   podcastLink,
-  blogLink,
+  // blogLink,
   contactLink,
 ];
 const socialLinks: linkSpec[] = [
