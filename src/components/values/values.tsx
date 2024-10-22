@@ -34,9 +34,12 @@ export default function Values({ values }: valuesProp): JSX.Element {
   }
   return isDesktop() ? (
     <div>
-      <div style={{ padding: '0px 215px', marginBottom: '48px' }}>
+      <div style={{ padding: '0px 17%', marginBottom: '48px' }}>
         {/* <div style={{ fontSize: "20px" }} > {values.superTitle} </div> */}
-        <div style={{ fontSize: '100px', marginBottom: '24px' }}>
+        <div
+          className='fs-larger'
+          style={{ fontWeight: 700, marginBottom: '24px', textAlign: 'center' }}
+        >
           {' '}
           {values.title}{' '}
         </div>
@@ -46,7 +49,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
     </div>
   ) : (
     <div>
-      <div style={{}}>
+      <div style={{ marginBottom: '50px' }}>
         <p className='fs-x-large title2'>{values.title}</p>
       </div>
       <div>

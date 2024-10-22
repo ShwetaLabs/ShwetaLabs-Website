@@ -7,13 +7,13 @@ import { isDesktop } from '../utils';
 export function Products(): JSX.Element {
   return isDesktop() ? (
     <div style={{ paddingLeft: '160px', paddingRight: '160px' }}>
-      <div style={{ marginBottom: '160px' }}>
+      <div style={{ marginBottom: '10px' }}>
         <SleuthHead sleuthHead={productData.head} />
       </div>
 
       <div>
         {productData.capabilities.capababilites.map((it, index) => (
-          <div style={{ margin: '30px' }}>
+          <div style={{ margin: '30px',marginBottom: '50px' }}>
             <CapabilityRow capability={it} imageOnLeft={index % 2 == 0} />
           </div>
         ))}
@@ -25,13 +25,13 @@ export function Products(): JSX.Element {
     </div>
   ) : (
     <div style={{}}>
-      <div style={{ marginBottom: '160px' }}>
+      <div style={{ marginBottom: '10px' }}>
         <SleuthHead sleuthHead={productData.head} />
       </div>
 
       <div>
         {productData.capabilities.capababilites.map((it, index) => (
-          <div style={{}}>
+          <div style={{ margin: '10px', marginBottom: '30px' }}>
             <CapabilityRow capability={it} imageOnLeft={index % 2 == 0} />
           </div>
         ))}

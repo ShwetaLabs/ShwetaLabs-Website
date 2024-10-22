@@ -18,7 +18,7 @@ import visionLogo from './assets/vision.svg';
 import missionLogo from './assets/mission.svg';
 import sleuthLogo from './assets/sleuth.svg';
 import dell from './assets/partners/dell.svg';
-import iitkgp from './assets/partners/iitkgp.svg';
+import iitb from './assets/partners/iitb.svg';
 import nvidia from './assets/partners/nvidia.svg';
 import aws from './assets/partners/aws.svg';
 import investigativeLogo from './assets/investigative.svg';
@@ -141,7 +141,7 @@ export const images = {
 
   dell,
   aws,
-  iitkgp,
+  iitb,
   nvidia,
 };
 

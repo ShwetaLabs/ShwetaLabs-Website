@@ -14,27 +14,40 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
         style={{
           height: '100%',
           display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
         }}
       >
-        <div style={{ width: '37%', padding: '50px' }}>
+        <div
+          style={{
+            margin: 'auto',
+            minWidth: '25%',
+            maxWidth: '25%',
+            padding: '0px 10%',
+          }}
+        >
           <img
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'scale-down', width: '90%' }}
             src={valueCard.image}
             alt={valueCard.title}
           />
         </div>
-        <div style={{ width: '63%', marginTop: '16px', marginRight: '40px' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <span className='fs-large' style={{ marginBottom: '16px' }}>
+        <div style={{ marginTop: '16px', marginRight: '40px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+            <span
+              className='fs-samller'
+              style={{ fontWeight: 700, marginBottom: '16px' }}
+            >
               {' '}
               {valueCard.title}{' '}
             </span>
           </div>
           <div
             className='fs-smaller'
-            style={{ textAlign: 'left', opacity: '0.6' }}
+            style={{
+              lineHeight: '1.4',
+              textAlign: 'left',
+              opacity: '0.6',
+              paddingBottom: '20px',
+            }}
           >
             {' '}
             {valueCard.para}{' '}

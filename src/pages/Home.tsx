@@ -55,11 +55,14 @@ function BriefAdvert(): JSX.Element {
       style={{ alignItems: 'center', width: '70vw', marginInline: 'auto' }}
     >
       <p
-        style={{ width: '50vw' }}
+        style={{ width: '50vw', marginBottom: '25px' }}
         className='title fs-larger'
         dangerouslySetInnerHTML={{ __html: advertData.title }}
       ></p>
-      <p className='shady-70' style={{ textAlign: 'center' }}>
+      <p
+        className='shady-70'
+        style={{ textAlign: 'center', margin: 'auto 50px' }}
+      >
         {advertData.description}
       </p>
       {/* <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
@@ -78,7 +81,7 @@ function BriefAdvert(): JSX.Element {
         }}
       >
         <div>
-          <p className='shady-70' style={{ width: '30vw' }}>
+          <p className='shady-70' style={{ width: '35vw' }}>
             {advertData.descriptionBesideLogo}
           </p>
         </div>
@@ -110,7 +113,7 @@ function TrustedPartners(): JSX.Element {
   return isDesktop() ? (
     <div
       className='col'
-      style={{ width: '80%', marginInline: 'auto', alignItems: 'center' }}
+      style={{ width: '80%', marginInline: 'auto', alignItems: 'center',paddingTop:"60px" }}
     >
       <p className='title fs-larger'>{trustedPartnersData.title}</p>
       <div

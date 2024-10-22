@@ -41,17 +41,16 @@ export function About(): JSX.Element {
   return isDesktop() ? (
     <div
       style={{
-        padding: '160px',
-        paddingTop: '80px',
+        padding: '0px 12%',
         display: 'flex',
         flexDirection: 'column',
-        gap: '160px',
+        gap: '80px',
       }}
     >
       <TitleInfo titleInfo={aboutData.titleInfo} />
-      <div style={{ height: '467px' }}>{createRows(aboutData.visions)}</div>
+      {createRows(aboutData.visions)}
       <Values values={aboutData.values} />
-      <Squad squad={aboutData.squad} />
+      {/* <Squad squad={aboutData.squad} /> */}
     </div>
   ) : (
     <div
@@ -68,17 +67,19 @@ export function About(): JSX.Element {
               className='col bg-accent'
               style={{ alignItems: 'center', marginTop: 24 }}
             >
-              <div>
+              <div style={{ margin: '20px' }}>
                 <img src={visionCard.image} />
               </div>
               <p className='fs-larger fw-bold'>{visionCard.title}</p>
-              <p className='shady-70 centered'>{visionCard.para}</p>
+              <p className='shady-70 centered' style={{ margin: '20px' }}>
+                {visionCard.para}
+              </p>
             </div>
           );
         })}
       </div>
       <Values values={aboutData.values} />
-      <Squad squad={aboutData.squad} />
+      {/* <Squad squad={aboutData.squad} /> */}
     </div>
   );
 }

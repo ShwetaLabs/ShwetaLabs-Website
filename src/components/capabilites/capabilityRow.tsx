@@ -57,7 +57,7 @@ function SubcapabilityRow({
         }}
       >
         <div className='fw-bold' style={{marginBottom:"10px"}}> {subCapability.title} </div>
-        <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
+        <p className='fs-smaller shady-70 stripped' style={{lineHeight:"1.5"}}> {subCapability.paras} </p>
       </div>
     </div>
   ) : (

@@ -10,7 +10,7 @@ export function Services(): JSX.Element {
         <p className='shady-70 centered'>{servicesData.subtitle}</p>
       </div>
       {servicesData.capababilites.map((it, index) => (
-        <div style={{ margin: '30px' }}>
+        <div style={{ margin: '30px',marginBottom: '50px'  }}>
           <CapabilityRow capability={it} imageOnLeft={index % 2 == 0} />
         </div>
       ))}
