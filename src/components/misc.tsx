@@ -12,11 +12,30 @@ import { comingSoonData } from '../data/podcast';
 import { icons } from '../rsrc';
 import { isDesktop } from '../utils';
 import { LinkBox } from './linkBox/LinkBox';
+import { motion } from 'framer-motion';
 
 export interface IFeatureProps {
   feature: featureSpec;
   reverse: boolean;
 }
+
+// Define the animation for the feature text data
+const featureVariants = (reverse: boolean) => ({
+  hidden: {
+    opacity: 0,
+    x: reverse ? 100 : -100, // Slide from right if reverse, otherwise from left
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 50,
+      damping: 15,
+    },
+  },
+});
+
 export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
   return isDesktop() ? (
     <div
@@ -35,13 +54,29 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
       >
         <img src={feature.image} style={{ maxWidth: '40%' }} />
       </div>
-      {
+
+      {/* Animate FeatureTextData using framer-motion, and trigger only when in view */}
+      <motion.div
+        variants={featureVariants(reverse)}
+        initial='hidden'
+        whileInView='show' // Trigger animation when the component comes into view
+        viewport={{ once: true, amount: 0.3 }} // 0.3 means 30% of the component should be in view to trigger animation
+        // style={{ flexGrow: 1, width: '50%' }} // Adjust the layout as needed
+        className='col bg2'
+        style={{
+          width: '50%',
+          paddingBlock: 40,
+          paddingInline: 52,
+          marginInline: 16,
+          flexGrow: 1,
+        }}
+      >
         <FeatureTextData
           title={feature.title}
           description={feature.description}
           learnMoreUrl={feature.learnMoreUrl}
         />
-      }
+      </motion.div>
     </div>
   ) : (
     <div className='col' style={{ alignItems: 'center' }}>
@@ -56,13 +91,22 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
       >
         <img src={feature.image} style={{ width: '60%' }} />
       </div>
-      {
+
+      {/* Animate FeatureTextData for mobile view */}
+      <motion.div
+        variants={featureVariants(false)} // No reverse for mobile; you can customize as needed
+        initial='hidden'
+        whileInView='show'
+        viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of the component is visible
+        className='col bg2'
+        style={{ padding: 24, marginBottom: 45 }}
+      >
         <FeatureTextData
           title={feature.title}
           description={feature.description}
           learnMoreUrl={feature.learnMoreUrl}
         />
-      }
+      </motion.div>
     </div>
   );
 }
@@ -77,16 +121,7 @@ export function FeatureTextData({
   learnMoreUrl,
 }: IFeatureTextDataProps) {
   return isDesktop() ? (
-    <div
-      className='col bg2'
-      style={{
-        width: '50%',
-        paddingBlock: 40,
-        paddingInline: 52,
-        marginInline: 16,
-        flexGrow: 1,
-      }}
-    >
+    <div>
       <p className='fs-large subtitle fw-bold' style={{ textAlign: 'left' }}>
         {title}
       </p>
@@ -101,7 +136,7 @@ export function FeatureTextData({
       ) : null}
     </div>
   ) : (
-    <div className='col bg2' style={{ padding: 24, marginBottom: 45 }}>
+    <div>
       <p className='fs-larger subtitle'>{title}</p>
       <p className='offwhite fw-bold'>{description}</p>
       {learnMoreUrl ? (
