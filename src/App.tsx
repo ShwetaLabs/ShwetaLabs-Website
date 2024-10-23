@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Scroll />
+      {/* <Scroll /> */}
       <span
         style={{
           position: 'sticky',
