@@ -68,21 +68,24 @@ export function Footer({ getDisplay }: any): JSX.Element {
           style={{ alignItems: 'flex-start' }}
         >
           <p className='shady-70 fs-smaller'>{footerData.addressTitle}</p>
-          {footerData.businessDetails.map(value => {
-            return (
-              <div
-                className='row'
-                style={{ alignItems: 'center', rowGap: '0.45vw' }}
-              >
-                <img src={value.icon} style={{ paddingRight: 10 }} />
-                <p
-                  className='stripped fs-smaller'
-                  key={value.text}
-                  dangerouslySetInnerHTML={{ __html: value.text }}
-                />
-              </div>
-            );
-          })}
+          {footerData.businessDetails.map((value, index) => (
+            <div
+              className={`row ${
+                value.tag === 'phone' ? 'phone-footer-text' : ''
+              }`}
+              key={index}
+              style={{ alignItems: 'center', rowGap: '0.45vw' }}
+            >
+              <img src={value.icon} style={{ paddingRight: 10 }} alt='icon' />
+              <p
+                className={`stripped fs-smaller ${
+                  value.tag === 'address' ? 'address-footer-text' : ''
+                }`}
+                dangerouslySetInnerHTML={{ __html: value.text }}
+              />
+            </div>
+          ))}
+
           {<SocialLinks />}
         </div>
       </div>
@@ -166,19 +169,23 @@ export function Footer({ getDisplay }: any): JSX.Element {
           }}
         >
           <p className='shady-70 fs-smaller'>{footerData.addressTitle}</p>
-          {footerData.businessDetails.map(value => {
-            return (
-              <div
-                className='row'
-                style={{ alignItems: 'center', rowGap: '0.45vw' }}
-              >
-                <img src={value.icon} style={{ paddingRight: 10 }} />
-                <p className='stripped fs-smaller' key={value.text}>
-                  {value.text}
-                </p>
-              </div>
-            );
-          })}
+          {footerData.businessDetails.map((value, index) => (
+            <div
+              className={`row ${
+                value.tag === 'phone' ? 'phone-footer-text' : ''
+              }`}
+              key={index}
+              style={{ alignItems: 'center', rowGap: '0.45vw' }}
+            >
+              <img src={value.icon} style={{ paddingRight: 10 }} alt='icon' />
+              <p
+                className={`stripped fs-smaller ${
+                  value.tag === 'address' ? 'address-footer-text' : ''
+                }`}
+                dangerouslySetInnerHTML={{ __html: value.text }}
+              />
+            </div>
+          ))}
         </div>
         <div
           className='row'
