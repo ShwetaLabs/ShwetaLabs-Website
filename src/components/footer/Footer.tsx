@@ -75,9 +75,11 @@ export function Footer({ getDisplay }: any): JSX.Element {
                 style={{ alignItems: 'center', rowGap: '0.45vw' }}
               >
                 <img src={value.icon} style={{ paddingRight: 10 }} />
-                <p className='stripped fs-smaller' key={value.text}>
-                  {value.text}
-                </p>
+                <p
+                  className='stripped fs-smaller'
+                  key={value.text}
+                  dangerouslySetInnerHTML={{ __html: value.text }}
+                />
               </div>
             );
           })}

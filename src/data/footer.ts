@@ -35,7 +35,8 @@ export const footerData = {
   businessDetails: [
     {
       icon: icons.location,
-      text: `Belgaum, KA, INDIA - 590 001`,
+      text: `<strong>Shweta Labs (OPC) Private Limited</strong><br/> 
+             Belgaum, KA, INDIA - 590 001`,
     },
     {
       icon: icons.phone,
