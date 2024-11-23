@@ -70,7 +70,7 @@ export function About(): JSX.Element {
               <div style={{ margin: '20px' }}>
                 <img src={visionCard.image} />
               </div>
-              <p className='fs-larger fw-bold'>{visionCard.title}</p>
+              <p className='fs-larger fw-bold' style={{marginTop:"0px"}}>{visionCard.title}</p>
               <p className='shady-70 centered' style={{ margin: '20px' }}>
                 {visionCard.para}
               </p>

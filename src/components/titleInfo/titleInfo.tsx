@@ -31,7 +31,7 @@ export default function TitleInfo({ titleInfo }: titleInfoProp): JSX.Element {
     </div>
   ) : (
     <div>
-      <p className='title fs-xx-large' style={{ textAlign: 'start' }}>
+      <p className='title fs-xx-large' style={{ marginTop: '-12px',textAlign: 'center' }}>
         {titleInfo.title}
       </p>
       <div style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>

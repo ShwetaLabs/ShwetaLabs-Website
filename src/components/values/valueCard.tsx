@@ -63,7 +63,7 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20,
-        padding: 20,
+        padding: 5,
       }}
     >
       <div style={{}}>

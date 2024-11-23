@@ -536,3 +536,29 @@ div.d2xn {
 .phone-footer-text{
   padding-top: 10px;
 }
+
+.social-icon-link {
+  display: inline-flex;
+  padding-left: 0;
+  margin-left: 0px;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon-link:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 10px var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.social-icon-link img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon-link:hover img {
+  filter: brightness(1.2);
+}

@@ -206,14 +206,13 @@ export function Footer({ getDisplay }: any): JSX.Element {
 }
 export function SocialLinks() {
   return (
-    <div className='row' style={{ marginTop: '1.96vw' }}>
+    <div className='row' style={{ marginTop: '1.96vw',marginLeft:"-10px", display: "flex", gap: "1rem" }}>
       {footerData.socialLinks.map(link => {
         return (
-          <span style={{ marginInline: '12.5px' }}>
+          <span className="social-link-wrapper" key={link.url}>
             <LinkBox
               link={link}
-              aClassName='button fs-large'
-              key={link.url}
+              aClassName='social-icon-link'
               target={'_blank'}
             />
           </span>
