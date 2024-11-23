@@ -10,7 +10,11 @@ export default function TitleInfo({ titleInfo }: titleInfoProp): JSX.Element {
     <div
       style={{
         display: 'flex',
-        justifyContent: 'space-around',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: '40px',
+        justifyContent: 'space-between',
+        marginTop: '-12px',
       }}
     >
       <p
@@ -20,7 +24,9 @@ export default function TitleInfo({ titleInfo }: titleInfoProp): JSX.Element {
         {titleInfo.title}
       </p>
       <div style={{ width: '50%', whiteSpace: 'pre-wrap', textAlign: 'left' }}>
-        <p style={{margin:"0"}} className='shady-70'>{titleInfo.paras}</p>
+        <p style={{ margin: '0' }} className='shady-70'>
+          {titleInfo.paras}
+        </p>
       </div>
     </div>
   ) : (
