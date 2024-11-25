@@ -62,7 +62,7 @@ export const ourProductsData: ourProductsSpec = {
       description:
         'SLEUTH is a sophisticated CDR (Call Detail Record) and IPDR (Internet Protocol Detail Record) analysis tool.',
       image: images.sleuthLogo,
-      learnMoreUrl: '/contact',
+      learnMoreUrl: '/products',
     },
   ],
 };

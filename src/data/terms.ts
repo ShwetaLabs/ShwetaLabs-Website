@@ -89,6 +89,10 @@ export const termsData: textOnlyPageSpec = {
     services at our sole discretion, without notice, if you violate these terms
     or engage in any conduct that we deem inappropriate or harmful.
 </p>
+<li class="fs-medium">Cancellation/Refund Policy</li>
+<p dir="ltr">
+    Cancellations or refunds are processed based on eligibility and timelines outlined here. Refunds, if applicable, will be credited to the customer's account within 7 business days, minus applicable charges.
+</p>
 <li class="fs-medium">Contact Information</li>
 <p dir="ltr">
     For any questions regarding our use of cookies, please contact us at:

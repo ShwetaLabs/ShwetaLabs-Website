@@ -121,7 +121,7 @@ export function FeatureTextData({
   learnMoreUrl,
 }: IFeatureTextDataProps) {
   return isDesktop() ? (
-    <div>
+    <div style={{padding:"20px"}}>
       <p className='fs-large subtitle fw-bold' style={{ textAlign: 'left' }}>
         {title}
       </p>
