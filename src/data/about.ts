@@ -36,7 +36,7 @@ Founder, witnessed first-hand the hurdles law enforcement faced in his own famil
     {
       image: images.visionLogo,
       title: 'Our Vision',
-      para: 'Empowering a fearless, free world by removing obstacles to freehand flourishing.',
+      para: 'Empowering a fearless, free world by removing obstacles to Freedom and flourishing.',
     },
     {
       image: images.missionLogo,
